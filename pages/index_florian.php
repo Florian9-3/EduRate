@@ -28,6 +28,34 @@
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	
+	<script src="dropzone.js"></script>
+	<link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script>
+		Dropzone.options.myDropzone = {
+			init: function() {
+				thisDropzone = this;
+				<!-- 4 -->
+				$.get('upload.php', function(data) {
+		 
+					<!-- 5 -->
+					$.each(data, function(key,value){
+						 
+						var mockFile = { name: value.name, size: value.size };
+						 
+						thisDropzone.options.addedfile.call(thisDropzone, mockFile);
+		 
+						thisDropzone.options.thumbnail.call(thisDropzone, mockFile, "uploads/"+value.name);
+						 
+					});
+					 
+				});
+			}
+		};
+	</script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -452,8 +480,10 @@
                         <div class="panel-heading">
                             Vorlesungsinhalte
                         </div>
-                        <div class="panel-body" style="text-align: center; margin-bottom: 3em; margin-top: 3em">
-                            <p>Noch keine geteilten Inhalte</p>
+                        <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
+							<div style="height: 300px; width: 100%; border: 2px dashed #0087F7; border-radius: 5px; background-color: white;>
+								<form style="height: 100%; width: 100px" action="upload.php" class="dropzone" id="my-dropzone"></form>
+							</div>
                         </div>
 
                     </div>
