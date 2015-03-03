@@ -1,79 +1,24 @@
 $(function() {
-
-    Morris.Area({
-        element: 'morris-area-chart',
-        data: [{
-            period: '11:30',
-            student: 80
-        }, {
-            period: '12:00',
-            student: 20
-        }, {
-            period: '12:30',
-            student: 60
-        }, {
-            period: '13:00',
-            student: 30
-        }],
-        xkey: 'period',
-        ykeys: ['student'],
-        labels: ['Student'],
-        pointSize: 2,
-        hideHover: 'auto',
-        resize: true
-    });
-
-    Morris.Donut({
-        element: 'morris-donut-chart',
-        data: [{
-            label: "Download Sales",
-            value: 12
-        }, {
-            label: "In-Store Sales",
-            value: 30
-        }, {
-            label: "Mail-Order Sales",
-            value: 20
-        }],
-        resize: true
-    });
-
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
-            y: '2006',
-            a: 100,
-            b: 90
+            y: '11:30',
+            a: 4.5
         }, {
-            y: '2007',
-            a: 75,
-            b: 65
+            y: '12:00',
+            a: 3.2
         }, {
-            y: '2008',
-            a: 50,
-            b: 40
+            y: '12:30',
+            a: 1.3
         }, {
-            y: '2009',
-            a: 75,
-            b: 65
-        }, {
-            y: '2010',
-            a: 50,
-            b: 40
-        }, {
-            y: '2011',
-            a: 75,
-            b: 65
-        }, {
-            y: '2012',
-            a: 100,
-            b: 90
+            y: '13:00',
+            a: 4.2
         }],
         xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
-        hideHover: 'auto',
-        resize: true
+        ykeys: ['a'],
+        labels: ['Studenten'],
+        hideHover: 'always',
+        resize: true,
     });
 
 });
