@@ -1,7 +1,7 @@
 <?php
 $ds          = DIRECTORY_SEPARATOR; 
  
-$storeFolder = 'uploads';  
+$storeFolder = 'uploads/';  
  
 if (!empty($_FILES)) {
  
