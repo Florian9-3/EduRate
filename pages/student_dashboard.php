@@ -60,6 +60,8 @@
 					}
 				};*/
 				</script>
+				
+		
 	
 	
 
@@ -425,8 +427,8 @@
 			
 			<div class="row">
 				<div class="col-lg-6">
-                    <div class="panel panel-yellow" style="overflow: hidden">
-                        <div class="panel-heading">
+                    <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
+                        <div class="bewertung1 panel-heading" id="bewertung_header">
                             Bewertung: Einführung
                         </div>
                         <div class="panel-body">
@@ -461,6 +463,32 @@
 					</div>
 				</div>
 				
+				<script>
+
+					function agendaChange(position){
+						
+						switch(position){
+						 case 1:
+							document.getElementById("bewertung_header").innerHTML="Bewertung: Einführung";
+							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
+							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
+							break;
+						 case 2:
+							document.getElementById("bewertung_header").innerHTML="Bewertung: Weiterführung";
+							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
+							document.getElementById("bewertung_container").className = "bewertungcontainer2 panel panel-yellow";
+							break;
+						 case 3:
+							document.getElementById("bewertung_header").innerHTML="Bewertung: Analyse";
+							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
+							document.getElementById("bewertung_container").className = "bewertungcontainer3 panel panel-yellow";
+							break;
+						 case 4:
+							document.getElementById("bewertung_header").innerHTML="Bewertung: Fazit";
+							break;
+						 }
+					}
+				</script>
 				
 				<div class="col-lg-6">
                                 <div class="panel panel-info">
@@ -469,13 +497,13 @@
                                     </div>
                                     <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
 
-                                      <button type="button" style="width: 100% ; text-align: left" class="btn btn-default btn-lg active">1. Einführng</button>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">1. Einführung</button>
                                       <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="btn btn-default btn-lg active">2. Weiterführung</button>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">2. Weiterführung</button>
                                       <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="btn btn-primary btn-lg active">3. Analyse</button>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >3. Analyse</button>
                                       <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="btn btn-lg btn-primary" disabled="disabled">4. Fazit</button>
+                                      <button type="button" style="width: 100% ; text-align: left" class="btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled">4. Fazit</button>
 
 
                                     </div>
@@ -484,6 +512,8 @@
                     <!-- /.col-lg-4 -->
 
                 </div>
+				
+				
 				</div>
 				
 
