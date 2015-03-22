@@ -322,7 +322,7 @@
                         <div class="bewertung1 panel-heading" id="bewertung_header">
                             Bewertung: Einführung
                         </div>
-                        <div class="panel-body">
+                      <div class="panel-body">
 							<div class="col-lg-12" style="margin: 0 auto">
 								<fieldset class="rating">
 									<input type="radio" id="star5" name="rating" value="5" onChange="ratingChange(5)"/><label for="star5" title="Rocks!">5 stars</label>
@@ -333,14 +333,19 @@
 								</fieldset>
 							</div>
 							
-							<div class="col-lg-6" style="margin-top:2em">
-							  <input type="radio" name="like" value="Understood"> 
-							  verstanden
+							<div class="col-lg-3 radios1" style="margin-top:0.3em">
+                            <span title="Thema verstanden">
+							  <input type="radio" name="like" value="1" id="v1" onChange="verstandenChange()" title="Thema verstanden"/> 
+                              <label class="radio" for="v1"></label>
+                             </span>
 							</div>
-							<div class="col-lg-6" style="margin-top:2em">
-							  <input type="radio" name="like" value="Not_understood">nicht verstanden
+							<div class="col-lg-3 radios2" style="margin-top:0.8em">
+                            <span title="Thema nicht verstanden">
+							  <input type="radio" name="like" value="0" id="v2" onChange="verstandenChange()" title="Thema nicht verstanden"/>
+                              <label class="radio" for="v2"></label>
+                            </span>
 							</div>
-							<div class="col-lg-12" style="margin-top:2em">
+							<div class="col-lg-12" style="margin-top:0.5em">
 								<div class="form-group input-group">
 														<input type="text" class="form-control" id="kommentar" placeholder="Gib einen Kommentar ab">
 														<span class="input-group-btn">
@@ -364,8 +369,35 @@
 					var two_comment = null;
 					var three_comment = null;
 					
+					var one_verstanden = -1;
+					var two_verstanden = -1;
+					var three_verstanden = -1;
+					
 					var radio_button;
 					var agenda = 1;
+					
+					function verstandenChange(){
+						switch(agenda){
+						case 1:
+							if(document.getElementById("v1").checked)
+								one_verstanden = 2;
+							else
+								one_verstanden = 1;
+							break;
+						case 2:
+							if(document.getElementById("v1").checked)
+								two_verstanden = 2;
+							else
+								two_verstanden = 1;
+							break;
+						case 3:
+							if(document.getElementById("v1").checked)
+								three_verstanden = 2;
+							else
+								three_verstanden = 1;
+							break;	
+						}
+					}
 					
 					function ratingChange(value){
 						switch(agenda){
@@ -391,6 +423,18 @@
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Einführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
 							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
+							
+							verstanden_button = document.getElementById("v1");
+							nichtverstanden_button = document.getElementById("v2");
+							if(one_verstanden == 2)
+								verstanden_button.checked = true;
+							else if(one_verstanden == 1)
+								nichtverstanden_button.checked = true;
+							else{
+								verstanden_button.checked = false;
+								nichtverstanden_button.checked = false;
+							}
+							
 							if(one_comment === 'undefined' || one_comment === null){
 								document.getElementById("kommentar").value = '';
 							}
@@ -437,6 +481,18 @@
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Weiterführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
 							document.getElementById("bewertung_container").className = "bewertungcontainer2 panel panel-yellow";
+							
+							verstanden_button = document.getElementById("v1");
+							nichtverstanden_button = document.getElementById("v2");
+							if(two_verstanden == 2)
+								verstanden_button.checked = true;
+							else if(two_verstanden == 1)
+								nichtverstanden_button.checked = true;
+							else{
+								verstanden_button.checked = false;
+								nichtverstanden_button.checked = false;
+							}
+							
 							if(two_comment === 'undefined' || two_comment === null){
 								document.getElementById("kommentar").value = '';
 							}
@@ -483,6 +539,18 @@
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Analyse";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
 							document.getElementById("bewertung_container").className = "bewertungcontainer3 panel panel-yellow";
+							
+							verstanden_button = document.getElementById("v1");
+							nichtverstanden_button = document.getElementById("v2");
+							if(three_verstanden == 2)
+								verstanden_button.checked = true;
+							else if(three_verstanden == 1)
+								nichtverstanden_button.checked = true;
+							else{
+								verstanden_button.checked = false;
+								nichtverstanden_button.checked = false;
+							}
+							
 							if(three_comment === 'undefined' || three_comment === null){
 								document.getElementById("kommentar").value = '';
 							}

@@ -64,7 +64,7 @@
 	opacity: 1;
 }
 
-.squaredCheckbox input[type="checkbox"], input[type="radio"] {
+.squaredCheckbox input[type="checkbox"] {
   position: absolute; 
   clip: rect(0,0,0,0);
 }
@@ -240,6 +240,43 @@
     position:relative;
     top:2px;
     left:2px;
+}
+
+
+
+
+.radios1 .radio{
+    background: url(res/lampe_an.png);
+    display:inline-block;
+	opacity: 0.5;
+    width:60px;
+    height:68px
+}
+
+.radios1 input[type=radio]{
+    display:none
+}
+
+.radios1 input[type=radio]:checked + .radio{
+    background: url(res/lampe_an.png);
+	opacity: 1.0;
+}
+
+.radios2 .radio{
+    background: url(res/lampe_aus.png);
+    display:inline-block;
+	opacity: 0.5;
+    width:38px;
+    height:60px
+}
+
+.radios2 input[type=radio]{
+    display:none
+}
+
+.radios2 input[type=radio]:checked + .radio{
+    background: url(res/lampe_aus.png);
+	opacity: 1.0;
 }
 
 
