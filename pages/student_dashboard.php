@@ -87,7 +87,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Student Dashboard</a>
+                <a class="navbar-brand" href="index.html">Willkommen Phillip</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -301,121 +301,12 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="flot.html">Flot Charts</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">Morris.js Charts</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">Panels and Wells</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="notifications.html">Notifications</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Typography</a>
-                                </li>
-                                <li>
-                                    <a href="icons.html"> Icons</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grid</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="blank.html">Blank Page</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">Login Page</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
+            
             <!-- /.navbar-static-side -->
         </nav>
 
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Willkommen xyz</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
+            
 			<div class="row">
                 <div class="col-lg-12">
                     <h4 class="page-wrapper">Aktuelle Vorlesung: Datenbanktechnik</h1>
@@ -434,11 +325,11 @@
                         <div class="panel-body">
 							<div class="col-lg-12" style="margin: 0 auto">
 								<fieldset class="rating">
-									<input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-									<input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-									<input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-									<input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-									<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+									<input type="radio" id="star5" name="rating" value="5" onChange="ratingChange(5)"/><label for="star5" title="Rocks!">5 stars</label>
+									<input type="radio" id="star4" name="rating" value="4" onChange="ratingChange(4)"/><label for="star4" title="Pretty good">4 stars</label>
+									<input type="radio" id="star3" name="rating" value="3" onChange="ratingChange(3)"/><label for="star3" title="Meh">3 stars</label>
+									<input type="radio" id="star2" name="rating" value="2" onChange="ratingChange(2)"/><label for="star2" title="Kinda bad">2 stars</label>
+									<input type="radio" id="star1" name="rating" value="1" onChange="ratingChange(1)"/><label for="star1" title="Sucks big time">1 star</label>
 								</fieldset>
 							</div>
 							
@@ -451,9 +342,9 @@
 							</div>
 							<div class="col-lg-12" style="margin-top:2em">
 								<div class="form-group input-group">
-														<input type="text" class="form-control" placeholder="Gib einen Kommentar ab">
+														<input type="text" class="form-control" id="kommentar" placeholder="Gib einen Kommentar ab">
 														<span class="input-group-btn">
-															<button class="btn btn-default" type="button"><i class="fa fa-comment"></i>
+															<button class="btn btn-default" type="button" onClick="sendComment()"><i class="fa fa-comment"></i>
 															</button>
 														</span>
 								</div>
@@ -464,29 +355,200 @@
 				</div>
 				
 				<script>
+				
+					var one_stars = 0;
+					var two_stars = 0;
+					var three_stars = 0;
+					
+					var one_comment = null;
+					var two_comment = null;
+					var three_comment = null;
+					
+					var radio_button;
+					var agenda = 1;
+					
+					function ratingChange(value){
+						switch(agenda){
+							case 1:
+								one_stars = value;
+								break;
+							case 2:
+								two_stars = value;
+								break;
+							case 3:
+								three_stars = value;
+								break;
+							default:
+							break;
+						}
+					}
 
 					function agendaChange(position){
 						
 						switch(position){
 						 case 1:
+						 	agenda = 1;
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Einführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
 							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
+							if(one_comment === 'undefined' || one_comment === null){
+								document.getElementById("kommentar").value = '';
+							}
+							else{
+								document.getElementById("kommentar").value = one_comment;
+							}
+							switch(one_stars){
+								case 1:
+									radio_button = document.getElementById("star1");
+									radio_button.checked = true;
+									break;
+								case 2:
+									radio_button = document.getElementById("star2");
+									radio_button.checked = true;
+									break;
+								case 3:
+									radio_button = document.getElementById("star3");
+									radio_button.checked = true;
+									break;
+								case 4:
+									radio_button = document.getElementById("star4");
+									radio_button.checked = true;
+									break;
+								case 5:
+									radio_button = document.getElementById("star5");
+									radio_button.checked = true;
+									break;
+								default:
+									radio_button = document.getElementById("star5");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star4");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star3");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star2");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star1");
+									radio_button.checked = false;
+									break;
+							}
 							break;
 						 case 2:
+						 	agenda = 2;
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Weiterführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
 							document.getElementById("bewertung_container").className = "bewertungcontainer2 panel panel-yellow";
+							if(two_comment === 'undefined' || two_comment === null){
+								document.getElementById("kommentar").value = '';
+							}
+							else{
+								document.getElementById("kommentar").value = two_comment;
+							}
+							switch(two_stars){
+								case 1:
+									radio_button = document.getElementById("star1");
+									radio_button.checked = true;
+									break;
+								case 2:
+									radio_button = document.getElementById("star2");
+									radio_button.checked = true;
+									break;
+								case 3:
+									radio_button = document.getElementById("star3");
+									radio_button.checked = true;
+									break;
+								case 4:
+									radio_button = document.getElementById("star4");
+									radio_button.checked = true;
+									break;
+								case 5:
+									radio_button = document.getElementById("star5");
+									radio_button.checked = true;
+									break;
+								default:
+									radio_button = document.getElementById("star5");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star4");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star3");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star2");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star1");
+									radio_button.checked = false;
+									break;
+							}
 							break;
 						 case 3:
+						 	agenda = 3;
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Analyse";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
 							document.getElementById("bewertung_container").className = "bewertungcontainer3 panel panel-yellow";
+							if(three_comment === 'undefined' || three_comment === null){
+								document.getElementById("kommentar").value = '';
+							}
+							else{
+								document.getElementById("kommentar").value = three_comment;
+							}
+							switch(three_stars){
+								case 1:
+									radio_button = document.getElementById("star1");
+									radio_button.checked = true;
+									break;
+								case 2:
+									radio_button = document.getElementById("star2");
+									radio_button.checked = true;
+									break;
+								case 3:
+									radio_button = document.getElementById("star3");
+									radio_button.checked = true;
+									break;
+								case 4:
+									radio_button = document.getElementById("star4");
+									radio_button.checked = true;
+									break;
+								case 5:
+									radio_button = document.getElementById("star5");
+									radio_button.checked = true;
+									break;
+								default:
+									radio_button = document.getElementById("star5");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star4");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star3");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star2");
+									radio_button.checked = false;
+									radio_button = document.getElementById("star1");
+									radio_button.checked = false;
+									break;
+							}
 							break;
 						 case 4:
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Fazit";
 							break;
 						 }
+						 
+						 }
+						 
+					   function sendComment(){
+						   var comment = document.getElementById("kommentar").value;
+						   if(!comment == ""){
+							   switch(agenda){
+								case 1:
+									one_comment = comment;
+									break;
+								case 2:
+									two_comment = comment;
+									break;
+								case 3:
+									three_comment = comment;
+									break;
+								default:
+									break;   
+							   }
+						   }
+					   
 					}
 				</script>
 				
@@ -519,12 +581,17 @@
 
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            Student Vorlesungsinhalte
+                            Vorlesungsinhalte
                         </div>
                         <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
 							<div style="height: 200px; width: 100%; border: 2px dashed #0087F7; border-radius: 5px; background-color: white;>
 								<form style="height: 100%; width: 100px" action="upload.php" class="dropzoneStud" id="stmy-Dropzone"></form>
-							</div>
+                                <div class="folder_empty" >
+                           	    	<img src="res/empty_folder.png" width="15%" height="15%" alt="" style="display:block; margin-left:auto; margin-right:auto;"/>
+                                 	<div style="text-align:center">Dieser Ordner ist leer <br> (Dateien werden vom Dozenten bereitgestellt) 
+                                 	</div>
+                                 </div>
+						  </div>
                         </div>
 
                     </div>
