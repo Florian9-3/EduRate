@@ -87,7 +87,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Willkommen Phillip</a>
+                <a class="navbar-brand" href="student_dashboard.php">Willkommen Phillip</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -349,7 +349,7 @@
 								<div class="form-group input-group">
 														<input type="text" class="form-control" id="kommentar" placeholder="Gib einen Kommentar ab">
 														<span class="input-group-btn">
-															<button class="btn btn-default" type="button" onClick="sendComment()"><i class="fa fa-comment"></i>
+															<button class="btn btn-default" type="button" id="sendButton" onClick="sendComment()"><i class="fa fa-comment"></i>
 															</button>
 														</span>
 								</div>
@@ -368,6 +368,14 @@
 					var one_comment = null;
 					var two_comment = null;
 					var three_comment = null;
+					
+					var one_count = 40;
+					var two_count = 40;
+					var three_count = 40;
+					
+					var one_Counter;
+					var two_Counter;
+					var three_Counter;
 					
 					var one_verstanden = -1;
 					var two_verstanden = -1;
@@ -419,10 +427,27 @@
 						
 						switch(position){
 						 case 1:
+						 	//Last agenda
+							var comment = document.getElementById("kommentar").value;
+							if((!comment == "") && !document.getElementById("kommentar").disabled){
+								switch(agenda){
+									case 1:
+										one_comment = comment;
+										break;
+									case 2:
+										two_comment = comment;
+										break;
+									case 3:
+										three_comment = comment;
+										break;
+								}
+							}
 						 	agenda = 1;
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Einführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
 							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
+					
+							
 							
 							verstanden_button = document.getElementById("v1");
 							nichtverstanden_button = document.getElementById("v2");
@@ -435,11 +460,20 @@
 								nichtverstanden_button.checked = false;
 							}
 							
-							if(one_comment === 'undefined' || one_comment === null){
+							if((one_comment === 'undefined' || one_comment === null) && one_count > 30){
 								document.getElementById("kommentar").value = '';
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
+							}
+							else if(one_count<=30){
+								document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
+								document.getElementById("kommentar").disabled = true;
+								document.getElementById("sendButton").disabled = true;
 							}
 							else{
 								document.getElementById("kommentar").value = one_comment;
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
 							}
 							switch(one_stars){
 								case 1:
@@ -477,6 +511,21 @@
 							}
 							break;
 						 case 2:
+						 	//Last agenda
+							var comment = document.getElementById("kommentar").value;
+							if((!comment == "") && !document.getElementById("kommentar").disabled){
+								switch(agenda){
+									case 1:
+										one_comment = comment;
+										break;
+									case 2:
+										two_comment = comment;
+										break;
+									case 3:
+										three_comment = comment;
+										break;
+								}
+							}
 						 	agenda = 2;
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Weiterführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
@@ -493,12 +542,22 @@
 								nichtverstanden_button.checked = false;
 							}
 							
-							if(two_comment === 'undefined' || two_comment === null){
+							if((two_comment === 'undefined' || two_comment === null) && two_count > 30){
 								document.getElementById("kommentar").value = '';
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
+							}
+							else if(two_count<=30){
+								document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
+								document.getElementById("kommentar").disabled = true;
+								document.getElementById("sendButton").disabled = true;
 							}
 							else{
 								document.getElementById("kommentar").value = two_comment;
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
 							}
+							
 							switch(two_stars){
 								case 1:
 									radio_button = document.getElementById("star1");
@@ -535,6 +594,21 @@
 							}
 							break;
 						 case 3:
+						 	//Last agenda
+							var comment = document.getElementById("kommentar").value;
+							if((!comment == "") && !document.getElementById("kommentar").disabled){
+								switch(agenda){
+									case 1:
+										one_comment = comment;
+										break;
+									case 2:
+										two_comment = comment;
+										break;
+									case 3:
+										three_comment = comment;
+										break;
+								}
+							}
 						 	agenda = 3;
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Analyse";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
@@ -551,11 +625,20 @@
 								nichtverstanden_button.checked = false;
 							}
 							
-							if(three_comment === 'undefined' || three_comment === null){
+							if((three_comment === 'undefined' || three_comment === null) && three_count > 30){
 								document.getElementById("kommentar").value = '';
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
+							}
+							else if(three_count<=30){
+								document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
+								document.getElementById("kommentar").disabled = true;
+								document.getElementById("sendButton").disabled = true;
 							}
 							else{
 								document.getElementById("kommentar").value = three_comment;
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
 							}
 							switch(three_stars){
 								case 1:
@@ -604,20 +687,84 @@
 						   if(!comment == ""){
 							   switch(agenda){
 								case 1:
-									one_comment = comment;
+									one_count = 30;
+									one_Counter = setInterval(oneCounter, 1000);
+									document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
+									document.getElementById("kommentar").disabled = true;
+									document.getElementById("sendButton").disabled = true;
+									one_comment = null;
 									break;
 								case 2:
-									two_comment = comment;
+									two_count = 30;
+									two_Counter = setInterval(twoCounter, 1000);
+									document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
+									document.getElementById("kommentar").disabled = true;
+									document.getElementById("sendButton").disabled = true;
+									two_comment = null;
 									break;
 								case 3:
-									three_comment = comment;
+									three_count = 30;
+									three_Counter = setInterval(threeCounter, 1000);
+									document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
+									document.getElementById("kommentar").disabled = true;
+									document.getElementById("sendButton").disabled = true;
+									three_comment = null;
 									break;
 								default:
 									break;   
 							   }
 						   }
-					   
+						}
+					
+					function oneCounter(){
+						one_count = one_count - 1;
+						if(one_count <= 0){
+							clearInterval(one_Counter);
+							one_count = 40;
+							if(agenda == 1){
+								document.getElementById("kommentar").value = '';
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
+							}
+							return;	
+						}
+						if(agenda == 1)
+							document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
 					}
+					
+					function twoCounter(){
+						two_count = two_count - 1;
+						if(two_count <= 0){
+							clearInterval(two_Counter);
+							two_count = 40;
+							if(agenda == 2){
+								document.getElementById("kommentar").value = '';
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
+							}
+							return;	
+						}
+						if(agenda == 2)
+							document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
+					}
+					
+					function threeCounter(){
+						three_count = three_count - 1;
+						if(three_count <= 0){
+							clearInterval(three_Counter);
+							three_count = 40;
+							if(agenda == 3){
+								document.getElementById("kommentar").value = '';
+								document.getElementById("kommentar").disabled = false;
+								document.getElementById("sendButton").disabled = false;
+							}
+							return;	
+						}
+						if(agenda == 3)
+							document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
+					}
+					
+					
 				</script>
 				
 				<div class="col-lg-6">
