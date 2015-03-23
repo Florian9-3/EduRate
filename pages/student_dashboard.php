@@ -816,7 +816,7 @@
 				
 
 				
-				<!------------------------------------------------------------------------------------------------------------------------------------------------
+<!------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------- Fragenbox Anfang -----------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------->
 				
@@ -951,8 +951,8 @@
 															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 11:10</p>
 															<p style="font-size: 1.3em; font-weight:bold"> Einleitung sooooooooo unglaublcih lang und deswegen frage ich mich, ob sie sinnvoll ist? </p>
 														</div>
-													
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+														<textarea name="Antwort auf Frage" cols="50" rows="5" placeholder="Es wurde noch keine Antwort gegeben..." readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+														</textarea>
 													</div>
 												</div>
 											</div>
@@ -971,16 +971,13 @@
 													</div>
 													
 													<!-- Squared FOUR -->
-													<div class="squaredCheckbox beantwortetButtonPositionierung">
+													<div class="checkerBoxer beantwortetButtonPositionierung">
 														<input type="checkbox" value="None" id="squaredTwo" name="check" />
-														<label for="squaredTwo"></label>
+														<label class="haken" for="squaredTwo"><!-- <img src="/lampe_an.png" width="60" height="60" > --></label>
 													</div>
+
 													
-													<!-- Beantwortet Label -->
-													<div class="panel-title beantwortetLabelPositionierung">
-															Beantwortet
-													</div>
-													
+
 													
 												</div>
 												<div id="collapseTwo" class="panel-collapse collapse">
@@ -989,7 +986,7 @@
 															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 11:20</p>
 															<p style="font-size: 1.3em; font-weight:bold"> Weiterführung sinnvoll? </p>
 														</div>
-														<!-- Antwort -->
+														<textarea name="user_eingabe" cols="50" rows="4" style="width:100%" placeholder="Es wurde noch keine Antwort gegeben..." readonly></textarea>
 													</div>
 												</div>
 											</div>

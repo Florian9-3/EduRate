@@ -179,8 +179,33 @@
 
 
 
+/* Fragen beantwortet Status*/
+.checkerBoxer .haken 
+   {
+   background: url(res/kreuz_rot25px.png);
+   height: 25px;
+   width: 25px;
+ }
+ 
+ .checkerBoxer input[type=checkbox] {
+    display:none ;
+  }
+   
+.checkerBoxer input[type=checkbox]:checked + label
+    {
+        background: url(res/haken_gruen25px.png);
+        height: 25px;
+        width: 25px;
+        display:inline-block;
+        padding: 0 0 0 0px;
+  }
 
 
+TEXTAREA {
+background-color: #fbfff3;
+width: 100%; 
+font-size: 1.2em;
+}
 
 
 
