@@ -773,7 +773,17 @@
                                     </div>
                                     <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
 
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">1. Einführung</button>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">
+                                      <span style="display: table-cell; vertical-align: middle;">1. Einführung
+                                      	<fieldset class="ratingDoz">
+                                            <input type="radio" id="ag5" name="ratingDoz" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz" value="4" checked="true" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+										</fieldset>
+                                        </span>
+                                      </button>
                                       <br><br>
                                       <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">2. Weiterführung</button>
                                       <br><br>
