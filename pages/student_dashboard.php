@@ -765,6 +765,31 @@
 					}
 					
 					
+					
+					DropzoneStudent.options.stmyDropzone = {
+					init: function() {
+						thisDropzone = this;
+						<!-- 4 -->
+						$.get('upload.php', function(data) {
+							<!-- 5 -->
+							$.each(data, function(key,value){
+								
+								document.getElementById("noFiles").style.display = 'none';
+								 
+								var mockFile = { name: value.name, size: value.size };
+								 
+								thisDropzone.options.addedfile.call(thisDropzone, mockFile);
+				 
+								thisDropzone.options.thumbnail.call(thisDropzone, mockFile, "uploads/"+value.name);
+								 
+							});
+							 
+						});
+						
+					}
+					}
+					
+					
 				</script>
 				
 				<div class="col-lg-6">
@@ -801,7 +826,7 @@
                         <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
 							<div style="height: 200px; width: 100%; border: 2px dashed #0087F7; border-radius: 5px; background-color: white;>
 								<form style="height: 100%; width: 100px" action="upload.php" class="dropzoneStud" id="stmy-Dropzone"></form>
-                                <div class="folder_empty" >
+                                <div class="folder_empty" id="noFiles" >
                            	    	<img src="res/empty_folder.png" width="15%" height="15%" alt="" style="display:block; margin-left:auto; margin-right:auto;"/>
                                  	<div style="text-align:center">Dieser Ordner ist leer <br> (Dateien werden vom Dozenten bereitgestellt) 
                                  	</div>

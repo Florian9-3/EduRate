@@ -121,10 +121,10 @@
       uploadMultiple: false,
       maxFilesize: 256,
       paramName: "file",
-      createImageThumbnails: true,
+      createImageThumbnails: false,
       maxThumbnailFilesize: 10,
-      thumbnailWidth: 120,
-      thumbnailHeight: 120,
+      thumbnailWidth: 0,
+      thumbnailHeight: 0,
       filesizeBase: 1000,
       maxFiles: null,
       filesizeBase: 1000,
@@ -263,6 +263,17 @@
             node.innerHTML = this.filesize(file.size);
           }
           if (this.options.addRemoveLinks) {
+			  
+			  /* NEW PART */
+				file._openLink = Dropzone.createElement("<a class=\"dz-open\" href=\"javascript:undefined;\">Open File</a>");
+				file._openLink.addEventListener("click", function(e) {
+				  e.preventDefault();
+				  e.stopPropagation();
+				  window.open("http://127.0.0.1/pages/uploads/"+file.name);
+				});
+    			/* END OF NEW PART */
+				
+				
             file._removeLink = DropzoneStudent.createElement("<a class=\"dz-remove\" href=\"javascript:undefined;\" data-dz-remove>" + this.options.dictRemoveFile + "</a>");
             file.previewElement.appendChild(file._removeLink);
           }
@@ -306,6 +317,7 @@
       thumbnail: function(file, dataUrl) {
         var thumbnailElement, _i, _len, _ref;
         if (file.previewElement) {
+			/*
           file.previewElement.classList.remove("dz-file-preview");
           _ref = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -318,6 +330,7 @@
               return file.previewElement.classList.add("dz-image-preview");
             };
           })(this)), 1);
+		  */
         }
       },
       error: function(file, message) {
@@ -349,6 +362,7 @@
       uploadprogress: function(file, progress, bytesSent) {
         var node, _i, _len, _ref, _results;
         if (file.previewElement) {
+			/*
           _ref = file.previewElement.querySelectorAll("[data-dz-uploadprogress]");
           _results = [];
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -360,6 +374,7 @@
             }
           }
           return _results;
+		  */
         }
       },
       totaluploadprogress: noop,
@@ -1017,7 +1032,7 @@
     DropzoneStudent.prototype._processingThumbnail = false;
 
     DropzoneStudent.prototype._enqueueThumbnail = function(file) {
-      if (this.options.createImageThumbnails && file.type.match(/image.*/) && file.size <= this.options.maxThumbnailFilesize * 1024 * 1024) {
+      if (this.options.createImageThumbnails && file.type.match(/image.*/) && file.size <= this.options.maxThumbnailFilesize * 1024 * 1024 && 1==2) {
         this._thumbnailQueue.push(file);
         return setTimeout(((function(_this) {
           return function() {
