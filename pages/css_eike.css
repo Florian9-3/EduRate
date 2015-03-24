@@ -99,21 +99,20 @@
 }
 
 .fragePositionierung{
-	display:inline-block; 
+/* 	display:inline-block; 
 	position:relative; 
 	margin-bottom:-5px; 
-	left:0px
+	left:0px; */
+	width: 90%;
+	float:left;
 }
 
 .beantwortetButtonPositionierung{
-	display:inline; 
-	left:30px;
-}
-
-.beantwortetLabelPositionierung{
-	display:inline; 
-	position:relative; 
-	left:30px
+/* 	display:inline; 
+	left:30px; */
+	width: 10%;
+	float:right;
+	background-color: grey;
 }
 
 
@@ -179,18 +178,18 @@
 
 
 
-/* Fragen beantwortet Status*/
+/* Fragenbeantwortet Status*/
 .checkerBoxer .haken 
    {
    background: url(res/kreuz_rot25px.png);
    height: 25px;
    width: 25px;
  }
- 
+  
  .checkerBoxer input[type=checkbox] {
     display:none ;
   }
-   
+  
 .checkerBoxer input[type=checkbox]:checked + label
     {
         background: url(res/haken_gruen25px.png);
@@ -204,7 +203,18 @@
 TEXTAREA {
 background-color: #fbfff3;
 width: 100%; 
-font-size: 1.2em;
+font-size: 1.1em;
+}
+
+.frageDatum{
+	font-size: 0.85em; 
+	opacity: .5; 
+	filter:Alpha(Opacity=50);
+}
+
+.frageVollständig{
+	font-size: 1.3em;
+	font-weight: bold;
 }
 
 

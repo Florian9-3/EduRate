@@ -824,8 +824,8 @@
                         <div class="panel-heading">
                             <h4 style="display:inline-block">FRAGEN</h4>
 							
-				<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
-<ul class="nav navbar-top-links navbar-right in" style="display:inline-block; position:center">
+			<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
+			<ul class="nav navbar-top-links navbar-right in" style="display:inline-block; position:center">
                 <li class="dropdown active">
                     <a class="dropdown-toggle active" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -880,34 +880,6 @@
 				
 				
 				
-				
-				
-<!-- 							<li class="dropdown open" style="display:inline-block; left:500px">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
-									<i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
-								</a>
-								<ul class="dropdown-menu dropdown-messages">
-									<li>
-										<a href="#">
-											<div>
-												<strong>John Smith</strong>
-												<span class="pull-right text-muted">
-													<em>Yesterday</em>
-												</span>
-											</div>
-											<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-										</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a class="text-center" href="#">
-											<strong>Read All Messages</strong>
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</li>
-								</ul>
-								<!-- /.dropdown-messages -->
-							<!-- </li>  -->
 				<!-- ************************************************Filterfunktion Ende*************************************************************************** -->
                         </div>
 
@@ -921,37 +893,53 @@
 											
 											<!-- Frage 1.1 -->
 											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenOne">
+												<div class="panel-heading hintergrundfarbeFragenOne" style="overflow:hidden"> <!-- hintergrundfarbeFragenOne" --> 
+													<!-- <div class="panel-title ellipsis fragePositionierung">
+													
+														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
+													</div> -->
+													
+													<!-- Status Two-->
+													<!-- <div class="checkerBoxer beantwortetButtonPositionierung">
+														<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="check" />
+														<label class="haken" for="statusZwei"></label>
+													</div> -->
+
 													<div class="panel-title ellipsis fragePositionierung">
-													<!-- display:inline; position:relative;  -->
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
-														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Frage: Einleitung sooooooooo unglaublich lang und deswegen frage ich mich, ob sie sinnvoll ist?</a>
+														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas??</a>
 													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="squaredCheckbox beantwortetButtonPositionierung disabled">
-														<input type="checkbox" onclick="return false" value="None" id="squaredOne" name="check" />
-														<label for="squaredOne"></label>
+
+													<div class="checkerBoxer beantwortetButtonPositionierung">
+														<input type="checkbox" onclick="return false" value="None" id="statusEins" name="check" />
+														<label class="haken" for="statusEins"></label>
 													</div>
+
 													
-													<!-- Beantwortet Label -->
-													<div class="panel-title beantwortetLabelPositionierung">
-															Beantwortet
-													</div>
 												</div>
-												
-												<div id="collapseOne" class="panel-collapse collapse in">
+												<div id="collapseOne" class="panel-collapse collapse">
 													<div class="panel-body">
 														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 11:10</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Einleitung sooooooooo unglaublcih lang und deswegen frage ich mich, ob sie sinnvoll ist? </p>
+															<p class="frageDatum">11. März 2015 um 11:20</p>
+															<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
 														</div>
-														<textarea name="Antwort auf Frage" cols="50" rows="5" placeholder="Es wurde noch keine Antwort gegeben..." readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-														</textarea>
+														<textarea id="antwortEins" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+													    </textarea>
+														
+														<script type="text/javascript">
+														<!-- Textarea auslesen und Status setzen -->									
+														
+														function leseTextarea1(){
+															var antwort = document.getElementById("antwortEins").value;
+															
+															if(antwort == ""){
+																document.getElementById("statusEins").checked = false;
+															}
+															else{
+																document.getElementById("statusEins").checked = true;
+															}
+														}
+														</script>
+														
 													</div>
 												</div>
 											</div>
@@ -959,33 +947,58 @@
 											
 											<!-- Frage 1.2 -->
 											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenOne">
+												<div class="panel-heading hintergrundfarbeFragenOne" style="overflow:hidden"> <!-- hintergrundfarbeFragenOne" --> 
+													<!-- <div class="panel-title ellipsis fragePositionierung">
+													
+														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
+													</div> -->
+													
+													<!-- Status Two-->
+													<!-- <div class="checkerBoxer beantwortetButtonPositionierung">
+														<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="check" />
+														<label class="haken" for="statusZwei"></label>
+													</div> -->
+
 													<div class="panel-title ellipsis fragePositionierung">
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
 														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
 													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="checkerBoxer beantwortetButtonPositionierung">
-														<input type="checkbox" value="None" id="squaredTwo" name="check" />
-														<label class="haken" for="squaredTwo"><!-- <img src="/lampe_an.png" width="60" height="60" > --></label>
-													</div>
 
-													
+													<div class="checkerBoxer beantwortetButtonPositionierung">
+														<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="check" />
+														<label class="haken" for="statusZwei"></label>
+													</div>
 
 													
 												</div>
 												<div id="collapseTwo" class="panel-collapse collapse">
 													<div class="panel-body">
 														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 11:20</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Weiterführung sinnvoll? </p>
+															<p class="frageDatum">11. März 2015 um 11:20</p>
+															<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 														</div>
-														<textarea name="user_eingabe" cols="50" rows="4" style="width:100%" placeholder="Es wurde noch keine Antwort gegeben..." readonly></textarea>
+														<textarea id="antwortZwei" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." readonly></textarea>
+														
+														<script type="text/javascript">
+														<!-- Textarea auslesen und Status setzen -->
+														window.onload = start;
+														
+														function start(){
+															leseTextarea1();
+															leseTextarea2();
+														}
+														
+														function leseTextarea2(){
+															var antwort = document.getElementById("antwortZwei").value;
+															
+															if(antwort == ""){
+																document.getElementById("statusZwei").checked = false;
+															}
+															else{
+																document.getElementById("statusZwei").checked = true;
+															}
+														}
+														</script>
+														
 													</div>
 												</div>
 											</div>
@@ -1083,7 +1096,7 @@
 							
 
                         <div class="panel-footer">
-                            Panel Footer
+                            Kann eigentlich weg
                         </div>
 					</div>
                 </div>
