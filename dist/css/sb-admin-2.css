@@ -5,7 +5,7 @@
  */
 
 body {
-    background-color: #f8f8f8;
+    background-color: #eaeaea;
 }
 
 #wrapper {
@@ -189,11 +189,11 @@ body {
 }
 
 .chat li.left .chat-body {
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 .chat li.right .chat-body {
-    margin-right: 60px;
+    margin-right: 0px;
 }
 
 .chat li .chat-body p {

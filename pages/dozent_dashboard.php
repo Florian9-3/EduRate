@@ -294,10 +294,10 @@
 				<div class="col-lg-6">
                     <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
                         <div class="bewertung1 panel-heading" id="bewertung_header">
-                            Bewertung: Einführung
+                            Detailbewertung: Einführung
                         </div>
                       <div class="panel-body">
-							<div class="col-lg-12" style="margin: 0 auto">
+							<!--<div class="col-lg-12" style="margin: 0 auto">
 								<fieldset class="rating">
 									<input type="radio" id="star5" name="rating" value="5" onChange="ratingChange(5)"/><label for="star5" title="Rocks!">5 stars</label>
 									<input type="radio" id="star4" name="rating" value="4" onChange="ratingChange(4)"/><label for="star4" title="Pretty good">4 stars</label>
@@ -328,10 +328,158 @@
 														</span>
 								</div>
 							</div>	
-							
+							-->
+                            <div style="width:100%; height:100%" id="chart_div"></div>
+                            <div style="margin-left:3%" id="gesamtzahl">Gesamtanzahl: 253 Bewertungen</div>
+                            <hr>
+                            <div style="margin-left:3%"><b>Kommentare:</b></div><br>
+                            <ul class="chat" style="margin-left:3%; margin-right:1%; padding-right:2%; height:200px !important; overflow:auto;">
+                                <li class="left clearfix comment1" id="list1">
+                                    
+                                    <div class="chat-body clearfix">
+                                        <div class="header" style="line-height:1">
+                                            
+                                                <fieldset class="ratingComment">
+                                                    <input type="radio" id="ag5" name="ratingComment1" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment1" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment1" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment1" value="2" checked="true" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment1" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                </fieldset>
+                                            
+                                            <small class="pull-right text-muted" style="margin-top:2%">
+                                                <i class="fa fa-clock-o fa-fw"></i> vor 12 min
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Schlecht erklärt
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix comment1" id="list2">
+                                    
+                                    <div class="chat-body clearfix">
+                                        <div class="header" style="line-height:1">
+                                            
+                                                <fieldset class="ratingComment">
+                                                    <input type="radio" id="ag5" name="ratingComment2" value="5" checked="true" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment2" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment2" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment2" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment2" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                </fieldset>
+                                            
+                                            <small class="pull-right text-muted" style="margin-top:2%">
+                                                <i class="fa fa-clock-o fa-fw"></i> vor 13 min
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Super! Habe alles verstanden.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix comment1" id="list3">
+                                    
+                                    <div class="chat-body clearfix">
+                                        <div class="header" style="line-height:1">
+                                            
+                                                <fieldset class="ratingComment">
+                                                    <input type="radio" id="ag5" name="ratingComment3" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment3" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment3" value="3" checked="true" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment3" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment3" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                </fieldset>
+                                            
+                                            <small class="pull-right text-muted" style="margin-top:2%">
+                                                <i class="fa fa-clock-o fa-fw"></i> vor 15 min
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Gut erklärt, aber Übungsaufgaben hätten geholfen.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix comment1"  id="list4">
+                                    
+                                    <div class="chat-body clearfix">
+                                        <div class="header" style="line-height:1">
+                                            
+                                                <fieldset class="ratingComment">
+                                                    <input type="radio" id="ag5" name="ratingComment4" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment4" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment4" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment4" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment4" value="1" checked="true" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                </fieldset>
+                                            
+                                            <small class="pull-right text-muted" style="margin-top:2%">
+                                                <i class="fa fa-clock-o fa-fw"></i> vor 22 min
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Das war ein reiner Monolog. Nichts verstanden. Tafelbild unübersichtlich.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
 						</div>
 					</div>
 				</div>
+                
+                
+                <!-- googleAPI -->
+                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                <script type="text/javascript">
+            
+                  // Load the Visualization API and the piechart package.
+                  google.load('visualization', '1.0', {'packages':['corechart']});
+            
+                  // Set a callback to run when the Google Visualization API is loaded.
+                  google.setOnLoadCallback(drawChart);
+            
+                  // Callback that creates and populates a data table,
+                  // instantiates the pie chart, passes in the data and
+                  // draws it.
+                  function drawChart() {
+            
+                    // Create the data table.
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Topping');
+                    data.addColumn('number', 'Anzahl der Bewertungen');
+					data.addColumn({type:'string', role:'style'});
+                    data.addRows([
+                      ['1 Stern', 37, 'color: #F44336'],
+                      ['2 Sterne', 23, 'color: #F44336'],
+                      ['3 Sterne', 55, 'color: #F44336'],
+                      ['4 Sterne', 76, 'color: #F44336'],
+                      ['5 Sterne', 62, 'color: #F44336']
+                    ]);
+            
+                    // Set chart options
+                    //var options = {'title':'Bewertung der Studenten'};
+					var options = {
+						title: 'Bewertung der Studenten',
+						animation:{
+							duration: 1500,
+							startup: true,
+							easing: 'out',
+						  },
+						legend:{
+							position: 'none',
+						},
+					};
+            
+                    // Instantiate and draw our chart, passing in some options.
+                    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+                    chart.draw(data, options);
+                  }
+            
+                  window.onresize = function(event) {
+            
+                  };
+                </script>
 				
 				<script>
 				
@@ -358,296 +506,186 @@
 					var radio_button;
 					var agenda = 1;
 					
-					function verstandenChange(){
-						switch(agenda){
-						case 1:
-							if(document.getElementById("v1").checked)
-								one_verstanden = 2;
-							else
-								one_verstanden = 1;
-							break;
-						case 2:
-							if(document.getElementById("v1").checked)
-								two_verstanden = 2;
-							else
-								two_verstanden = 1;
-							break;
-						case 3:
-							if(document.getElementById("v1").checked)
-								three_verstanden = 2;
-							else
-								three_verstanden = 1;
-							break;	
-						}
-					}
-					
-					function ratingChange(value){
-						switch(agenda){
-							case 1:
-								one_stars = value;
-								break;
-							case 2:
-								two_stars = value;
-								break;
-							case 3:
-								three_stars = value;
-								break;
-							default:
-							break;
-						}
-					}
-
 					function agendaChange(position){
 						
 						switch(position){
 						 case 1:
-						 	//Last agenda
-							var comment = document.getElementById("kommentar").value;
-							if((!comment == "") && !document.getElementById("kommentar").disabled){
-								switch(agenda){
-									case 1:
-										one_comment = comment;
-										break;
-									case 2:
-										two_comment = comment;
-										break;
-									case 3:
-										three_comment = comment;
-										break;
-								}
-							}
 						 	agenda = 1;
-							document.getElementById("bewertung_header").innerHTML="Bewertung: Einführung";
+							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Einführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
 							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
-					
+							document.getElementById("list1").className = "left clearfix comment1";
+							document.getElementById("list2").className = "left clearfix comment1";
+							document.getElementById("list3").className = "left clearfix comment1";
+							document.getElementById("list4").className = "left clearfix comment1";
 							
-							
-							verstanden_button = document.getElementById("v1");
-							nichtverstanden_button = document.getElementById("v2");
-							if(one_verstanden == 2)
-								verstanden_button.checked = true;
-							else if(one_verstanden == 1)
-								nichtverstanden_button.checked = true;
-							else{
-								verstanden_button.checked = false;
-								nichtverstanden_button.checked = false;
-							}
-							
-							if((one_comment === 'undefined' || one_comment === null) && one_count > 30){
-								document.getElementById("kommentar").value = '';
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							else if(one_count<=30){
-								document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
-								document.getElementById("kommentar").disabled = true;
-								document.getElementById("sendButton").disabled = true;
-							}
-							else{
-								document.getElementById("kommentar").value = one_comment;
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							switch(one_stars){
-								case 1:
-									radio_button = document.getElementById("star1");
-									radio_button.checked = true;
-									break;
-								case 2:
-									radio_button = document.getElementById("star2");
-									radio_button.checked = true;
-									break;
-								case 3:
-									radio_button = document.getElementById("star3");
-									radio_button.checked = true;
-									break;
-								case 4:
-									radio_button = document.getElementById("star4");
-									radio_button.checked = true;
-									break;
-								case 5:
-									radio_button = document.getElementById("star5");
-									radio_button.checked = true;
-									break;
-								default:
-									radio_button = document.getElementById("star5");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star4");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star3");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star2");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star1");
-									radio_button.checked = false;
-									break;
-							}
+							// Load the Visualization API and the piechart package.
+							  google.load('visualization', '1.0', {'packages':['corechart']});
+						
+							  // Set a callback to run when the Google Visualization API is loaded.
+							  google.setOnLoadCallback(drawChart);
+						
+							  // Callback that creates and populates a data table,
+							  // instantiates the pie chart, passes in the data and
+							  // draws it.
+							  function drawChart1() {
+						
+								// Create the data table.
+								var data = new google.visualization.DataTable();
+								data.addColumn('string', 'Topping');
+								data.addColumn('number', 'Anzahl der Bewertungen');
+								data.addColumn({type:'string', role:'style'});
+								data.addRows([
+								  ['1 Stern', 37, 'color: #F44336'],
+								  ['2 Sterne', 23, 'color: #F44336'],
+								  ['3 Sterne', 55, 'color: #F44336'],
+								  ['4 Sterne', 76, 'color: #F44336'],
+								  ['5 Sterne', 62, 'color: #F44336']
+								]);
+						
+								// Set chart options
+								//var options = {'title':'Bewertung der Studenten'};
+								var options = {
+									title: 'Bewertung der Studenten',
+									animation:{
+										duration: 1500,
+										startup: true,
+										easing: 'out',
+									  },
+									legend:{
+										position: 'none',
+									},
+								};
+						
+								// Instantiate and draw our chart, passing in some options.
+								var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+								chart.draw(data, options);
+							  }
+							  drawChart1();
+						
+							  window.onresize = function(event) {
+						
+							  };
+							document.getElementById("gesamtzahl").innerHTML="Gesamtanzahl: 253 Bewertungen";  
 							break;
 						 case 2:
-						 	//Last agenda
-							var comment = document.getElementById("kommentar").value;
-							if((!comment == "") && !document.getElementById("kommentar").disabled){
-								switch(agenda){
-									case 1:
-										one_comment = comment;
-										break;
-									case 2:
-										two_comment = comment;
-										break;
-									case 3:
-										three_comment = comment;
-										break;
-								}
-							}
 						 	agenda = 2;
-							document.getElementById("bewertung_header").innerHTML="Bewertung: Weiterführung";
+							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Weiterführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
 							document.getElementById("bewertung_container").className = "bewertungcontainer2 panel panel-yellow";
+							document.getElementById("list1").className = "left clearfix comment2";
+							document.getElementById("list2").className = "left clearfix comment2";
+							document.getElementById("list3").className = "left clearfix comment2";
+							document.getElementById("list4").className = "left clearfix comment2";
 							
-							verstanden_button = document.getElementById("v1");
-							nichtverstanden_button = document.getElementById("v2");
-							if(two_verstanden == 2)
-								verstanden_button.checked = true;
-							else if(two_verstanden == 1)
-								nichtverstanden_button.checked = true;
-							else{
-								verstanden_button.checked = false;
-								nichtverstanden_button.checked = false;
-							}
+							// Load the Visualization API and the piechart package.
+							  google.load('visualization', '1.0', {'packages':['corechart']});
+						
+							  // Set a callback to run when the Google Visualization API is loaded.
+							  google.setOnLoadCallback(drawChart);
+						
+							  // Callback that creates and populates a data table,
+							  // instantiates the pie chart, passes in the data and
+							  // draws it.
+							  function drawChart2() {
+						
+								// Create the data table.
+								var data = new google.visualization.DataTable();
+								data.addColumn('string', 'Topping');
+								data.addColumn('number', 'Anzahl der Bewertungen');
+								data.addColumn({type:'string', role:'style'});
+								data.addRows([
+								  ['1 Stern', 10, 'color: #673AB7'],
+								  ['2 Sterne', 17, 'color: #673AB7'],
+								  ['3 Sterne', 88, 'color: #673AB7'],
+								  ['4 Sterne', 34, 'color: #673AB7'],
+								  ['5 Sterne', 49, 'color: #673AB7']
+								]);
+						
+								// Set chart options
+								//var options = {'title':'Bewertung der Studenten'};
+								var options = {
+									title: 'Bewertung der Studenten',
+									animation:{
+										duration: 1500,
+										startup: true,
+										easing: 'out',
+									  },
+									legend:{
+										position: 'none',
+									},
+								};
+						
+								// Instantiate and draw our chart, passing in some options.
+								var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+								chart.draw(data, options);
+							  }
 							
-							if((two_comment === 'undefined' || two_comment === null) && two_count > 30){
-								document.getElementById("kommentar").value = '';
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							else if(two_count<=30){
-								document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
-								document.getElementById("kommentar").disabled = true;
-								document.getElementById("sendButton").disabled = true;
-							}
-							else{
-								document.getElementById("kommentar").value = two_comment;
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							
-							switch(two_stars){
-								case 1:
-									radio_button = document.getElementById("star1");
-									radio_button.checked = true;
-									break;
-								case 2:
-									radio_button = document.getElementById("star2");
-									radio_button.checked = true;
-									break;
-								case 3:
-									radio_button = document.getElementById("star3");
-									radio_button.checked = true;
-									break;
-								case 4:
-									radio_button = document.getElementById("star4");
-									radio_button.checked = true;
-									break;
-								case 5:
-									radio_button = document.getElementById("star5");
-									radio_button.checked = true;
-									break;
-								default:
-									radio_button = document.getElementById("star5");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star4");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star3");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star2");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star1");
-									radio_button.checked = false;
-									break;
-							}
+							  drawChart2();
+							  window.onresize = function(event) {
+						
+							  };
+							document.getElementById("gesamtzahl").innerHTML="Gesamtanzahl: 198 Bewertungen";
 							break;
 						 case 3:
-						 	//Last agenda
-							var comment = document.getElementById("kommentar").value;
-							if((!comment == "") && !document.getElementById("kommentar").disabled){
-								switch(agenda){
-									case 1:
-										one_comment = comment;
-										break;
-									case 2:
-										two_comment = comment;
-										break;
-									case 3:
-										three_comment = comment;
-										break;
-								}
-							}
 						 	agenda = 3;
-							document.getElementById("bewertung_header").innerHTML="Bewertung: Analyse";
+							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Analyse";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
 							document.getElementById("bewertung_container").className = "bewertungcontainer3 panel panel-yellow";
+							document.getElementById("list1").className = "left clearfix comment3";
+							document.getElementById("list2").className = "left clearfix comment3";
+							document.getElementById("list3").className = "left clearfix comment3";
+							document.getElementById("list4").className = "left clearfix comment3";
 							
-							verstanden_button = document.getElementById("v1");
-							nichtverstanden_button = document.getElementById("v2");
-							if(three_verstanden == 2)
-								verstanden_button.checked = true;
-							else if(three_verstanden == 1)
-								nichtverstanden_button.checked = true;
-							else{
-								verstanden_button.checked = false;
-								nichtverstanden_button.checked = false;
-							}
+							// Load the Visualization API and the piechart package.
+							  google.load('visualization', '1.0', {'packages':['corechart']});
+						
+							  // Set a callback to run when the Google Visualization API is loaded.
+							  google.setOnLoadCallback(drawChart);
+						
+							  // Callback that creates and populates a data table,
+							  // instantiates the pie chart, passes in the data and
+							  // draws it.
+							  function drawChart3() {
+						
+								// Create the data table.
+								var data = new google.visualization.DataTable();
+								data.addColumn('string', 'Topping');
+								data.addColumn('number', 'Anzahl der Bewertungen');
+								data.addColumn({type:'string', role:'style'});
+								data.addRows([
+								  ['1 Stern', 45, 'color: #2196F3'],
+								  ['2 Sterne', 49, 'color: #2196F3'],
+								  ['3 Sterne', 55, 'color: #2196F3'],
+								  ['4 Sterne', 43, 'color: #2196F3'],
+								  ['5 Sterne', 13, 'color: #2196F3']
+								]);
+						
+								// Set chart options
+								//var options = {'title':'Bewertung der Studenten'};
+								var options = {
+									title: 'Bewertung der Studenten',
+									animation:{
+										duration: 1500,
+										startup: true,
+										easing: 'out',
+									  },
+									legend:{
+										position: 'none',
+									},
+								};
+						
+								// Instantiate and draw our chart, passing in some options.
+								var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+								chart.draw(data, options);
+							  }
 							
-							if((three_comment === 'undefined' || three_comment === null) && three_count > 30){
-								document.getElementById("kommentar").value = '';
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							else if(three_count<=30){
-								document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
-								document.getElementById("kommentar").disabled = true;
-								document.getElementById("sendButton").disabled = true;
-							}
-							else{
-								document.getElementById("kommentar").value = three_comment;
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							switch(three_stars){
-								case 1:
-									radio_button = document.getElementById("star1");
-									radio_button.checked = true;
-									break;
-								case 2:
-									radio_button = document.getElementById("star2");
-									radio_button.checked = true;
-									break;
-								case 3:
-									radio_button = document.getElementById("star3");
-									radio_button.checked = true;
-									break;
-								case 4:
-									radio_button = document.getElementById("star4");
-									radio_button.checked = true;
-									break;
-								case 5:
-									radio_button = document.getElementById("star5");
-									radio_button.checked = true;
-									break;
-								default:
-									radio_button = document.getElementById("star5");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star4");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star3");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star2");
-									radio_button.checked = false;
-									radio_button = document.getElementById("star1");
-									radio_button.checked = false;
-									break;
-							}
+							  drawChart3();
+							  window.onresize = function(event) {
+						
+							  };
+							document.getElementById("gesamtzahl").innerHTML="Gesamtanzahl: 205 Bewertungen";
+							
 							break;
 						 case 4:
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Fazit";
@@ -655,90 +693,6 @@
 						 }
 						 
 						 }
-						 
-					   function sendComment(){
-						   var comment = document.getElementById("kommentar").value;
-						   if(!comment == ""){
-							   switch(agenda){
-								case 1:
-									one_count = 30;
-									one_Counter = setInterval(oneCounter, 1000);
-									document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
-									document.getElementById("kommentar").disabled = true;
-									document.getElementById("sendButton").disabled = true;
-									one_comment = null;
-									break;
-								case 2:
-									two_count = 30;
-									two_Counter = setInterval(twoCounter, 1000);
-									document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
-									document.getElementById("kommentar").disabled = true;
-									document.getElementById("sendButton").disabled = true;
-									two_comment = null;
-									break;
-								case 3:
-									three_count = 30;
-									three_Counter = setInterval(threeCounter, 1000);
-									document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
-									document.getElementById("kommentar").disabled = true;
-									document.getElementById("sendButton").disabled = true;
-									three_comment = null;
-									break;
-								default:
-									break;   
-							   }
-						   }
-						}
-					
-					function oneCounter(){
-						one_count = one_count - 1;
-						if(one_count <= 0){
-							clearInterval(one_Counter);
-							one_count = 40;
-							if(agenda == 1){
-								document.getElementById("kommentar").value = '';
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							return;	
-						}
-						if(agenda == 1)
-							document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
-					}
-					
-					function twoCounter(){
-						two_count = two_count - 1;
-						if(two_count <= 0){
-							clearInterval(two_Counter);
-							two_count = 40;
-							if(agenda == 2){
-								document.getElementById("kommentar").value = '';
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							return;	
-						}
-						if(agenda == 2)
-							document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
-					}
-					
-					function threeCounter(){
-						three_count = three_count - 1;
-						if(three_count <= 0){
-							clearInterval(three_Counter);
-							three_count = 40;
-							if(agenda == 3){
-								document.getElementById("kommentar").value = '';
-								document.getElementById("kommentar").disabled = false;
-								document.getElementById("sendButton").disabled = false;
-							}
-							return;	
-						}
-						if(agenda == 3)
-							document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
-					}
-					
-					
 					
 					DropzoneStudent.options.stmyDropzone = {
 					init: function() {
@@ -771,10 +725,11 @@
                                     <div class="panel-heading">
                                         Agenda
                                     </div>
-                                    <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
+                                    <div class="panel-body" style="margin-bottom: -1 em; margin-top: -1 em">
 
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">
-                                      <span style="display: table-cell; vertical-align: middle;">1. Einführung
+                                      <button type="button" style="text-align:left; width: 100%" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">
+                                      <span style="text-align:left;">1. Einführung</span>
+                                      <span style="text-align:right;">
                                       	<fieldset class="ratingDoz">
                                             <input type="radio" id="ag5" name="ratingDoz" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
                                             <input type="radio" id="ag4" name="ratingDoz" value="4" checked="true" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
@@ -785,9 +740,31 @@
                                         </span>
                                       </button>
                                       <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">2. Weiterführung</button>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">
+                                      <span style="text-align:left;">2. Weiterführung</span>
+                                      <span style="text-align:right;">
+                                      	<fieldset class="ratingDoz">
+                                            <input type="radio" id="ag5" name="ratingDoz2" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz2" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz2" value="3" checked="true" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz2" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz2" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+										</fieldset>
+                                        </span>
+                                      </button>
                                       <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >3. Analyse</button>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >
+                                      <span style="text-align:left;">3. Analyse</span>
+                                      <span style="text-align:right;">
+                                      	<fieldset class="ratingDoz">
+                                            <input type="radio" id="ag5" name="ratingDoz3" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz3" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz3" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz3" value="2" checked="true" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz3" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+										</fieldset>
+                                        </span>
+                                      </button>
                                       <br><br>
                                       <button type="button" style="width: 100% ; text-align: left" class="btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled">4. Fazit</button>
 
