@@ -175,7 +175,7 @@
 
 .dropzoneStud {
   min-height: 150px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  
   background: white;
   padding: 10px 10px	; }
   .dropzoneStud.dz-clickable {

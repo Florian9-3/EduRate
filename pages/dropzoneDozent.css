@@ -175,7 +175,6 @@
 
 .dropzoneDoz {
   min-height: 150px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
   background: white;
   padding: 10px 10px	; }
   .dropzoneDoz.dz-clickable {
@@ -327,7 +326,7 @@
       z-index: 1000;
       pointer-events: none;
       position: absolute;
-      height: 16px;
+      height: 0px;
       left: 50%;
       top: 50%;
       margin-top: -8px;

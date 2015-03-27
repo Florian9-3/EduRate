@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Student Dashboard</title>
+    <title>Studenten Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -55,215 +55,19 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="student_dashboard.php">Willkommen Phillip</a>
+                <a class="navbar-brand" href="student_dashboard.php">Willkommen Henny</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-tasks -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profil</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Einstellungen</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -281,9 +85,18 @@
 
         <div id="page-wrapper">
             
-			<div class="row">
-                <div class="col-lg-12">
+			<div class="row" style="margin-bottom:2em; padding-top:1em; margin-left:2%">
+                <div class="col-lg-3">
                     <h4 class="page-wrapper">Aktuelle Vorlesung: Datenbanktechnik</h1>
+                </div>
+                 <div class="col-lg-3">
+                    <h4 class="page-wrapper">Dozent: Prof. Dr. Reorg Gichter</h1>
+                </div>
+                 <div class="col-lg-3">
+                    <h4 class="page-wrapper">Raum: B354</h1>
+                </div>
+                 <div class="col-lg-3">
+                    <h4 class="page-wrapper">Zeitraum: 9.00 Uhr - 12.15 Uhr</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -440,7 +253,7 @@
 								document.getElementById("sendButton").disabled = false;
 							}
 							else if(one_count<=30){
-								document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
+								document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+one_count+")";
 								document.getElementById("kommentar").disabled = true;
 								document.getElementById("sendButton").disabled = true;
 							}
@@ -522,7 +335,7 @@
 								document.getElementById("sendButton").disabled = false;
 							}
 							else if(two_count<=30){
-								document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
+								document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+two_count+")";
 								document.getElementById("kommentar").disabled = true;
 								document.getElementById("sendButton").disabled = true;
 							}
@@ -605,7 +418,7 @@
 								document.getElementById("sendButton").disabled = false;
 							}
 							else if(three_count<=30){
-								document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
+								document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+three_count+")";
 								document.getElementById("kommentar").disabled = true;
 								document.getElementById("sendButton").disabled = true;
 							}
@@ -663,7 +476,7 @@
 								case 1:
 									one_count = 30;
 									one_Counter = setInterval(oneCounter, 1000);
-									document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
+									document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+one_count+")";
 									document.getElementById("kommentar").disabled = true;
 									document.getElementById("sendButton").disabled = true;
 									one_comment = null;
@@ -671,7 +484,7 @@
 								case 2:
 									two_count = 30;
 									two_Counter = setInterval(twoCounter, 1000);
-									document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
+									document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+two_count+")";
 									document.getElementById("kommentar").disabled = true;
 									document.getElementById("sendButton").disabled = true;
 									two_comment = null;
@@ -679,7 +492,7 @@
 								case 3:
 									three_count = 30;
 									three_Counter = setInterval(threeCounter, 1000);
-									document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
+									document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+three_count+")";
 									document.getElementById("kommentar").disabled = true;
 									document.getElementById("sendButton").disabled = true;
 									three_comment = null;
@@ -703,7 +516,7 @@
 							return;	
 						}
 						if(agenda == 1)
-							document.getElementById("kommentar").value = "Bitte warten ("+one_count+")";
+							document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+one_count+")";
 					}
 					
 					function twoCounter(){
@@ -719,7 +532,7 @@
 							return;	
 						}
 						if(agenda == 2)
-							document.getElementById("kommentar").value = "Bitte warten ("+two_count+")";
+							document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+two_count+")";
 					}
 					
 					function threeCounter(){
@@ -735,7 +548,7 @@
 							return;	
 						}
 						if(agenda == 3)
-							document.getElementById("kommentar").value = "Bitte warten ("+three_count+")";
+							document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+three_count+")";
 					}
 					
 					
@@ -798,13 +611,14 @@
                             Vorlesungsinhalte
                         </div>
                         <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
-							<div style="height: 200px; width: 100%; border: 2px dashed #0087F7; border-radius: 5px; background-color: white;>
-								<form style="height: 100%; width: 100px" action="upload.php" class="dropzoneStud" id="stmy-Dropzone"></form>
-                                <div class="folder_empty" id="noFiles" >
-                           	    	<img src="res/empty_folder.png" width="15%" height="15%" alt="" style="display:block; margin-left:auto; margin-right:auto;"/>
+							<div style="height: 200px; width: 100%; border: 2px dashed #0087F7; border-radius: 5px; background-color: white;">
+								<form style="height: 100%; width: 100%" action="upload.php" class="dropzoneStud" id="stmy-Dropzone">
+                                <span class="folder_empty" id="noFiles" >
+                           	    	<img src="res/empty_folder.png"  height="70%" alt="" style="display:block; margin-left:auto; margin-right:auto; width:auto;"/>
                                  	<div style="text-align:center">Dieser Ordner ist leer <br> (Dateien werden vom Dozenten bereitgestellt) 
                                  	</div>
-                                 </div>
+                                 </span>
+                                 </form>
 						  </div>
                         </div>
 
@@ -1132,7 +946,13 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+    
+    <footer style="display:block; text-align:center">
+    	&copy; 2015 by EduRate
+    </footer>
 
 </body>
+
+
 
 </html>

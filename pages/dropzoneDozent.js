@@ -121,7 +121,7 @@
       uploadMultiple: false,
       maxFilesize: 256,
       paramName: "file",
-      createImageThumbnails: true,
+      createImageThumbnails: false,
       maxThumbnailFilesize: 10,
       thumbnailWidth: 120,
       thumbnailHeight: 120,
@@ -138,7 +138,7 @@
       addRemoveLinks: true,
       previewsContainer: null,
       capture: null,
-      dictDefaultMessage: "Dateien in dieses Feld ziehen und hochladen",
+      dictDefaultMessage: "",
       dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
       dictFallbackText: "Please use the fallback form below to upload your files like in the olden days.",
       dictFileTooBig: "File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.",
@@ -247,6 +247,7 @@
         var node, removeFileEvent, removeLink, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2, _results;
         if (this.element === this.previewsContainer) {
           this.element.classList.add("dz-started");
+		  document.getElementById("noFiles").style.display = 'none';
         }
         if (this.previewsContainer) {
           file.previewElement = DropzoneDozent.createElement(this.options.previewTemplate.trim());
@@ -263,7 +264,7 @@
             node.innerHTML = this.filesize(file.size);
           }
           if (this.options.addRemoveLinks) {
-            file._removeLink = DropzoneDozent.createElement("<a class=\"dz-remove\" href=\"javascript:undefined;\" data-dz-remove>" + this.options.dictRemoveFile + "</a>");
+            file._removeLink = DropzoneDozent.createElement("<a class=\"dz-remove\" href=\"javascript:deleteFile(;\" data-dz-remove>" + this.options.dictRemoveFile + "</a>");
             file.previewElement.appendChild(file._removeLink);
           }
           removeFileEvent = (function(_this) {
@@ -295,6 +296,20 @@
         }
       },
       removedfile: function(file) {
+		  var name = file.name;        
+			$.ajax({
+				type: 'GET',
+				url: 'delete.php',
+				data: {
+					id: name
+				},
+				success: function(data) {
+					if(data == 1)
+						document.getElementById("noFiles").style.display = 'inline';
+				},
+				//data: "id="+name,
+				dataType: 'html'
+			});
         var _ref;
         if (file.previewElement) {
           if ((_ref = file.previewElement) != null) {
@@ -349,6 +364,7 @@
       uploadprogress: function(file, progress, bytesSent) {
         var node, _i, _len, _ref, _results;
         if (file.previewElement) {
+			/*
           _ref = file.previewElement.querySelectorAll("[data-dz-uploadprogress]");
           _results = [];
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -360,6 +376,7 @@
             }
           }
           return _results;
+		  */
         }
       },
       totaluploadprogress: noop,
@@ -527,7 +544,7 @@
         this.element.setAttribute("enctype", "multipart/form-data");
       }
       if (this.element.classList.contains("dropzoneDoz") && !this.element.querySelector(".dz-message")) {
-        this.element.appendChild(DropzoneDozent.createElement("<div class=\"dz-default dz-message\"><span>" + this.options.dictDefaultMessage + "</span></div>"));
+        //this.element.appendChild(DropzoneDozent.createElement("<div class=\"dz-default dz-message\"><span>" + this.options.dictDefaultMessage + "</span></div>"));
       }
       if (this.clickableElements.length) {
         setupHiddenFileInput = (function(_this) {
