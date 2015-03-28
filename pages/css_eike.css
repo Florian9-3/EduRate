@@ -73,21 +73,10 @@
   font-weight: bold;
 }
 
-.hintergrundfarbeFragenOne{
-	background-color: #eac573 !important;
+.quOverflow{
+	overflow:hidden;
 }
 
-.hintergrundfarbeFragenTwo{
-	background-color: #ca9e47 !important;
-}
-
-.hintergrundfarbeFragenThree{
-	background-color: #7d4921 !important;
-}
-
-.hintergrundfarbeFragenFour{
-	background-color: #d04b43 !important;
-}
 
 /* kürzt angeblich Te... */
 .ellipsis {

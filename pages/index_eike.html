@@ -31,6 +31,9 @@
 	
 	<!-- CSS Eike -->
 	<link href="css_eike.css" rel="stylesheet" type="text/css">
+	
+	<!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -127,11 +130,32 @@
                     <!-- /.dropdown-messages -->
                 </li>
             </ul>
-				
-				
-				
-				<!-- ************************************************Filterfunktion Ende*************************************************************************** -->
-                        </div>
+		</div>
+<!-- ************************************************Filterfunktion Ende*************************************************************************** -->
+
+						<!-- Frage stellen -->
+					<div class="panel panel-default"style="margin: 20px 30px 30px 30px">
+						
+						<dt style="margin-bot:5px">Ordne deine Frage einem Themengebiet zu:</dt>
+						<select class="form-control" id="selected">
+									<option class="agenda1" value="agenda1">1. Einführung</option>
+									<option class="agenda2" value="agenda2">2. Weiterführung</option>
+									<option class="agenda3" value="agenda3">3. Analyse</option>
+									<option class="agenda4" value="agenda4">4. Fazit</option>
+						</select>
+						
+						<div class=" input-group" style="margin-top: 15px">
+								<input type="text" class="form-control agenda1" id="quNew" placeholder="Stelle eine Frage">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-question"></i>
+									</button>
+								</span>
+						</div>
+
+						
+						
+
+					</div>
 
                         <div class="panel-body">
                             <div class="col-lg-12">
@@ -139,28 +163,18 @@
 							<!-- Panel Groups-->		
 		
 										<!-- *******************************************Panel Group 1 *****************************************************-->
-										<div class="panel-group " id="accordion1">
+										<div class="panel-group " id="agenda1">
 											
 											<!-- Frage 1.1 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenOne" style="overflow:hidden"> <!-- hintergrundfarbeFragenOne" --> 
-													<!-- <div class="panel-title ellipsis fragePositionierung">
-													
-														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
-													</div> -->
-													
-													<!-- Status Two-->
-													<!-- <div class="checkerBoxer beantwortetButtonPositionierung">
-														<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="check" />
-														<label class="haken" for="statusZwei"></label>
-													</div> -->
+											<div class="panel panel-default" id="qu1">
+												<div class="panel-heading quOverflow agenda1">
 
-													<div class="panel-title ellipsis fragePositionierung">
-														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas??</a>
+													<div class="panel-title ellipsis fragePositionierung ">
+														<a data-toggle="collapse" data-parent="#agenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas??</a>
 													</div>
 
 													<div class="checkerBoxer beantwortetButtonPositionierung">
-														<input type="checkbox" onclick="return false" value="None" id="statusEins" name="check" />
+														<input type="checkbox" onclick="return false" value="None" id="statusEins" name="checkerBoxer" />
 														<label class="haken" for="statusEins"></label>
 													</div>
 
@@ -172,49 +186,23 @@
 															<p class="frageDatum">11. März 2015 um 11:20</p>
 															<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
 														</div>
-														<textarea id="antwortEins" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-													    </textarea>
-														
-														<script type="text/javascript">
-														<!-- Textarea auslesen und Status setzen -->									
-														
-														function leseTextarea(){
-															var antwort = document.getElementById("antwortEins").value;
-															
-															if(antwort == ""){
-																document.getElementById("statusEins").checked = false;
-															}
-															else{
-																document.getElementById("statusEins").checked = true;
-															}
-														}
-														</script>
-														
+														<textarea id="antwortEins" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+													    </textarea>														
 													</div>
 												</div>
 											</div>
 											
 											
 											<!-- Frage 1.2 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenOne" style="overflow:hidden"> <!-- hintergrundfarbeFragenOne" --> 
-													<!-- <div class="panel-title ellipsis fragePositionierung">
-													
-														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
-													</div> -->
-													
-													<!-- Status Two-->
-													<!-- <div class="checkerBoxer beantwortetButtonPositionierung">
-														<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="check" />
-														<label class="haken" for="statusZwei"></label>
-													</div> -->
+											<div class="panel panel-default" id="qu2">
+												<div class="panel-heading quOverflow agenda1"> 
 
 													<div class="panel-title ellipsis fragePositionierung">
-														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
+														<a data-toggle="collapse" data-parent="#agenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
 													</div>
 
 													<div class="checkerBoxer beantwortetButtonPositionierung">
-														<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="check" />
+														<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="checkerBoxer" />
 														<label class="haken" for="statusZwei"></label>
 													</div>
 
@@ -226,28 +214,7 @@
 															<p class="frageDatum">11. März 2015 um 11:20</p>
 															<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 														</div>
-														<textarea id="antwortZwei" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." readonly></textarea>
-														
-														<script type="text/javascript">
-														<!-- Textarea auslesen und Status setzen -->
-														window.onload = start;
-														
-														function start(){
-															leseTextarea();
-															<!-- leseTextarea1(); -->
-														}
-														
-														function leseTextarea(){
-															var antwort = document.getElementById("antwortZwei").value;
-															
-															if(antwort == ""){
-																document.getElementById("statusZwei").checked = false;
-															}
-															else{
-																document.getElementById("statusZwei").checked = true;
-															}
-														}
-														</script>
+														<textarea id="antwortZwei" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
 														
 													</div>
 												</div>
@@ -257,102 +224,274 @@
 
 									
 										<!-- *********************************************Panel Group 2 *********************************************************-->									
-										<div class="panel-group" id="accordion2">
+										<div class="panel-group " id="agenda2">
 											
 											<!-- Frage 2.1 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenTwo">
+											<div class="panel panel-default" id="qu3">
+												<div class="panel-heading quOverflow agenda2">
+
 													<div class="panel-title ellipsis fragePositionierung">
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
-														<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" >Frage: Weiterführung sinnvoll?</a>
+														<a data-toggle="collapse" data-parent="#agenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" >Frage 3??</a>
 													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="squaredCheckbox beantwortetButtonPositionierung">
-														<input type="checkbox" value="None" id="squaredThree" name="check" />
-														<label for="squaredThree"></label>
+
+													<div class="checkerBoxer beantwortetButtonPositionierung">
+														<input type="checkbox" onclick="return false" value="None" id="status3" name="checkerBoxer" />
+														<label class="haken" for="status3"></label>
 													</div>
-													
-													<!-- Beantwortet Label -->
-													<div class="panel-title beantwortetLabelPositionierung">
-															Beantwortet
-													</div>
-													
+
 													
 												</div>
-												<div id="collapseThree" class="panel-collapse collapse">
+												<div id="collapse3" class="panel-collapse collapse">
 													<div class="panel-body">
 														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 12:20</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Weiterführung sinnvoll? </p>
+															<p class="frageDatum">11. März 2015 um 11:20</p>
+															<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
 														</div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+														<textarea id="antwort3" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+													    </textarea>														
 													</div>
 												</div>
 											</div>
-											
 											
 											
 											<!-- Frage 2.2 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenTwo">
+											<div class="panel panel-default" id="qu4">
+												<div class="panel-heading quOverflow agenda2"> 
+
 													<div class="panel-title ellipsis fragePositionierung">
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
-														<a data-toggle="collapse" data-parent="#accordion2" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" >Frage: Weiterführung sinnvoll?</a>
+														<a data-toggle="collapse" data-parent="#agenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" >Frage: Weiterführung sinnvoll?</a>
 													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="squaredCheckbox beantwortetButtonPositionierung">
-														<input type="checkbox" value="None" id="squaredFour" name="check" />
-														<label for="squaredFour"></label>
+
+													<div class="checkerBoxer beantwortetButtonPositionierung">
+														<input type="checkbox" onclick="return false" value="None" id="status4" name="checkerBoxer" />
+														<label class="haken" for="status4"></label>
 													</div>
-													
-													<!-- Beantwortet Label -->
-													<div class="panel-title beantwortetLabelPositionierung">
-															Beantwortet
-													</div>
-													
+
 													
 												</div>
-												<div id="collapseFour" class="panel-collapse collapse">
+												<div id="collapse4" class="panel-collapse collapse">
 													<div class="panel-body">
 														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">12. März 2015 um 11:20</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Weiterführung sinnvoll? </p>
+															<p class="frageDatum">11. März 2015 um 11:20</p>
+															<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 														</div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+														<textarea id="antwort4" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
+														
 													</div>
 												</div>
 											</div>
-											
 											
 										</div>							
 								
 								
-								
-							
-								
-									</div>
-							
-						</div>
-							
 
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
 					</div>
                 </div>
                 <!-- /.col-lg-4 -->
+				
+	
+				
+				<script type="text/javascript">
+					<!-- Textarea auslesen und Status setzen -->
+					
+					window.onload = start;
+					
+					function start(){
+						setzeBeantwortetStatus();
+					}
+					
+					
+					<!-- Beantwortet Status setzen  -->
+					function setzeBeantwortetStatus(){
+						var listeTextarea = document.getElementsByName("texterArea");
+						var listeCheckbox = document.getElementsByName("checkerBoxer");
+						var anzahlLT = listeTextarea.length;
+						var antwort;
+						
+						for(var i = 0; i < anzahlLT; i++ ){
+						
+							antwort = listeTextarea[i].value
+							
+							if(antwort == ""){
+								listeCheckbox[i].checked = false;
+							}
+							else{
+								listeCheckbox[i].checked = true;
+							}
+						
+						}
+						
+						
+					}
+
+									
+				</script>
                
 				
+				<script>
+				
+				
+				   $(function() {
+						
+						<!-- Verändere Hintergrund von Fragestellen Feld -->
+						var idOld = "agenda1";
+						
+							$("#selected").on("change", function(){					
+								var selected = document.getElementById("selected");
+								var id = selected.options[selected.selectedIndex].value;
+								$("#quNew").removeClass(idOld);
+								$("#quNew").addClass(id);
+								idOld = id;
+							});
+						
+						<!-- Frage hinzufügen -->
+						var x = 9;
+						
+							$("#btnAddQuestion").on("click", function() {
+							
+								<!-- $("#accordion1").append("<div>hallo</div>") -->
+								
+								div1 = document.createElement('div');
+								div21 = document.createElement('div');
+								div22 = document.createElement('div');
+								div31 = document.createElement('div');
+								div32 = document.createElement('div');
+								div33 = document.createElement('div');
+								div4 = document.createElement('div');
+								p1 = document.createElement('p');
+								p2 = document.createElement('p');
+								
+								<!-- Dynamische Zuordnung herstellen -->
+								var selected = document.getElementById("selected");
+								var id = selected.options[selected.selectedIndex].value;
+								var hid = '#' + id;	
+								alert(hid);
+								
+								<!-- Variable zur dynamischen Erstellung von IDs -->
+								
+								$(div1).addClass("panel panel-default")
+									.appendTo($(hid));	
+								var quX = 'qu' + x;
+								var hquX = '#qu' + x;
+								$(div1).attr( 'id', quX);
+								
+								
+									$(div21).addClass("panel-heading quOverflow").addClass(id)
+										.appendTo($(hquX));	
+									var div21X = 'div21' + x;
+									var hdiv21X = '#div21' + x;
+									$(div21).attr( 'id', div21X);					
+										
+										$(div31).addClass("panel-title ellipsis fragePositionierung")
+											.appendTo($(hdiv21X));
+										var div31X = 'div31' + x;
+										var hdiv31X = '#div31' + x;
+										$(div31).attr( 'id', div31X);
+											
+										<!-- Frage -->
+										var quNew = document.getElementById("quNew").value;
+																			
+										var collapseX = 'collapse' + x;
+										var hcollapseX = '#collapse' + x;
+										
+											$("<a/>", {
+												text: quNew,
+												href: hcollapseX,
+												"data-toggle":"collapse",
+												"data-parent":id,
+												"aria-expanded":"false",
+												"aria-controls":collapseX,
+											}).appendTo($(hdiv31X));
+										
+									<!-- Status -->
+										$(div32).addClass("checkerBoxer beantwortetButtonPositionierung")
+											.appendTo($(hdiv21X));
+										var div32X = 'div32' + x;
+										var hdiv32X = '#div32' + x;
+										$(div32).attr( 'id', div32X);
+												
+											$('<input />', { 
+												type: 'checkbox', 
+												onclick:'return false', 
+												value: 'none', 
+												'id': 'statusX', 
+												'name': 'checkerBoxer'}).appendTo($(hdiv32X));
+											
+											$('<label />', { 
+												'for': 'statusX', 
+												class:'haken'  }).appendTo($(hdiv32X));
+											
+								<!-- Ausfahrender Body -->
+									$(div22).addClass("panel-collapse collapse")
+										.appendTo($(hquX));	
+									$(div22).attr( 'id', collapseX);
+										
+										$(div33).addClass("panel-body")
+											.appendTo($(hcollapseX));	
+										var div33X = 'div33' + x;
+										var hdiv33X = '#div33' + x;
+										$(div33).attr( 'id', div33X);
+										
+											$(div4).appendTo($(hdiv33X));	
+											var div4X = 'div4' + x;
+											var hdiv4X = '#div4' + x;
+											$(div4).attr( 'id', div4X);
+											
+											<!-- Datum der Frage -->
+											var currentdate = new Date(); 
+											
+											var minutes = currentdate.getMinutes();
+											if(minutes < 10){
+												minutes = '0' + minutes;
+											}
+											
+											var hours = currentdate.getHours();
+											if(hours < 10){
+												hours = '0' + hours;
+											}
+											
+											var datetime = currentdate.getDate() + "/"
+															+ (currentdate.getMonth()+1)  + "/" 
+															+ currentdate.getFullYear() + " um "  
+															+ hours + ":"  
+															+ minutes;
+											
+												$(p1).addClass("frageDatum")
+													.html(datetime)
+													.appendTo($(hdiv4X));	
+												var p1X = 'p1' + x;
+												var hp1X = '#p1' + x;
+												$(p1).attr( 'id', p1X);
+												
+											<!-- Frage Vollständig -->
+												$(p2).addClass("frageVollständig")
+													.html(quNew)
+													.appendTo($(hdiv4X));	
+												var p2X = 'p2' + x;
+												var hp2X = '#p2' + x;
+												$(p2).attr( 'id', p2X);
+												
+										<!-- Antwortfeld -->
+											$('<textarea />', { 
+												'id': 'antwortX',
+												'cols': '50',
+												'rows': '4',
+												'placeholder': 'Es wurde noch keine Antwort gegeben...',
+												'readonly':'readonly',
+												'name': 'texterArea'}).appendTo($(hdiv33X));
+										
+							<!-- BeantwortetStatus setzen -->
+								setzeBeantwortetStatus();
+								
+							<!-- Erhöhe x um 1, damit die nächste Frage erneute dynamisch erzeugt werden kann  -->
+								x = x +1;
+							});
+						
+					});
+						
+				</script>		
+				
+					
 <!----------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------- Fragenbox ENDE ---------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------->
@@ -365,8 +504,7 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
