@@ -722,8 +722,8 @@
 							
 					<!-- Panel Groups-->		
 
-								<!-- *******************************************Panel Group 1 *****************************************************-->
-								<div class="panel-group " id="agenda1">
+						<!-- *******************************************Panel Group 1 *****************************************************-->
+						<div class="panel-group " id="agenda1">
 									
 									<!-- Frage 1.1 -->
 									<div class="panel panel-default" id="qu1">
@@ -734,8 +734,7 @@
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
-												<input type="checkbox" onclick="return false" value="None" id="statusEins" name="checkerBoxer" />
-												<label class="haken" for="statusEins"></label>
+												<label class="haken" name="labeler"></label>
 											</div>
 
 											
@@ -762,8 +761,7 @@
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
-												<input type="checkbox" onclick="return false" value="None" id="statusZwei" name="checkerBoxer" />
-												<label class="haken" for="statusZwei"></label>
+												<label class="haken" name="labeler"></label>
 											</div>
 
 											
@@ -795,8 +793,7 @@
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
-												<input type="checkbox" onclick="return false" value="None" id="status3" name="checkerBoxer" />
-												<label class="haken" for="status3"></label>
+												<label class="haken" name="labeler""></label>
 											</div>
 
 											
@@ -822,9 +819,8 @@
 												<a data-toggle="collapse" data-parent="#agenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" >Frage: Weiterführung sinnvoll?</a>
 											</div>
 
-											<div class="checkerBoxer beantwortetButtonPositionierung">
-												<input type="checkbox" onclick="return false" value="None" id="status4" name="checkerBoxer" />
-												<label class="haken" for="status4"></label>
+											<div class="checkerBoxer beantwortetButtonPositionierung" style="border-left:groove">
+												<label class="haken" name="labeler"></label>
 											</div>
 
 											
@@ -842,9 +838,16 @@
 									</div>
 									
 								</div>							
-
+					
+					
+					<div class="panel-group " id="agenda3">
 					</div>
-                </div>
+					
+					<div class="panel-group " id="agenda4">
+					</div>
+					
+				</div>
+			</div>
                 <!-- /.col-lg-4 -->
 				
 				<script type="text/javascript">
@@ -860,7 +863,7 @@
 					<!-- Beantwortet Status setzen  -->
 					function setzeBeantwortetStatus(){
 						var listeTextarea = document.getElementsByName("texterArea");
-						var listeCheckbox = document.getElementsByName("checkerBoxer");
+						var listeLabel = document.getElementsByName("labeler");
 						var anzahlLT = listeTextarea.length;
 						var antwort;
 						
@@ -869,14 +872,13 @@
 							antwort = listeTextarea[i].value
 							
 							if(antwort == ""){
-								listeCheckbox[i].checked = false;
+								listeLabel[i].className = "haken fa fa-times";
 							}
 							else{
-								listeCheckbox[i].checked = true;
+								listeLabel[i].className = "haken fa fa-check";
 							}
 						
 						}
-						
 						
 					}
 
@@ -921,7 +923,6 @@
 								var selected = document.getElementById("selected");
 								var id = selected.options[selected.selectedIndex].value;
 								var hid = '#' + id;	
-								alert(hid);
 								
 								<!-- Variable zur dynamischen Erstellung von IDs -->
 								
@@ -954,8 +955,8 @@
 												text: quNew,
 												href: hcollapseX,
 												"data-toggle":"collapse",
-												"data-parent":id,
-												"aria-expanded":"false",
+												"data-parent":hid,
+												"aria-expanded":"true",
 												"aria-controls":collapseX,
 											}).appendTo($(hdiv31X));
 										
@@ -965,16 +966,9 @@
 										var div32X = 'div32' + x;
 										var hdiv32X = '#div32' + x;
 										$(div32).attr( 'id', div32X);
-												
-											$('<input />', { 
-												type: 'checkbox', 
-												onclick:'return false', 
-												value: 'none', 
-												'id': 'statusX', 
-												'name': 'checkerBoxer'}).appendTo($(hdiv32X));
 											
 											$('<label />', { 
-												'for': 'statusX', 
+												'name': 'labeler', 
 												class:'haken'  }).appendTo($(hdiv32X));
 											
 								<!-- Ausfahrender Body -->
