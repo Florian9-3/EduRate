@@ -1,11 +1,6 @@
 /********************************************************** SQUARED FOUR ********************************************************/
 
 
-.quOverflow{
-	overflow:hidden;
-}
-
-
 /* kürzt angeblich Te... */
 .ellipsis {
   overflow: hidden;
@@ -32,6 +27,8 @@
 	border-left:groove;
 }
 
+.hider{
+}
 
 .agenda1,
 .agenda1:focus{
@@ -103,6 +100,11 @@
 
 #quHeading{
 	color: black !important;
+}
+
+.quOverflow{
+	overflow:hidden;
+	cursor:pointer;
 }
 
 

@@ -687,63 +687,72 @@
 				<div class="col-lg-6">
                     <div class="panel panel-default" style="overflow: hidden">
                         <div class="panel-heading">
-                            <h4 style="display:inline-block">FRAGEN</h4>
-							
-			<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
-			<ul class="nav navbar-top-links navbar-right in" style="display:inline-block; position:center">
-                <li class="dropdown active">
-                    <a class="dropdown-toggle active" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages in">
-                        <li>
-                            <a href="#" class="active">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#" class="active">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#" class="active">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center active" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-            </ul>
-				
-		 </div>			
+						<div style="display:inline-block; width:300px">
+							<h4>FRAGEN</h4>
+						</div>
+						
+						<div class="fa fa-search" >
+						</div>
+						
+						<div style="display:inline-block">
+							<input type="text" id="search" placeholder="Suche nach Stichwort...">
+						</div>
+				<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
+							<ul class="nav navbar-top-links navbar-right in" style="display:inline-block; position:center">
+								<li class="dropdown active">
+									<a class="dropdown-toggle active" data-toggle="dropdown" href="#" aria-expanded="false">
+										<i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-messages in">
+										<li>
+											<a href="#" class="active">
+												<div>
+													<strong>John Smith</strong>
+													<span class="pull-right text-muted">
+														<em>Yesterday</em>
+													</span>
+												</div>
+												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="#" class="active">
+												<div>
+													<strong>John Smith</strong>
+													<span class="pull-right text-muted">
+														<em>Yesterday</em>
+													</span>
+												</div>
+												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="#" class="active">
+												<div>
+													<strong>John Smith</strong>
+													<span class="pull-right text-muted">
+														<em>Yesterday</em>
+													</span>
+												</div>
+												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a class="text-center active" href="#">
+												<strong>Read All Messages</strong>
+												<i class="fa fa-angle-right"></i>
+											</a>
+										</li>
+									</ul>
+									<!-- /.dropdown-messages -->
+								</li>
+							</ul>
+
+					
+				</div>
 <!-- ************************************************Filterfunktion Ende*************************************************************************** -->
                       	<!-- Frage stellen -->
 					<div id="quNewPanel" class="panel panel-default agenda1Fragen"style="margin: 20px 30px 30px 30px">
@@ -774,11 +783,11 @@
 						<div class="panel-group " id="pgagenda1">
 									
 									<!-- Frage 1.1 -->
-									<div class="panel panel-default" id="qu1">
-										<div class="panel-heading quOverflow agenda1">
-
+									<div class="panel panel-default hider" id="qu1">
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1">
+					   
 											<div class="panel-title ellipsis fragePositionierung ">
-												<a data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Braucht Edurate Dummy-Fragen, damit man versteht worum es geht oder sind die Nutzer schlau genug es selbst herauszufinden?</a>
+												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
@@ -790,21 +799,21 @@
 										<div id="collapseOne" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
-													<p class="frageVollständig"> Braucht Edurate Dummy-Fragen, damit man versteht worum es geht oder sind die Nutzer schlau genug es selbst herauszufinden? </p>
+													<p class="frageDatum">30/3/2015 um 19:50</p>
+													<p class="frageVollständig"> Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten? </p>
 												</div>
-												<div id="antwort1" name="texterArea">Ja, denn das ist das wichtigste auf der Welt.</div>														
+												<div id="antwort1" name="texterArea">Weil der Dozent passender zu der spezifischen Frage und vor allem passender zu seinem relevanten Stoff eine passende Antwort geben kann. Suchen bei Google können immer durch die nicht vorhandene Möglichkeit des expliziten Fragestellens sehr mühselig werden, bis man die für die Frage relevanten Informationen gefunden hat. </div>														
 											</div>
 										</div>
 									</div>
 									
-									
+
 									<!-- Frage 1.2 -->
-									<div class="panel panel-default" id="qu2">
-										<div class="panel-heading quOverflow agenda1"> 
+									<div class="panel panel-default hider" id="qu2">
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
 
 											<div class="panel-title ellipsis fragePositionierung">
-												<a data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
+												Warum sollten Dozenten Feedback wollen?
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
@@ -816,8 +825,8 @@
 										<div id="collapseTwo" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
-													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
+													<p class="frageDatum">30/3/2015 um 19:39</p>
+													<p class="frageVollständig"> Warum sollten Dozenten Feedback wollen? </p>
 												</div>
 												<div id="antwort2" name="texterArea"></div>	
 												
@@ -832,11 +841,11 @@
 								<div class="panel-group " id="pgagenda2">
 									
 									<!-- Frage 2.1 -->
-									<div class="panel panel-default" id="qu3">
-										<div class="panel-heading quOverflow agenda2">
+									<div class="panel panel-default hider" id="qu3">
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2">
 
 											<div class="panel-title ellipsis fragePositionierung">
-												<a data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" >Frage 3??</a>
+												Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten?
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
@@ -848,21 +857,23 @@
 										<div id="collapse3" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
-													<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
+													<p class="frageDatum">30/3/2015 um 20:15</p>
+													<p class="frageVollständig"> Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten? </p>
 												</div>
-												<div id="antwort3" name="texterArea"></div>														
+												<div id="antwort3" name="texterArea">Weil er so während der Vorlesung mehr Zeit hat seinen Stoff verständlich und interaktiv zu vermitteln. Außerdem kann er so die Informationen die er den Studenten bereitstellt mit weiteren Informationen oder Dateien versehen. Z.B. der kompletten Lösung einer Rechenaufgabe. 
+												Hierbei kann er sich viel mehr Zeit nehmen, als er während der Vorlesung hätte. 
+												</div>														
 											</div>
 										</div>
 									</div>
 									
 									
 									<!-- Frage 2.2 -->
-									<div class="panel panel-default" id="qu4">
-										<div class="panel-heading quOverflow agenda2"> 
+									<div class="panel panel-default hider" id="qu4">
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2"> 
 
 											<div class="panel-title ellipsis fragePositionierung">
-												<a data-toggle="collapse" data-parentpgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" >Frage: Weiterführung sinnvoll?</a>
+												Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein?
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung" style="border-left:groove">
@@ -874,8 +885,8 @@
 										<div id="collapse4" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
-													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
+													<p class="frageDatum">30/3/2015 um 19:55</p>
+													<p class="frageVollständig"> Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein? </p>
 												</div>
 												<div id="antwort4" name="texterArea"></div>	
 											</div>
@@ -944,6 +955,27 @@
 							}
 						});
 						
+<!-- Suche -->
+						$("#search").keyup(function(){
+							var val = $(this).val().toLowerCase();
+							$(".hider").hide();
+							$(".hider").each(function(){
+								var text = $(this).text().toLowerCase();
+								if(text.indexOf(val) != -1)
+								{
+									$(this).show();
+								}
+							});
+							
+							$("div[name='texterArea']").each(function(){
+								var text = $(this).text().toLowerCase();
+								if(text.indexOf(val) != -1)
+								{
+									$(this).show();
+								}
+							});
+						 });						
+						
 <!-- Verändere Hintergrund von Fragestellen Feld -->
 						// var idOld = "agenda1";
 						
@@ -956,7 +988,7 @@
 							// });
 						
 <!-- Frage hinzufügen -->
-						var x = 9;
+						var x = 5;
 						
 							$("#btnAddQuestion").on("click", function() {
 							
@@ -984,37 +1016,33 @@
 								
 								$(hid).prepend(div1);
 								
-								$(div1).addClass("panel panel-default");
+								$(div1).addClass("panel panel-default hider");
 								var quX = 'qu' + x;
 								var hquX = '#qu' + x;
 								$(div1).attr( 'id', quX);
 								
-								
-									$(div21).addClass("panel-heading quOverflow").addClass(id)
-										.appendTo($(hquX));	
+									var collapseX = 'collapse' + x;
+									var hcollapseX = '#collapse' + x;
+										
+									$(div21).appendTo($(hquX));	
 									var div21X = 'div21' + x;
 									var hdiv21X = '#div21' + x;
-									$(div21).attr( 'id', div21X);					
+									$(div21).attr( 'id', div21X);			
+									$(div21).attr( 'data-toggle', 'collapse');		
+									$(div21).attr( 'data-parent', hid);		
+									$(div21).attr( 'href', hcollapseX);
+									$(div21).attr( 'aria-expanded', 'false');	
+									$(div21).attr( 'aria-controls', collapseX);
+									$(div21).addClass("panel-heading quOverflow").addClass(id);								
+									
 										
 										$(div31).addClass("panel-title ellipsis fragePositionierung")
 											.appendTo($(hdiv21X));
+										$(div31).html(quNew);
 										var div31X = 'div31' + x;
 										var hdiv31X = '#div31' + x;
 										$(div31).attr( 'id', div31X);
 											
-										<!-- Frage -->
-																			
-										var collapseX = 'collapse' + x;
-										var hcollapseX = '#collapse' + x;
-										
-											$("<a/>", {
-												text: quNew,
-												href: hcollapseX,
-												"data-toggle":"collapse",
-												"data-parent":hid,
-												"aria-expanded":"false",
-												"aria-controls":collapseX,
-											}).appendTo($(hdiv31X));
 										
 									<!-- Status -->
 										$(div32).addClass("checkerBoxer beantwortetButtonPositionierung")
