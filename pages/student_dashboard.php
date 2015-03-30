@@ -892,7 +892,7 @@
 							antwort = listeTextarea[i].value
 							
 							if(antwort == ""){
-								listeLabel[i].className = "haken fa fa-times";
+								listeLabel[i].className = "haken fa fa-ellipsis-h";
 							}
 							else{
 								listeLabel[i].className = "haken fa fa-check";
@@ -946,8 +946,8 @@
 								
 								<!-- Variable zur dynamischen Erstellung von IDs -->
 								
-								$(div1).addClass("panel panel-default")
-									.appendTo($(hid));	
+								$(hid).prepend(div1);
+								$(div1).addClass("panel panel-default");
 								var quX = 'qu' + x;
 								var hquX = '#qu' + x;
 								$(div1).attr( 'id', quX);

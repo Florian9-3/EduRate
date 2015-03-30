@@ -136,7 +136,14 @@
 						<!-- Frage stellen -->
 					<div class="panel panel-default"style="margin: 20px 30px 30px 30px">
 						
-						<dt style="margin-bot:5px">Ordne deine Frage einem Themengebiet zu:</dt>
+						<div>
+							<label style="display: inline-block; margin-bot:5px">Stelle eine Frage zum Thema:</label>
+							<div style="display: inline-block">
+								<label>Einführung</label>
+							</div>
+						</div>
+						
+								
 						<select class="form-control" id="selected">
 									<option class="agenda1" value="agenda1">1. Einführung</option>
 									<option class="agenda2" value="agenda2">2. Weiterführung</option>
@@ -147,7 +154,7 @@
 						<div class=" input-group" style="margin-top: 15px">
 								<input type="text" class="form-control agenda1" id="quNew" placeholder="Stelle eine Frage">
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-question"></i>
+									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-share"></i> <!-- fa-angle-double-right  -->
 									</button>
 								</span>
 						</div>
@@ -313,7 +320,7 @@
 							antwort = listeTextarea[i].value
 							
 							if(antwort == ""){
-								listeLabel[i].className = "haken fa fa-times";
+								listeLabel[i].className = "haken fa fa-ellipsis-h";
 							}
 							else{
 								listeLabel[i].className = "haken fa fa-check";
@@ -364,12 +371,12 @@
 								var selected = document.getElementById("selected");
 								var id = selected.options[selected.selectedIndex].value;
 								var hid = '#' + id;	
-								alert(hid);
 								
 								<!-- Variable zur dynamischen Erstellung von IDs -->
 								
-								$(div1).addClass("panel panel-default")
-									.appendTo($(hid));	
+								$(hid).prepend(div1);
+								
+								$(div1).addClass("panel panel-default");
 								var quX = 'qu' + x;
 								var hquX = '#qu' + x;
 								$(div1).attr( 'id', quX);
