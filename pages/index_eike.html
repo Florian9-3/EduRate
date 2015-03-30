@@ -160,7 +160,6 @@
 						</div>
 
 						
-						
 
 					</div>
 
@@ -189,7 +188,7 @@
 										<div id="collapseOne" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
+													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
 												</div>
 												<textarea id="antwortEins" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -216,7 +215,7 @@
 										<div id="collapseTwo" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
+													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 												</div>
 												<textarea id="antwortZwei" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
@@ -248,7 +247,7 @@
 										<div id="collapse3" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
+													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
 												</div>
 												<textarea id="antwort3" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -275,7 +274,7 @@
 										<div id="collapse4" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div>
-													<p class="frageDatum">11. März 2015 um 11:20</p>
+													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 												</div>
 												<textarea id="antwort4" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
@@ -338,8 +337,16 @@
 				
 				
 				   $(function() {
+				   
+<!-- Enterfunktion Textfeld Fragen -->
+						$("#quNew").keyup(function(event){
+							if(event.keyCode == 13){
+								$("#btnAddQuestion").click();
+							}
+						});
 						
-						<!-- Verändere Hintergrund von Fragestellen Feld -->
+						
+<!-- Verändere Hintergrund von Fragestellen Feld -->
 						var idOld = "agenda1";
 						
 							$("#selected").on("change", function(){					
@@ -350,13 +357,16 @@
 								idOld = id;
 							});
 						
-						<!-- Frage hinzufügen -->
+<!-- Frage hinzufügen -->
 						var x = 9;
 						
 							$("#btnAddQuestion").on("click", function() {
 							
-								<!-- $("#accordion1").append("<div>hallo</div>") -->
-								
+							var quNew = document.getElementById("quNew").value;
+							
+							if(quNew == ""){
+							}
+							else{								
 								div1 = document.createElement('div');
 								div21 = document.createElement('div');
 								div22 = document.createElement('div');
@@ -395,7 +405,6 @@
 										$(div31).attr( 'id', div31X);
 											
 										<!-- Frage -->
-										var quNew = document.getElementById("quNew").value;
 																			
 										var collapseX = 'collapse' + x;
 										var hcollapseX = '#collapse' + x;
@@ -484,6 +493,10 @@
 								
 							<!-- Erhöhe x um 1, damit die nächste Frage erneute dynamisch erzeugt werden kann  -->
 								x = x +1;
+								
+							<!-- Lösche Eingabe aus Textfeld -->
+								document.getElementById("quNew").value = "";
+							}
 							});
 						
 					});

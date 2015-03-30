@@ -720,6 +720,15 @@
                       	<!-- Frage stellen -->
 					<div class="panel panel-default"style="margin: 20px 30px 30px 30px">
 						
+
+						
+						<div>
+							<label style="display: inline-block; margin-bot:5px">Stelle eine Frage zum Thema:</label>
+							<div style="display: inline-block">
+								<label id="agendaLabel" class="agenda1">1. Einführung</label>
+							</div>
+						</div>
+						
 						<dt style="margin-bot:5px">Ordne deine Frage einem Themengebiet zu:</dt>
 						<select class="form-control" id="selected">
 									<option class="agenda1" value="agenda1">1. Einführung</option>
@@ -911,8 +920,15 @@
 				
 				
 				   $(function() {
+					   
+<!-- Enterfunktion Textfeld Fragen -->
+						$("#quNew").keyup(function(event){
+							if(event.keyCode == 13){
+								$("#btnAddQuestion").click();
+							}
+						});
 						
-						<!-- Verändere Hintergrund von Fragestellen Feld -->
+<!-- Verändere Hintergrund von Fragestellen Feld -->
 						var idOld = "agenda1";
 						
 							$("#selected").on("change", function(){					
@@ -923,13 +939,16 @@
 								idOld = id;
 							});
 						
-						<!-- Frage hinzufügen -->
+<!-- Frage hinzufügen -->
 						var x = 9;
 						
 							$("#btnAddQuestion").on("click", function() {
 							
-								<!-- $("#accordion1").append("<div>hallo</div>") -->
-								
+							var quNew = document.getElementById("quNew").value;
+							
+							if(quNew == ""){
+							}
+							else{								
 								div1 = document.createElement('div');
 								div21 = document.createElement('div');
 								div22 = document.createElement('div');
@@ -948,6 +967,7 @@
 								<!-- Variable zur dynamischen Erstellung von IDs -->
 								
 								$(hid).prepend(div1);
+								
 								$(div1).addClass("panel panel-default");
 								var quX = 'qu' + x;
 								var hquX = '#qu' + x;
@@ -967,7 +987,6 @@
 										$(div31).attr( 'id', div31X);
 											
 										<!-- Frage -->
-										var quNew = document.getElementById("quNew").value;
 																			
 										var collapseX = 'collapse' + x;
 										var hcollapseX = '#collapse' + x;
@@ -977,7 +996,7 @@
 												href: hcollapseX,
 												"data-toggle":"collapse",
 												"data-parent":hid,
-												"aria-expanded":"true",
+												"aria-expanded":"false",
 												"aria-controls":collapseX,
 											}).appendTo($(hdiv31X));
 										
@@ -987,7 +1006,7 @@
 										var div32X = 'div32' + x;
 										var hdiv32X = '#div32' + x;
 										$(div32).attr( 'id', div32X);
-											
+																				
 											$('<label />', { 
 												'name': 'labeler', 
 												class:'haken'  }).appendTo($(hdiv32X));
@@ -1056,6 +1075,10 @@
 								
 							<!-- Erhöhe x um 1, damit die nächste Frage erneute dynamisch erzeugt werden kann  -->
 								x = x +1;
+								
+							<!-- Lösche Eingabe aus Textfeld -->
+								document.getElementById("quNew").value = "";
+							}
 							});
 						
 					});
