@@ -88,7 +88,7 @@
 
         <div id="page-wrapper">
             
-			<div class="row" style="margin-bottom:2em; padding-top:1em; margin-left:2%">
+			<div class="row" style="padding-top:1em; margin-left:2%">
                 <div class="col-lg-3">
                     <h4 class="page-wrapper">Aktuelle Vorlesung: Datenbanktechnik</h1>
                 </div>
@@ -103,10 +103,49 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
+            <hr style="margin-top:0px !important;">
 			
 			<div class="col-lg-6">
+            
+            <script type="text/javascript">
+				$(document).ready(function(){
+					$('[data-toggle="tooltip"]').tooltip();   
+				});
+			</script>
 			
 			<div class="row">
+            
+            <div class="col-lg-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        Agenda
+                                    </div>
+                                    <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
+
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">1. Einführung</button>
+                                      <br><br>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">2. Weiterführung</button>
+                                      <br><br>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >3. Analyse</button>
+                                      <br><br>
+                                      <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt">
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled"
+                                      >4. Aufgaben</button></div>
+                                      <br>
+                                      <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt">
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(5);" disabled="disabled"
+                                      >5. Fazit</button></div>
+
+
+                                    </div>
+
+                                </div>
+                    <!-- /.col-lg-4 -->
+
+                </div>
+            
+            
+            
 				<div class="col-lg-6">
                     <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
                         <div class="bewertung1 panel-heading" id="bewertung_header">
@@ -125,19 +164,20 @@
 							
 							<div class="col-lg-3 radios1" style="margin-top:0.3em">
                             <span title="Thema verstanden">
-							  <input type="radio" name="like" value="1" id="v1" onChange="verstandenChange()" title="Thema verstanden"/> 
-                              <label class="radio" for="v1"></label>
+							  <input type="radio" name="like" value="1" id="v1" onChange="verstandenChange()"/> 
+                              <label class="radio" for="v1" data-toggle="tooltip" data-placement="right" title="Thema verstanden"></label>
                              </span>
 							</div>
 							<div class="col-lg-3 radios2" style="margin-top:0.8em">
                             <span title="Thema nicht verstanden">
-							  <input type="radio" name="like" value="0" id="v2" onChange="verstandenChange()" title="Thema nicht verstanden"/>
-                              <label class="radio" for="v2"></label>
+							  <input type="radio" name="like" value="0" id="v2" onChange="verstandenChange()" />
+                              <label class="radio" for="v2" data-toggle="tooltip" data-placement="right" title="Thema nicht verstanden"></label>
                             </span>
 							</div>
 							<div class="col-lg-12" style="margin-top:0.5em">
 								<div class="form-group input-group">
-														<input type="text" class="form-control" id="kommentar" placeholder="Gib einen Kommentar ab">
+														<input type="text" class="form-control" id="kommentar" placeholder="Gib einen Kommentar ab" 
+                                                        onkeydown="if (event.keyCode == 13) document.getElementById('sendButton').click()">
 														<span class="input-group-btn">
 															<button class="btn btn-default" type="button" id="sendButton" onClick="sendComment()"><i class="fa fa-comment"></i>
 															</button>
@@ -150,6 +190,7 @@
 				</div>
 				
 				<script>
+				
 				
 					var one_stars = 0;
 					var two_stars = 0;
@@ -582,28 +623,7 @@
 					
 				</script>
 				
-				<div class="col-lg-6">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        Agenda
-                                    </div>
-                                    <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
-
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">1. Einführung</button>
-                                      <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">2. Weiterführung</button>
-                                      <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >3. Analyse</button>
-                                      <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled">4. Fazit</button>
-
-
-                                    </div>
-
-                                </div>
-                    <!-- /.col-lg-4 -->
-
-                </div>
+				
 				
 				
 				</div>
