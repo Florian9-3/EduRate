@@ -52,6 +52,12 @@
 	color:#FFF !important;
 }
 
+.agenda4,
+.agenda4:focus{
+	background-color: #757575 !important;
+	color:#FFF;
+}
+
 
 .agenda1:hover{
 	background-color: #B71C1C !important;
@@ -297,12 +303,13 @@ font-size: 1.1em;
     background: url(res/lampe_an.png);
     display:inline-block;
 	opacity: 0.5;
+	cursor: pointer;
     width:60px;
     height:68px
 }
 
 .radios1 input[type=radio]{
-    display:none
+    display:none;
 }
 
 .radios1 input[type=radio]:checked + .radio{
@@ -314,6 +321,7 @@ font-size: 1.1em;
     background: url(res/lampe_aus.png);
     display:inline-block;
 	opacity: 0.5;
+	cursor: pointer;
     width:38px;
     height:60px
 }

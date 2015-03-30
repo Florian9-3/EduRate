@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Student Dashboard</title>
+    <title>EduRate - Dozent</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -85,25 +85,99 @@
 
         <div id="page-wrapper">
             
-			<div class="row" style="margin-bottom:2em; padding-top:1em; margin-left:2%">
+			<div class="row" style="padding-top:1em; margin-left:2%">
                 <div class="col-lg-3">
-                    <h4 class="page-wrapper">Aktuelle Vorlesung: Datenbanktechnik</h1>
+                    <h4 class="page-wrapper">Aktuelle Vorlesung: Datenbanktechnik</h4>
                 </div>
                  <div class="col-lg-3">
-                    <h4 class="page-wrapper">Kurs: WI376 (345 Studenten)</h1>
+                    <h4 class="page-wrapper">Kurs: WI376 (345 Studenten)</h4>
                 </div>
                  <div class="col-lg-3">
-                    <h4 class="page-wrapper">Raum: B354</h1>
+                    <h4 class="page-wrapper">Raum: B354</h4>
                 </div>
                  <div class="col-lg-3">
-                    <h4 class="page-wrapper">Zeitraum: 9.00 Uhr - 12.15 Uhr</h1>
+                    <h4 class="page-wrapper">Zeitraum: 9.00 Uhr - 12.15 Uhr</h4>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
+            
+            <hr style="margin-top:0px !important;">
 			
 			<div class="col-lg-6">
 			
 			<div class="row">
+            
+            <script type="text/javascript">
+				$(document).ready(function(){
+					$('[data-toggle="tooltip"]').tooltip();   
+					document.getElementById("activate_button4").disabled = false;
+				});
+			</script>
+            
+            <div class="col-lg-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        Agenda
+                                    </div>
+                                    <div class="panel-body" style="margin-bottom: -1 em; margin-top: -1 em">
+
+                                      <button type="button" style="text-align:left; width: 100%" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">
+                                      <span style="text-align:left;">1. Einführung</span>
+                                      <span style="text-align:right;">
+                                      	<fieldset class="ratingDoz">
+                                            <input type="radio" id="ag5" name="ratingDoz" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz" value="4" checked="true" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+										</fieldset>
+                                        </span>
+                                      </button>
+                                      <br><br>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">
+                                      <span style="text-align:left;">2. Weiterführung</span>
+                                      <span style="text-align:right;">
+                                      	<fieldset class="ratingDoz">
+                                            <input type="radio" id="ag5" name="ratingDoz2" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz2" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz2" value="3" checked="true" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz2" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz2" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+										</fieldset>
+                                        </span>
+                                      </button>
+                                      <br><br>
+                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >
+                                      <span style="text-align:left;">3. Analyse</span>
+                                      <span style="text-align:right;">
+                                      	<fieldset class="ratingDoz">
+                                            <input type="radio" id="ag5" name="ratingDoz3" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz3" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz3" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz3" value="2" checked="true" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz3" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+										</fieldset>
+                                        </span>
+                                      </button>
+                                      <br><br>
+                                      <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt" id="nichtBehandelt4">
+                                          <div style="width: 100%; text-align: left; margin-bottom:1em; " id="agenda4" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled"
+                                          >4. Aufgaben
+                                          <span style="float: right;">
+                                          <button type="button" class="btn btn-info btn-circle" style="cursor: pointer !important" onClick="activate(4)" id="activate_button4"><i class="fa fa-check"></i>
+                                            </button></span>
+                                          </div></div>
+                                      <br>
+                                      
+
+
+                                    </div>
+
+                                </div>
+                    <!-- /.col-lg-4 -->
+
+                </div>
+            
 				<div class="col-lg-6">
                     <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
                         <div class="bewertung1 panel-heading" id="bewertung_header">
@@ -286,6 +360,14 @@
 					
 					var radio_button;
 					var agenda = 1;
+					
+					function activate(position){
+						
+						document.getElementById("agenda4").className = "agenda3 btn btn-lg btn-primary";
+						document.getElementById("agenda4").disabled = false;
+						//document.getElementById("nichtBehandelt4").
+						document.getElementById("activate_button4").style.display = "none";
+					}
 					
 					function agendaChange(position){
 						
@@ -501,61 +583,7 @@
 					
 				</script>
 				
-				<div class="col-lg-6">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        Agenda
-                                    </div>
-                                    <div class="panel-body" style="margin-bottom: -1 em; margin-top: -1 em">
-
-                                      <button type="button" style="text-align:left; width: 100%" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">
-                                      <span style="text-align:left;">1. Einführung</span>
-                                      <span style="text-align:right;">
-                                      	<fieldset class="ratingDoz">
-                                            <input type="radio" id="ag5" name="ratingDoz" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                            <input type="radio" id="ag4" name="ratingDoz" value="4" checked="true" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                            <input type="radio" id="ag3" name="ratingDoz" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                            <input type="radio" id="ag2" name="ratingDoz" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                            <input type="radio" id="ag1" name="ratingDoz" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
-										</fieldset>
-                                        </span>
-                                      </button>
-                                      <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">
-                                      <span style="text-align:left;">2. Weiterführung</span>
-                                      <span style="text-align:right;">
-                                      	<fieldset class="ratingDoz">
-                                            <input type="radio" id="ag5" name="ratingDoz2" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                            <input type="radio" id="ag4" name="ratingDoz2" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                            <input type="radio" id="ag3" name="ratingDoz2" value="3" checked="true" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                            <input type="radio" id="ag2" name="ratingDoz2" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                            <input type="radio" id="ag1" name="ratingDoz2" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
-										</fieldset>
-                                        </span>
-                                      </button>
-                                      <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >
-                                      <span style="text-align:left;">3. Analyse</span>
-                                      <span style="text-align:right;">
-                                      	<fieldset class="ratingDoz">
-                                            <input type="radio" id="ag5" name="ratingDoz3" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                            <input type="radio" id="ag4" name="ratingDoz3" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                            <input type="radio" id="ag3" name="ratingDoz3" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                            <input type="radio" id="ag2" name="ratingDoz3" value="2" checked="true" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                            <input type="radio" id="ag1" name="ratingDoz3" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
-										</fieldset>
-                                        </span>
-                                      </button>
-                                      <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled">4. Fazit</button>
-
-
-                                    </div>
-
-                                </div>
-                    <!-- /.col-lg-4 -->
-
-                </div>
+				
 				
 				
 				</div>

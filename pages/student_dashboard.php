@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Studenten Dashboard</title>
+    <title>EduRate - Student</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -90,16 +90,16 @@
             
 			<div class="row" style="padding-top:1em; margin-left:2%">
                 <div class="col-lg-3">
-                    <h4 class="page-wrapper">Aktuelle Vorlesung: Datenbanktechnik</h1>
+                    <h4 class="page-wrapper">Aktuelle Vorlesung: Datenbanktechnik</h4>
                 </div>
                  <div class="col-lg-3">
-                    <h4 class="page-wrapper">Dozent: Prof. Dr. Reorg Gichter</h1>
+                    <h4 class="page-wrapper">Dozent: Prof. Dr. Reorg Gichter</h4>
                 </div>
                  <div class="col-lg-3">
-                    <h4 class="page-wrapper">Raum: B354</h1>
+                    <h4 class="page-wrapper">Raum: B354</h4>
                 </div>
                  <div class="col-lg-3">
-                    <h4 class="page-wrapper">Zeitraum: 9.00 Uhr - 12.15 Uhr</h1>
+                    <h4 class="page-wrapper">Zeitraum: 9.00 Uhr - 12.15 Uhr</h4>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -813,7 +813,7 @@
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
-												<label class="haken" name="labeler""></label>
+												<label class="haken" name="labeler"></label>
 											</div>
 
 											
@@ -868,6 +868,7 @@
 					
 				</div>
 			</div>
+            </div>
                 <!-- /.col-lg-4 -->
 				
 				<script type="text/javascript">
@@ -1074,6 +1075,7 @@
 
     </div>
     <!-- /#wrapper -->
+   
 
    
 
