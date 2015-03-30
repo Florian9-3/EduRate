@@ -35,34 +35,34 @@
 
 .agenda1,
 .agenda1:focus{
-	background-color: #F44336;
-	color:#FFF;
+	background-color: #F44336 !important;
+	color:#FFF !important;
 
 }
 
 .agenda2,
 .agenda2:focus{
-	background-color: #673AB7;
-	color:#FFF;
+	background-color: #673AB7 !important;
+	color:#FFF !important;;
 }
 
 .agenda3,
 .agenda3:focus{
-	background-color: #2196F3;
-	color:#FFF;
+	background-color: #2196F3 !important;
+	color:#FFF !important;
 }
 
 
 .agenda1:hover{
-	background-color: #B71C1C;
+	background-color: #B71C1C !important;
 	color:#FFF;
 }
 .agenda2:hover{
-	background-color: #311B92;
+	background-color: #311B92 !important;
 	color:#FFF;
 }
 .agenda3:hover{
-	background-color: #0D47A1;
+	background-color: #0D47A1 !important;
 	color:#FFF;
 }
 
@@ -122,6 +122,8 @@
         padding: 0 0 0 0px;
   } */
 
+
+  
 
 TEXTAREA {
 background-color: #fbfff3;
