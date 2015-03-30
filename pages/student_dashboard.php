@@ -122,18 +122,18 @@
                                     </div>
                                     <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
 
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">1. Einführung</button>
+                                      <button type="button" id="agenda1" style="width: 100% ; text-align: left" class="agenda1 btn btn-default btn-lg " onClick="agendaChange(1);">1. Einführung</button>
                                       <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">2. Weiterführung</button>
+                                      <button type="button" id="agenda2" style="width: 100% ; text-align: left" class="agenda2 btn btn-default btn-lg" onclick="agendaChange(2);">2. Weiterführung</button>
                                       <br><br>
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >3. Analyse</button>
+                                      <button type="button" id="agenda3" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >3. Analyse</button>
                                       <br><br>
                                       <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt">
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled"
+                                      <button type="button" id="agenda4" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled"
                                       >4. Aufgaben</button></div>
                                       <br>
                                       <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt">
-                                      <button type="button" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(5);" disabled="disabled"
+                                      <button type="button" id="agenda5" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(5);" disabled="disabled"
                                       >5. Fazit</button></div>
 
 
@@ -215,6 +215,8 @@
 					var radio_button;
 					var agenda = 1;
 					
+					var classOld = "agenda1";
+					
 					function verstandenChange(){
 						switch(agenda){
 						case 1:
@@ -255,9 +257,18 @@
 					}
 
 					function agendaChange(position){
+						var agendaLabel;
 						
 						switch(position){
 						 case 1:
+							//Ändere Fragenzuweisung
+							agendaLabel = document.getElementById("agendaLabel")
+							agendaLabel.textContent = document.getElementById("agenda1").textContent;
+							agendaLabel.value = "agenda1";
+							agendaLabel.className= "agenda1Label quLabel";
+							document.getElementById("quNewPanel").className = "panel panel-default agenda1Fragen";
+							
+							
 						 	//Last agenda
 							var comment = document.getElementById("kommentar").value;
 							if((!comment == "") && !document.getElementById("kommentar").disabled){
@@ -340,8 +351,17 @@
 									radio_button.checked = false;
 									break;
 							}
+
 							break;
 						 case 2:
+							//Ändere Fragenzuweisung
+							agendaLabel = document.getElementById("agendaLabel")
+							agendaLabel.textContent = document.getElementById("agenda2").textContent;
+							agendaLabel.value = "agenda2";
+							agendaLabel.className= "agenda2Label quLabel";
+							document.getElementById("quNewPanel").className = "panel panel-default agenda2Fragen";
+
+								
 						 	//Last agenda
 							var comment = document.getElementById("kommentar").value;
 							if((!comment == "") && !document.getElementById("kommentar").disabled){
@@ -425,6 +445,13 @@
 							}
 							break;
 						 case 3:
+							//Ändere Fragenzuweisung
+							agendaLabel = document.getElementById("agendaLabel")
+							agendaLabel.textContent = document.getElementById("agenda3").textContent;
+							agendaLabel.value = "agenda3";
+							agendaLabel.className= "agenda3Label quLabel";
+							document.getElementById("quNewPanel").className = "panel panel-default agenda3Fragen";
+							
 						 	//Last agenda
 							var comment = document.getElementById("kommentar").value;
 							if((!comment == "") && !document.getElementById("kommentar").disabled){
@@ -507,6 +534,7 @@
 							}
 							break;
 						 case 4:
+
 							document.getElementById("bewertung_header").innerHTML="Bewertung: Fazit";
 							break;
 						 }
@@ -716,31 +744,22 @@
             </ul>
 				
 		 </div>			
-				<!-- ************************************************Filterfunktion Ende*************************************************************************** -->
+<!-- ************************************************Filterfunktion Ende*************************************************************************** -->
                       	<!-- Frage stellen -->
-					<div class="panel panel-default"style="margin: 20px 30px 30px 30px">
-						
-
-						
+					<div id="quNewPanel" class="panel panel-default agenda1Fragen"style="margin: 20px 30px 30px 30px">
+											
 						<div>
-							<label style="display: inline-block; margin-bot:5px">Stelle eine Frage zum Thema:</label>
-							<div style="display: inline-block">
-								<label id="agendaLabel" class="agenda1">1. Einführung</label>
+							<label id="quHeading" class="quLabel" style="display: inline-block; margin-bot:5px">Stelle eine Frage zum Thema:</label>
+							<div style="display: inline-block; margin-bot:5px">
+								<label id="agendaLabel" class="quLabel agenda1Label" value="agenda1">1. Einführung</label>
 							</div>
 						</div>
-						
-						<dt style="margin-bot:5px">Ordne deine Frage einem Themengebiet zu:</dt>
-						<select class="form-control" id="selected">
-									<option class="agenda1" value="agenda1">1. Einführung</option>
-									<option class="agenda2" value="agenda2">2. Weiterführung</option>
-									<option class="agenda3" value="agenda3">3. Analyse</option>
-									<option class="agenda4" value="agenda4">4. Fazit</option>
-						</select>
+
 						
 						<div class=" input-group" style="margin-top: 15px">
-								<input type="text" class="form-control agenda1" id="quNew" placeholder="Stelle eine Frage">
+								<input type="text" class="form-control" id="quNew" placeholder="Stelle eine Frage">
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-question"></i>
+									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-share"></i>
 									</button>
 								</span>
 						</div>
@@ -752,14 +771,14 @@
 					<!-- Panel Groups-->		
 
 						<!-- *******************************************Panel Group 1 *****************************************************-->
-						<div class="panel-group " id="agenda1">
+						<div class="panel-group " id="pgagenda1">
 									
 									<!-- Frage 1.1 -->
 									<div class="panel panel-default" id="qu1">
 										<div class="panel-heading quOverflow agenda1">
 
 											<div class="panel-title ellipsis fragePositionierung ">
-												<a data-toggle="collapse" data-parent="#agenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas??</a>
+												<a data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Braucht Edurate Dummy-Fragen, damit man versteht worum es geht oder sind die Nutzer schlau genug es selbst herauszufinden?</a>
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
@@ -772,10 +791,9 @@
 											<div class="panel-body">
 												<div>
 													<p class="frageDatum">11. März 2015 um 11:20</p>
-													<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
+													<p class="frageVollständig"> Braucht Edurate Dummy-Fragen, damit man versteht worum es geht oder sind die Nutzer schlau genug es selbst herauszufinden? </p>
 												</div>
-												<textarea id="antwortEins" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-												</textarea>														
+												<div id="antwort1" name="texterArea">Ja, denn das ist das wichtigste auf der Welt.</div>														
 											</div>
 										</div>
 									</div>
@@ -786,7 +804,7 @@
 										<div class="panel-heading quOverflow agenda1"> 
 
 											<div class="panel-title ellipsis fragePositionierung">
-												<a data-toggle="collapse" data-parent="#agenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
+												<a data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
@@ -801,7 +819,7 @@
 													<p class="frageDatum">11. März 2015 um 11:20</p>
 													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 												</div>
-												<textarea id="antwortZwei" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
+												<div id="antwort2" name="texterArea"></div>	
 												
 											</div>
 										</div>
@@ -811,14 +829,14 @@
 
 							
 								<!-- *********************************************Panel Group 2 *********************************************************-->									
-								<div class="panel-group " id="agenda2">
+								<div class="panel-group " id="pgagenda2">
 									
 									<!-- Frage 2.1 -->
 									<div class="panel panel-default" id="qu3">
 										<div class="panel-heading quOverflow agenda2">
 
 											<div class="panel-title ellipsis fragePositionierung">
-												<a data-toggle="collapse" data-parent="#agenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" >Frage 3??</a>
+												<a data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" >Frage 3??</a>
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung">
@@ -833,8 +851,7 @@
 													<p class="frageDatum">11. März 2015 um 11:20</p>
 													<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
 												</div>
-												<textarea id="antwort3" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-												</textarea>														
+												<div id="antwort3" name="texterArea"></div>														
 											</div>
 										</div>
 									</div>
@@ -845,7 +862,7 @@
 										<div class="panel-heading quOverflow agenda2"> 
 
 											<div class="panel-title ellipsis fragePositionierung">
-												<a data-toggle="collapse" data-parent="#agenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" >Frage: Weiterführung sinnvoll?</a>
+												<a data-toggle="collapse" data-parentpgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" >Frage: Weiterführung sinnvoll?</a>
 											</div>
 
 											<div class="checkerBoxer beantwortetButtonPositionierung" style="border-left:groove">
@@ -860,8 +877,7 @@
 													<p class="frageDatum">11. März 2015 um 11:20</p>
 													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 												</div>
-												<textarea id="antwort4" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
-												
+												<div id="antwort4" name="texterArea"></div>	
 											</div>
 										</div>
 									</div>
@@ -869,10 +885,10 @@
 								</div>							
 					
 					
-					<div class="panel-group " id="agenda3">
+					<div class="panel-group " id="pgagenda3">
 					</div>
 					
-					<div class="panel-group " id="agenda4">
+					<div class="panel-group " id="pgagenda4">
 					</div>
 					
 				</div>
@@ -899,7 +915,7 @@
 						
 						for(var i = 0; i < anzahlLT; i++ ){
 						
-							antwort = listeTextarea[i].value
+							antwort = listeTextarea[i].textContent;
 							
 							if(antwort == ""){
 								listeLabel[i].className = "haken fa fa-ellipsis-h";
@@ -929,15 +945,15 @@
 						});
 						
 <!-- Verändere Hintergrund von Fragestellen Feld -->
-						var idOld = "agenda1";
+						// var idOld = "agenda1";
 						
-							$("#selected").on("change", function(){					
-								var selected = document.getElementById("selected");
-								var id = selected.options[selected.selectedIndex].value;
-								$("#quNew").removeClass(idOld);
-								$("#quNew").addClass(id);
-								idOld = id;
-							});
+							// $("#agendaLabel").on("click", function(){					
+								// var agendaLabel = document.getElementById("agendaLabel");
+								// var id = agendaLabel.value;
+								// $("#quNew").removeClass(idOld);
+								// $("#quNew").addClass(id);
+								// idOld = id;
+							// });
 						
 <!-- Frage hinzufügen -->
 						var x = 9;
@@ -960,9 +976,9 @@
 								p2 = document.createElement('p');
 								
 								<!-- Dynamische Zuordnung herstellen -->
-								var selected = document.getElementById("selected");
-								var id = selected.options[selected.selectedIndex].value;
-								var hid = '#' + id;	
+								var agendaLabel = document.getElementById("agendaLabel");
+								var id = agendaLabel.value;
+								var hid = '#pg' + id;	
 								
 								<!-- Variable zur dynamischen Erstellung von IDs -->
 								
@@ -1060,14 +1076,11 @@
 												var p2X = 'p2' + x;
 												var hp2X = '#p2' + x;
 												$(p2).attr( 'id', p2X);
-												
+												 
+												var antwortX = 'antwort' + x;
 										<!-- Antwortfeld -->
-											$('<textarea />', { 
-												'id': 'antwortX',
-												'cols': '50',
-												'rows': '4',
-												'placeholder': 'Es wurde noch keine Antwort gegeben...',
-												'readonly':'readonly',
+											$('<div />', { 
+												'id': antwortX,
 												'name': 'texterArea'}).appendTo($(hdiv33X));
 										
 							<!-- BeantwortetStatus setzen -->

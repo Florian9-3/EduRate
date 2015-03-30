@@ -72,6 +72,40 @@
 	color:#FFF;
 }
 
+
+.agenda1Fragen{
+	border-color: #B71C1C !important;
+	border-style: groove !important;
+}
+.agenda2Fragen{
+	border-color: #311B92 !important;
+	border-style: groove !important;
+}
+.agenda3Fragen{
+	border-color: #0D47A1 !important;
+	border-style: groove !important;
+}
+
+.agenda1Label{
+	color: #F44336;
+}
+.agenda2Label{
+	color: #673AB7;
+}
+.agenda3Label{
+	color: #2196F3;
+}
+
+.quLabel{
+	font-weight:bold !important;
+	font-size:1.5em !important;
+}
+
+#quHeading{
+	color: black !important;
+}
+
+
 .bewertung1{
 	border-color:#F44336 !important;
 	background-color:#F44336 !important;

@@ -190,9 +190,9 @@
 												<div>
 													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
-												</div>
-												<textarea id="antwortEins" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-												</textarea>														
+												</div >
+												<div id="antwort1" name="texterArea">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+												</div>														
 											</div>
 										</div>
 									</div>
@@ -218,8 +218,7 @@
 													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 												</div>
-												<textarea id="antwortZwei" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
-												
+												<div id="antwort2" name="texterArea"></div>				
 											</div>
 										</div>
 									</div>
@@ -250,8 +249,7 @@
 													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Frage so lannnngngngnaksdlfkjn kasdjf ksadöljf sdkljf askdjf k sjdkfjklsdkföklj  asdjfjjdj öaklsdjfölaksdjf öasldkfjsö dfkjdsfaklösdfjas? </p>
 												</div>
-												<textarea id="antwort3" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-												</textarea>														
+												<div id="antwort3" name="texterArea"></div>													
 											</div>
 										</div>
 									</div>
@@ -277,7 +275,7 @@
 													<p class="frageDatum">30/3/2015 um 16:49</p>
 													<p class="frageVollständig"> Weiterführung sinnvoll? </p>
 												</div>
-												<textarea id="antwort4" cols="50" rows="4" placeholder="Es wurde noch keine Antwort gegeben..." name="texterArea" readonly></textarea>	
+												<div id="antwort4" name="texterArea">Weil du dumm bist.</div>		
 												
 											</div>
 										</div>
@@ -316,7 +314,7 @@
 						
 						for(var i = 0; i < anzahlLT; i++ ){
 						
-							antwort = listeTextarea[i].value
+							antwort = listeTextarea[i].textContent;
 							
 							if(antwort == ""){
 								listeLabel[i].className = "haken fa fa-ellipsis-h";
@@ -479,13 +477,10 @@
 												var hp2X = '#p2' + x;
 												$(p2).attr( 'id', p2X);
 												
+										var antwortX = 'antwort' + x;
 										<!-- Antwortfeld -->
-											$('<textarea />', { 
-												'id': 'antwortX',
-												'cols': '50',
-												'rows': '4',
-												'placeholder': 'Es wurde noch keine Antwort gegeben...',
-												'readonly':'readonly',
+											$('<div />', { 
+												'id': anwortX,
 												'name': 'texterArea'}).appendTo($(hdiv33X));
 										
 							<!-- BeantwortetStatus setzen -->
