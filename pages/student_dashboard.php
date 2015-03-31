@@ -117,7 +117,7 @@
             
             <div class="col-lg-6">
                                 <div class="panel panel-info">
-                                    <div class="panel-heading">
+                                    <div class="panel-heading panelCustom">
                                         Agenda
                                     </div>
                                     <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
@@ -149,7 +149,7 @@
 				<div class="col-lg-6">
                     <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
                         <div class="bewertung1 panel-heading" id="bewertung_header">
-                            Bewertung: Einführung
+                            Bewertung: 1. Einführung
                         </div>
                       <div class="panel-body">
 							<div class="col-lg-12" style="margin: 0 auto">
@@ -264,7 +264,7 @@
 							//Ändere Fragenzuweisung
 							agendaLabel = document.getElementById("agendaLabel")
 							agendaLabel.textContent = document.getElementById("agenda1").textContent;
-							agendaLabel.value = "agenda1";
+							agendaLabel.setAttribute("value", "agenda1") ;
 							agendaLabel.className= "agenda1Label quLabel";
 							document.getElementById("quNewPanel").className = "panel panel-default agenda1Fragen";
 							
@@ -285,7 +285,7 @@
 								}
 							}
 						 	agenda = 1;
-							document.getElementById("bewertung_header").innerHTML="Bewertung: Einführung";
+							document.getElementById("bewertung_header").innerHTML= "Bewertung: " + document.getElementById("agenda1").textContent;
 							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
 							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
 					
@@ -357,7 +357,7 @@
 							//Ändere Fragenzuweisung
 							agendaLabel = document.getElementById("agendaLabel")
 							agendaLabel.textContent = document.getElementById("agenda2").textContent;
-							agendaLabel.value = "agenda2";
+							agendaLabel.setAttribute("value", "agenda2") ;
 							agendaLabel.className= "agenda2Label quLabel";
 							document.getElementById("quNewPanel").className = "panel panel-default agenda2Fragen";
 
@@ -378,7 +378,7 @@
 								}
 							}
 						 	agenda = 2;
-							document.getElementById("bewertung_header").innerHTML="Bewertung: Weiterführung";
+							document.getElementById("bewertung_header").innerHTML= "Bewertung: " + document.getElementById("agenda2").textContent;
 							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
 							document.getElementById("bewertung_container").className = "bewertungcontainer2 panel panel-yellow";
 							
@@ -448,7 +448,7 @@
 							//Ändere Fragenzuweisung
 							agendaLabel = document.getElementById("agendaLabel")
 							agendaLabel.textContent = document.getElementById("agenda3").textContent;
-							agendaLabel.value = "agenda3";
+							agendaLabel.setAttribute("value", "agenda3") ;
 							agendaLabel.className= "agenda3Label quLabel";
 							document.getElementById("quNewPanel").className = "panel panel-default agenda3Fragen";
 							
@@ -468,7 +468,7 @@
 								}
 							}
 						 	agenda = 3;
-							document.getElementById("bewertung_header").innerHTML="Bewertung: Analyse";
+							document.getElementById("bewertung_header").innerHTML= "Bewertung: " + document.getElementById("agenda3").textContent;
 							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
 							document.getElementById("bewertung_container").className = "bewertungcontainer3 panel panel-yellow";
 							
@@ -686,78 +686,52 @@
 				
 				<div class="col-lg-6">
                     <div class="panel panel-default" style="overflow: hidden">
-                        <div class="panel-heading">
-						<div style="display:inline-block; width:300px">
-							<h4>FRAGEN</h4>
-						</div>
-						
-						<div class="fa fa-search" >
-						</div>
-						
-						<div style="display:inline-block">
-							<input type="text" id="search" placeholder="Suche nach Stichwort...">
-						</div>
-				<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
-							<ul class="nav navbar-top-links navbar-right in" style="display:inline-block; position:center">
-								<li class="dropdown active">
-									<a class="dropdown-toggle active" data-toggle="dropdown" href="#" aria-expanded="false">
-										<i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
-									</a>
-									<ul class="dropdown-menu dropdown-messages in">
-										<li>
-											<a href="#" class="active">
-												<div>
-													<strong>John Smith</strong>
-													<span class="pull-right text-muted">
-														<em>Yesterday</em>
-													</span>
-												</div>
-												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-											</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a href="#" class="active">
-												<div>
-													<strong>John Smith</strong>
-													<span class="pull-right text-muted">
-														<em>Yesterday</em>
-													</span>
-												</div>
-												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-											</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a href="#" class="active">
-												<div>
-													<strong>John Smith</strong>
-													<span class="pull-right text-muted">
-														<em>Yesterday</em>
-													</span>
-												</div>
-												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-											</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a class="text-center active" href="#">
-												<strong>Read All Messages</strong>
-												<i class="fa fa-angle-right"></i>
-											</a>
-										</li>
-									</ul>
-									<!-- /.dropdown-messages -->
-								</li>
-							</ul>
+                        <div class="panel-heading" style="display:inline-block; width:100%">
 
-					
-				</div>
+						<div style="float:left; width:90%">
+						
+							<div style="display:inline-block; width:320px">
+								Fragen
+							</div>
+							
+							<div class="fa fa-search" >
+							</div>
+							
+							<div style="display:inline-block">
+								<input type="text" id="search" placeholder="Suche nach Stichwort...">
+							</div>
+						
+						</div>	
+
+<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->						
+						<div class="nav navbar-top-links navbar-right in" style="width:10% display:inline-block">
+							<label id="filterLabel" class="dropdown active">
+								<div id="dropdownDivFilter" href="#dropItLikeItsHot" style="cursor:pointer" class="dropdown-toggle filter nav navbar-top-links in" data-toggle="dropdown" role="button" aria-expanded="false">
+									<label class="fa fa-filter" style="cursor:pointer"></label> Filter <span class="caret"></span>
+								</div>
+								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
+								  <li class="dropdown-header">STATUS</li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ug" value="ungelesenFilter" style="margin-left:5px"><label for="ug" style="margin-left:2px">ungelesen</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ub" value="unbeantwortetFilter" style="margin-left:5px"><label for="ub" style="margin-left:2px">unbeantwortet</label><br></li>
+								  <li class="divider"></li>
+								  <li class="dropdown-header">AGENDA</li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="agenda1Filter" style="margin-left:5px"><label for="agenda1" style="margin-left:2px">1. Einführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px"><label for="agenda2" style="margin-left:2px">2. Weiterführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px"><label for="agenda3" style="margin-left:2px">3. Analyse</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px"><label for="agenda4" style="margin-left:2px">4. Aufgaben</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px"><label for="agenda5" style="margin-left:2px">5. Fazit</label><br></li>
+
+								  
+								  
+								</ul>
+							</label>
+						</div>
+					</div>
 <!-- ************************************************Filterfunktion Ende*************************************************************************** -->
                       	<!-- Frage stellen -->
 					<div id="quNewPanel" class="panel panel-default agenda1Fragen"style="margin: 20px 30px 30px 30px">
 											
-						<div>
+						<div style="margin: 20px 30px 30px 30px">
 							<label id="quHeading" class="quLabel" style="display: inline-block; margin-bot:5px">Stelle eine Frage zum Thema:</label>
 							<div style="display: inline-block; margin-bot:5px">
 								<label id="agendaLabel" class="quLabel agenda1Label" value="agenda1">1. Einführung</label>
@@ -765,7 +739,7 @@
 						</div>
 
 						
-						<div class=" input-group" style="margin-top: 15px">
+						<div class=" input-group" style="margin: 20px 30px 30px 30px" style="margin-top: 15px">
 								<input type="text" class="form-control" id="quNew" placeholder="Stelle eine Frage">
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-share"></i>
@@ -1009,7 +983,7 @@
 								
 								<!-- Dynamische Zuordnung herstellen -->
 								var agendaLabel = document.getElementById("agendaLabel");
-								var id = agendaLabel.value;
+								var id = agendaLabel.getAttribute("value");
 								var hid = '#pg' + id;	
 								
 								<!-- Variable zur dynamischen Erstellung von IDs -->

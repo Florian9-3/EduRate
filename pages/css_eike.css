@@ -30,11 +30,22 @@
 .hider{
 }
 
+.filter,
+.filter:focus{
+	color:#1C70B3 !important;
+}
+.filter:hover{
+	background-color: #D3D3D3 !important;
+}
+#filterLabel{
+	margin-bottom:0px;
+}
+
+
 .agenda1,
 .agenda1:focus{
 	background-color: #F44336 !important;
 	color:#FFF !important;
-
 }
 
 .agenda2,
@@ -71,16 +82,17 @@
 
 
 .agenda1Fragen{
+	border: groove !important;
 	border-color: #B71C1C !important;
-	border-style: groove !important;
+	
 }
 .agenda2Fragen{
+	border: dotted !important;
 	border-color: #311B92 !important;
-	border-style: groove !important;
 }
 .agenda3Fragen{
+	border: dashed !important;
 	border-color: #0D47A1 !important;
-	border-style: groove !important;
 }
 
 .agenda1Label{
@@ -165,12 +177,12 @@
   } */
 
 
-  
-
-TEXTAREA {
-background-color: #fbfff3;
-width: 100%; 
-font-size: 1.1em;
+  /* Die Scheiße funktioniert nicht */
+.panelCustom{
+	font-size:18 !important;
+	line-hight: 1.7em !important;
+	background-color: rgb(213, 197, 179) !important;
+	color: black !important;
 }
 
 .frageDatum{

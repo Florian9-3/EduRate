@@ -72,114 +72,81 @@
 --------------------------------------------------------------- Fragenbox Anfang -----------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------->
 				
-			<div class="col-lg-6">
+		<div class="col-lg-6">
 				<div class="panel panel-default" style="overflow: hidden">
-					<div class="panel-heading">
-						<div style="display:inline-block; width:300px">
-							<h4>FRAGEN</h4>
-						</div>
+					<div class="panel-heading" style="display:inline-block; width:100%">
+
+						<div style="float:left; width:90%">
 						
-						<div class="fa fa-search" >
-						</div>
+							<div style="display:inline-block; width:320px">
+								Fragen
+							</div>
+							
+							<div class="fa fa-search" >
+							</div>
+							
+							<div style="display:inline-block">
+								<input type="text" id="search" placeholder="Suche nach Stichwort...">
+							</div>
 						
-						<div style="display:inline-block">
-							<input type="text" id="search" placeholder="Suche nach Stichwort...">
+						</div>	
+
+						
+						<div class="nav navbar-top-links navbar-right in" style="width:10% display:inline-block">
+							<label id="filterLabel" class="dropdown active">
+								<div id="dropdownDivFilter" href="#dropItLikeItsHot" style="cursor:pointer" class="dropdown-toggle filter nav navbar-top-links in" data-toggle="dropdown" role="button" aria-expanded="false">
+									<label class="fa fa-filter" style="cursor:pointer"></label> Filter <span class="caret"></span>
+								</div>
+								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ug" value="ungelesenFilter" style="margin-left:5px"><label for="ug" style="margin-left:2px">ungelesen</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ub" value="unbeantwortetFilter" style="margin-left:5px"><label for="ub" style="margin-left:2px">unbeantwortet</label><br></li>
+								  <li class="divider"></li>
+								  <li class="dropdown-header">AGENDA</li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="agenda1Filter" style="margin-left:5px"><label for="agenda1" style="margin-left:2px">1. Einführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px"><label for="agenda2" style="margin-left:2px">2. Weiterführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px"><label for="agenda3" style="margin-left:2px">3. Analyse</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px"><label for="agenda4" style="margin-left:2px">4. Aufgaben</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px"><label for="agenda5" style="margin-left:2px">5. Fazit</label><br></li>
+
+								  
+								  
+								</ul>
+							</label>
 						</div>
+					</div>
 				<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
-							<ul class="nav navbar-top-links navbar-right in" style="display:inline-block; position:center">
-								<li class="dropdown active">
-									<a class="dropdown-toggle active" data-toggle="dropdown" href="#" aria-expanded="false">
-										<i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
-									</a>
-									<ul class="dropdown-menu dropdown-messages in">
-										<li>
-											<a href="#" class="active">
-												<div>
-													<strong>John Smith</strong>
-													<span class="pull-right text-muted">
-														<em>Yesterday</em>
-													</span>
-												</div>
-												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-											</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a href="#" class="active">
-												<div>
-													<strong>John Smith</strong>
-													<span class="pull-right text-muted">
-														<em>Yesterday</em>
-													</span>
-												</div>
-												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-											</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a href="#" class="active">
-												<div>
-													<strong>John Smith</strong>
-													<span class="pull-right text-muted">
-														<em>Yesterday</em>
-													</span>
-												</div>
-												<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-											</a>
-										</li>
-										<li class="divider"></li>
-										<li>
-											<a class="text-center active" href="#">
-												<strong>Read All Messages</strong>
-												<i class="fa fa-angle-right"></i>
-											</a>
-										</li>
-									</ul>
-									<!-- /.dropdown-messages -->
-								</li>
-							</ul>
+
 
 					
-				</div>
+				
 <!-- ************************************************Filterfunktion Ende*************************************************************************** -->
-
-						<!-- Frage stellen -->
-					<div class="panel panel-default"style="margin: 20px 30px 30px 30px">
-						
-						<div>
-							<label style="display: inline-block; margin-bot:5px">Stelle eine Frage zum Thema:</label>
-							<div style="display: inline-block">
-								<label>Einführung</label>
+                      	<!-- Frage stellen -->
+					<div id="quNewPanel" class="panel panel-default agenda1Fragen"style="margin: 20px 30px 30px 30px">
+											
+						<div style="margin: 20px 30px 30px 30px">
+							<label id="quHeading" class="quLabel" style="display: inline-block; margin-bot:5px">Stelle eine Frage zum Thema:</label>
+							<div style="display: inline-block; margin-bot:5px">
+								<label id="agendaLabel" class="quLabel agenda1Label" value="agenda1">1. Einführung</label>
 							</div>
 						</div>
-						
-								
-						<select class="form-control" id="selected">
-									<option class="agenda1" value="agenda1">1. Einführung</option>
-									<option class="agenda2" value="agenda2">2. Weiterführung</option>
-									<option class="agenda3" value="agenda3">3. Analyse</option>
-									<option class="agenda4" value="agenda4">4. Fazit</option>
-						</select>
+
 						
 						<div class=" input-group" style="margin-top: 15px">
-								<input type="text" class="form-control agenda1" id="quNew" placeholder="Stelle eine Frage">
+								<input type="text" class="form-control" style="margin: 20px 30px 30px 30px" id="quNew" placeholder="Stelle eine Frage">
 								<span class="input-group-btn">
-									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-share"></i> <!-- fa-angle-double-right  -->
+									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-share"></i>
 									</button>
 								</span>
 						</div>
-
-						
-
 					</div>
 
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-									
-							<!-- Panel Groups-->		
-		
-								<!-- *******************************************Panel Group 1 *****************************************************-->
-								<div class="panel-group " id="pgagenda1">
+				<div class="panel-body">
+					<div class="col-lg-12">
+							
+					<!-- Panel Groups-->		
+
+						<!-- *******************************************Panel Group 1 *****************************************************-->
+						<div class="panel-group " id="pgagenda1">
 									
 									<!-- Frage 1.1 -->
 									<div class="panel panel-default hider" id="qu1">
@@ -292,21 +259,19 @@
 										</div>
 									</div>
 									
-								</div>						
+								</div>							
 					
 					
-					<div class="panel-group " id="agenda3">
+					<div class="panel-group " id="pgagenda3">
 					</div>
 					
-					<div class="panel-group " id="agenda4">
+					<div class="panel-group " id="pgagenda4">
 					</div>
 					
 				</div>
-				
 			</div>
+            </div>
                 <!-- /.col-lg-4 -->
-				
-	
 				
 				<script type="text/javascript">
 					<!-- Textarea auslesen und Status setzen -->
@@ -316,7 +281,9 @@
 					function start(){
 						setzeBeantwortetStatus();
 					}
-
+					
+					
+					<!-- Beantwortet Status setzen  -->
 					function setzeBeantwortetStatus(){
 						var listeTextarea = document.getElementsByName("texterArea");
 						var listeLabel = document.getElementsByName("labeler");
@@ -347,13 +314,19 @@
 				
 				   $(function() {
 				   
+<!-- Lasse Dropdown geöffnet -->
+						$('dropdownDivFilter').on({
+							"shown.bs.dropdown": function() { this.closable = false; },
+							"click": function() { this.closable = false; },
+							"hide.bs.dropdown":  function() { return this.closable; }
+						});
+				   
 <!-- Enterfunktion Textfeld Fragen -->
 						$("#quNew").keyup(function(event){
 							if(event.keyCode == 13){
 								$("#btnAddQuestion").click();
 							}
 						});
-						
 						
 <!-- Suche -->
 						$("#search").keyup(function(){
@@ -374,10 +347,21 @@
 									$(this).show();
 								}
 							});
-						 });
+						 });						
+						
+<!-- Verändere Hintergrund von Fragestellen Feld -->
+						// var idOld = "agenda1";
+						
+							// $("#agendaLabel").on("click", function(){					
+								// var agendaLabel = document.getElementById("agendaLabel");
+								// var id = agendaLabel.value;
+								// $("#quNew").removeClass(idOld);
+								// $("#quNew").addClass(id);
+								// idOld = id;
+							// });
 						
 <!-- Frage hinzufügen -->
-						var x = 9;
+						var x = 5;
 						
 							$("#btnAddQuestion").on("click", function() {
 							
@@ -397,45 +381,41 @@
 								p2 = document.createElement('p');
 								
 								<!-- Dynamische Zuordnung herstellen -->
-								var selected = document.getElementById("selected");
-								var id = selected.options[selected.selectedIndex].value;
-								var hid = '#' + id;	
+								var agendaLabel = document.getElementById("agendaLabel");
+								var id = agendaLabel.getAttribute("value");
+								var hid = '#pg' + id;	
 								
 								<!-- Variable zur dynamischen Erstellung von IDs -->
 								
 								$(hid).prepend(div1);
 								
-								$(div1).addClass("panel panel-default");
+								$(div1).addClass("panel panel-default hider");
 								var quX = 'qu' + x;
 								var hquX = '#qu' + x;
 								$(div1).attr( 'id', quX);
 								
-								
-									$(div21).addClass("panel-heading quOverflow").addClass(id)
-										.appendTo($(hquX));	
+									var collapseX = 'collapse' + x;
+									var hcollapseX = '#collapse' + x;
+										
+									$(div21).appendTo($(hquX));	
 									var div21X = 'div21' + x;
 									var hdiv21X = '#div21' + x;
-									$(div21).attr( 'id', div21X);					
+									$(div21).attr( 'id', div21X);			
+									$(div21).attr( 'data-toggle', 'collapse');		
+									$(div21).attr( 'data-parent', hid);		
+									$(div21).attr( 'href', hcollapseX);
+									$(div21).attr( 'aria-expanded', 'false');	
+									$(div21).attr( 'aria-controls', collapseX);
+									$(div21).addClass("panel-heading quOverflow").addClass(id);								
+									
 										
 										$(div31).addClass("panel-title ellipsis fragePositionierung")
 											.appendTo($(hdiv21X));
+										$(div31).html(quNew);
 										var div31X = 'div31' + x;
 										var hdiv31X = '#div31' + x;
 										$(div31).attr( 'id', div31X);
 											
-										<!-- Frage -->
-																			
-										var collapseX = 'collapse' + x;
-										var hcollapseX = '#collapse' + x;
-										
-											$("<a/>", {
-												text: quNew,
-												href: hcollapseX,
-												"data-toggle":"collapse",
-												"data-parent":hid,
-												"aria-expanded":"false",
-												"aria-controls":collapseX,
-											}).appendTo($(hdiv31X));
 										
 									<!-- Status -->
 										$(div32).addClass("checkerBoxer beantwortetButtonPositionierung")
@@ -497,11 +477,11 @@
 												var p2X = 'p2' + x;
 												var hp2X = '#p2' + x;
 												$(p2).attr( 'id', p2X);
-												
-										var antwortX = 'antwort' + x;
+												 
+												var antwortX = 'antwort' + x;
 										<!-- Antwortfeld -->
 											$('<div />', { 
-												'id': anwortX,
+												'id': antwortX,
 												'name': 'texterArea'}).appendTo($(hdiv33X));
 										
 							<!-- BeantwortetStatus setzen -->
@@ -517,7 +497,7 @@
 						
 					});
 						
-				</script>		
+				</script>
 				
 					
 <!----------------------------------------------------------------------------------------------------------------------------------------------
