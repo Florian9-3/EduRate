@@ -711,19 +711,18 @@
 								</div>
 								
 								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
+								
 								  <li class="dropdown-header">STATUS</li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ug" value="ungelesenFilter" style="margin-left:5px"><label for="ug" style="margin-left:2px">ungelesen</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ub" value="unbeantwortetFilter" style="margin-left:5px"><label for="ub" style="margin-left:2px">unbeantwortet</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ug" value="ungelesenFilter" style="margin-left:5px; cursor:pointer"><label for="ug" style="margin-left:2px; cursor:pointer">ungelesen</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ub" value="unbeantwortetFilter" style="margin-left:5px; cursor:pointer"><label for="ub" style="margin-left:2px; cursor:pointer">unbeantwortet</label><br></li>
 								  <li class="divider"></li>
 								  <li class="dropdown-header">AGENDA</li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="agenda1Filter" style="margin-left:5px"><label for="agenda1Filter" style="margin-left:2px">1. Einführung</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px"><label for="agenda2Filter" style="margin-left:2px">2. Weiterführung</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px"><label for="agenda3Filter" style="margin-left:2px">3. Analyse</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px"><label for="agenda4Filter" style="margin-left:2px">4. Aufgaben</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px"><label for="agenda5Filter" style="margin-left:2px">5. Fazit</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="agenda1Filter" style="margin-left:5px; cursor:pointer"><label for="agenda1Filter" style="margin-left:2px; cursor:pointer">1. Einführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px; cursor:pointer"><label for="agenda2Filter" style="margin-left:2px; cursor:pointer">2. Weiterführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px; cursor:pointer"><label for="agenda3Filter" style="margin-left:2px; cursor:pointer">3. Analyse</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px; cursor:pointer"><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Aufgaben</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px; cursor:pointer"><label for="agenda5Filter" style="margin-left:2px; cursor:pointer">5. Fazit</label><br></li>
 
-								  
-								  
 								</ul>
 							</label>
 						</div>
@@ -741,6 +740,7 @@
 								$('#filterLabel').removeClass('open');
 							}
 						});
+						
 						
 					</script>
 					
