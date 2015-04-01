@@ -35,6 +35,7 @@
 .hider{
 }
 
+
 /* Eigenschaften für Filterbutton */
 .filter,
 .filter:focus{
@@ -93,11 +94,11 @@
 	
 }
 .agenda2Fragen{
-	border: dotted !important;
+	border: groove !important;
 	border-color: #311B92 !important;
 }
 .agenda3Fragen{
-	border: dashed !important;
+	border: groove !important;
 	border-color: #0D47A1 !important;
 }
 

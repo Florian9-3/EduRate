@@ -713,15 +713,15 @@
 								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
 								
 								  <li class="dropdown-header">STATUS</li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ug" value="ungelesenFilter" style="margin-left:5px; cursor:pointer"><label for="ug" style="margin-left:2px; cursor:pointer">ungelesen</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ub" value="unbeantwortetFilter" style="margin-left:5px; cursor:pointer"><label for="ub" style="margin-left:2px; cursor:pointer">unbeantwortet</label><br></li>
+								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ug" value="quBold" style="margin-left:5px; cursor:pointer"><label for="ug" style="margin-left:2px; cursor:pointer">ungelesen</label><br></li>
+								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ub" value="fa-ellipsis-h" style="margin-left:5px; cursor:pointer"><label for="ub" style="margin-left:2px; cursor:pointer">unbeantwortet</label><br></li>
 								  <li class="divider"></li>
 								  <li class="dropdown-header">AGENDA</li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="agenda1Filter" style="margin-left:5px; cursor:pointer"><label for="agenda1Filter" style="margin-left:2px; cursor:pointer">1. Einführung</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px; cursor:pointer"><label for="agenda2Filter" style="margin-left:2px; cursor:pointer">2. Weiterführung</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px; cursor:pointer"><label for="agenda3Filter" style="margin-left:2px; cursor:pointer">3. Analyse</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px; cursor:pointer"><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Aufgaben</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px; cursor:pointer"><label for="agenda5Filter" style="margin-left:2px; cursor:pointer">5. Fazit</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="pgagenda1" style="margin-left:5px; cursor:pointer" checked><label for="agenda1Filter" style="margin-left:2px; cursor:pointer">1. Einführung</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="pgagenda2" style="margin-left:5px; cursor:pointer" checked><label for="agenda2Filter" style="margin-left:2px; cursor:pointer">2. Weiterführung</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="pgagenda3" style="margin-left:5px; cursor:pointer" checked><label for="agenda3Filter" style="margin-left:2px; cursor:pointer">3. Analyse</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="pgagenda4" style="margin-left:5px; cursor:pointer" checked><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Aufgaben</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="pgagenda5" style="margin-left:5px; cursor:pointer" checked><label for="agenda5Filter" style="margin-left:2px; cursor:pointer">5. Fazit</label><br></li>
 
 								</ul>
 							</label>
@@ -782,7 +782,7 @@
 												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
 											</div>
 
-											<div class="checkerBoxer beantwortetButtonPositionierung">
+											<div data-toggle="tooltip" data-placement="left" data-original-title="" class="checkerBoxer beantwortetButtonPositionierung">
 												<label class="haken" name="labeler"></label>
 											</div>
 
@@ -802,13 +802,13 @@
 
 									<!-- Frage 1.2 -->
 									<div class="panel panel-default hider" id="qu2">
-										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
 
 											<div id="quHeader2" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Dozenten Feedback wollen?
 											</div>
 
-											<div class="checkerBoxer beantwortetButtonPositionierung">
+											<div  class="checkerBoxer beantwortetButtonPositionierung" data-toggle="tooltip" data-placement="left" data-original-title="">
 												<label class="haken" name="labeler"></label>
 											</div>
 
@@ -840,7 +840,7 @@
 												Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten?
 											</div>
 
-											<div class="checkerBoxer beantwortetButtonPositionierung">
+											<div data-toggle="tooltip" data-placement="left" data-original-title="" class="checkerBoxer beantwortetButtonPositionierung">
 												<label class="haken" name="labeler"></label>
 											</div>
 
@@ -868,7 +868,7 @@
 												Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein?
 											</div>
 
-											<div class="checkerBoxer beantwortetButtonPositionierung" style="border-left:groove">
+											<div data-toggle="tooltip" data-placement="left" data-original-title="" class="checkerBoxer beantwortetButtonPositionierung" style="border-left:groove">
 												<label class="haken" name="labeler"></label>
 											</div>
 
@@ -922,14 +922,21 @@
 							
 							if(antwort == ""){
 								listeLabel[i].className = "haken fa fa-ellipsis-h";
+								$(listeLabel[i]).parent().attr("data-original-title" , "Unbeantwortet");
 							}
 							else{
 								listeLabel[i].className = "haken fa fa-check";
+								$(listeLabel[i]).parent().attr("data-original-title", "Beantwortet");
 							}
-						
+
 						}
 						
 					}
+					
+<!-- Setze gelesen-Status -->					
+					$(".quBold").on("click", function() {					
+						$(this).removeClass("quBold");		
+					});
 
 									
 				</script>
@@ -966,12 +973,64 @@
 									$(this).show();
 								}
 							});
-						 });						
+						 });				
+
+<!-- Filter -->
+						$(".fi").on("click", function(){
+							
+							var checkedAgendaList = [];
+							var checkedStatusList = [];
+							var count = 0;
+							
+							<!-- Filteroptionen auslesen -->
+							$(".agFilter").each(function(){
+								if(this.checked === true){
+									checkedAgendaList[count] =  this;
+									count++;
+								}
+							});
+							
+							count = 0;
+							
+							$(".stFilter").each(function(){
+								if(this.checked === true){
+									checkedStatusList[count] =  this;
+									count++;
+								}
+							});
 								
-<!-- Setze gelesen-Status -->					
-					$(".quBold").on("click", function() {					
-						$(this).removeClass("quBold");		
-					});
+							$(".panel-group").hide();
+							$(".hider").hide();
+								
+							for(var i = 0; i < checkedAgendaList.length; i++){
+								var cl = "#" + checkedAgendaList[i].value;
+								$(cl).show();
+							}
+							
+							for(var i = 0; i < checkedStatusList.length; i++){
+								var cl = "." + checkedStatusList[i].value;
+								
+								if(cl == ".quBold"){
+									$(".quBold").each(function(){
+										$(this).parent().parent().show();
+									});
+									// $(cl).parent().parent().show();
+								}
+								
+								if(cl == ".fa-ellipsis-h"){
+									$(".fa-ellipsis-h").each(function(){
+										$(this).parent().parent().parent().show();
+									});
+								}
+									
+							}
+							
+							
+						});
+						
+						
+								
+
 										
 						
 <!-- Frage hinzufügen -->
@@ -1037,6 +1096,10 @@
 										var div32X = 'div32' + x;
 										var hdiv32X = '#div32' + x;
 										$(div32).attr( 'id', div32X);
+										$(div32).attr("data-toggle", "tooltip"); 
+										$(div32).attr("data-placement", "left"); 
+										$(div32).attr("data-original-title", ""); 
+										 
 																				
 											$('<label />', { 
 												'name': 'labeler', 
@@ -1110,9 +1173,11 @@
 								$(".quBold").on("click", function() {					
 									$(this).removeClass("quBold");		
 								});
+								
+								$('[data-toggle="tooltip"]').tooltip();   
 							}
+							
 							});
-						
 					});
 						
 				</script>
