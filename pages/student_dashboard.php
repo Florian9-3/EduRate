@@ -778,7 +778,7 @@
 									<div class="panel panel-default hider" id="qu1">
 										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1">
 					   
-											<div class="panel-title ellipsis fragePositionierung ">
+											<div id="quHeader1" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
 											</div>
 
@@ -804,7 +804,7 @@
 									<div class="panel panel-default hider" id="qu2">
 										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
 
-											<div class="panel-title ellipsis fragePositionierung">
+											<div id="quHeader2" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Dozenten Feedback wollen?
 											</div>
 
@@ -836,7 +836,7 @@
 									<div class="panel panel-default hider" id="qu3">
 										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2">
 
-											<div class="panel-title ellipsis fragePositionierung">
+											<div id="quHeader3" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten?
 											</div>
 
@@ -864,7 +864,7 @@
 									<div class="panel panel-default hider" id="qu4">
 										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2"> 
 
-											<div class="panel-title ellipsis fragePositionierung">
+											<div id="quHeader4" class="panel-title ellipsis fragePositionierung quBold">
 												Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein?
 											</div>
 
@@ -909,7 +909,7 @@
 					}
 					
 					
-					<!-- Beantwortet Status setzen  -->
+<!-- Beantwortet Status setzen  -->
 					function setzeBeantwortetStatus(){
 						var listeTextarea = document.getElementsByName("texterArea");
 						var listeLabel = document.getElementsByName("labeler");
@@ -967,7 +967,9 @@
 								}
 							});
 						 });						
+								
 						
+
 <!-- Verändere Hintergrund von Fragestellen Feld -->
 						// var idOld = "agenda1";
 						

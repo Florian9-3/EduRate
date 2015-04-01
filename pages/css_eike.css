@@ -27,9 +27,15 @@
 	border-left:groove;
 }
 
+.quBold{
+	font-weight:bold;
+}
+
+/* Für Suche */
 .hider{
 }
 
+/* Eigenschaften für Filterbutton */
 .filter,
 .filter:focus{
 	color:#1C70B3 !important;

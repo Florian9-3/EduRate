@@ -74,7 +74,7 @@
 				
 		<div class="col-lg-6">
 				<div class="panel panel-default" style="overflow: hidden">
-					<div class="panel-heading" style="display:inline-block; width:100%">
+                        <div class="panel-heading" style="display:inline-block; width:100%">
 
 						<div style="float:left; width:90%">
 						
@@ -91,13 +91,14 @@
 						
 						</div>	
 
-						
+<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->						
 						<div class="nav navbar-top-links navbar-right in" style="width:10% display:inline-block">
 							<label id="filterLabel" class="dropdown active">
 								<div id="dropdownDivFilter" href="#dropItLikeItsHot" style="cursor:pointer" class="dropdown-toggle filter nav navbar-top-links in" data-toggle="dropdown" role="button" aria-expanded="false">
 									<label class="fa fa-filter" style="cursor:pointer"></label> Filter <span class="caret"></span>
 								</div>
 								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
+								  <li class="dropdown-header">STATUS</li>
 								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ug" value="ungelesenFilter" style="margin-left:5px"><label for="ug" style="margin-left:2px">ungelesen</label><br></li>
 								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ub" value="unbeantwortetFilter" style="margin-left:5px"><label for="ub" style="margin-left:2px">unbeantwortet</label><br></li>
 								  <li class="divider"></li>
@@ -114,11 +115,6 @@
 							</label>
 						</div>
 					</div>
-				<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
-
-
-					
-				
 <!-- ************************************************Filterfunktion Ende*************************************************************************** -->
                       	<!-- Frage stellen -->
 					<div id="quNewPanel" class="panel panel-default agenda1Fragen"style="margin: 20px 30px 30px 30px">
@@ -131,8 +127,8 @@
 						</div>
 
 						
-						<div class=" input-group" style="margin-top: 15px">
-								<input type="text" class="form-control" style="margin: 20px 30px 30px 30px" id="quNew" placeholder="Stelle eine Frage">
+						<div class=" input-group" style="margin: 20px 30px 30px 30px" style="margin-top: 15px">
+								<input type="text" class="form-control" id="quNew" placeholder="Stelle eine Frage">
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="button" id="btnAddQuestion"><i class="fa fa-share"></i>
 									</button>
@@ -150,9 +146,9 @@
 									
 									<!-- Frage 1.1 -->
 									<div class="panel panel-default hider" id="qu1">
-										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1">
-					   
-											<div class="panel-title ellipsis fragePositionierung ">
+										<div id="quHeader1" data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1" onclick="read()" value="test">
+					   hallo
+											<div  class="panel-title ellipsis fragePositionierung quBold" value="test1">
 												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
 											</div>
 
@@ -176,9 +172,9 @@
 
 									<!-- Frage 1.2 -->
 									<div class="panel panel-default hider" id="qu2">
-										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1" onclick="read()"> 
 
-											<div class="panel-title ellipsis fragePositionierung">
+											<div id="quHeader2" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Dozenten Feedback wollen?
 											</div>
 
@@ -210,7 +206,7 @@
 									<div class="panel panel-default hider" id="qu3">
 										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2">
 
-											<div class="panel-title ellipsis fragePositionierung">
+											<div id="quHeader3" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten?
 											</div>
 
@@ -238,7 +234,7 @@
 									<div class="panel panel-default hider" id="qu4">
 										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2"> 
 
-											<div class="panel-title ellipsis fragePositionierung">
+											<div id="quHeader4" class="panel-title ellipsis fragePositionierung quBold">
 												Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein?
 											</div>
 
@@ -283,7 +279,7 @@
 					}
 					
 					
-					<!-- Beantwortet Status setzen  -->
+	<!-- Beantwortet Status setzen  -->
 					function setzeBeantwortetStatus(){
 						var listeTextarea = document.getElementsByName("texterArea");
 						var listeLabel = document.getElementsByName("labeler");
@@ -304,6 +300,15 @@
 						}
 						
 					}
+<!-- Setze gelesen-Status -->
+					function read(){
+						<!-- var child = this.firstElementChild().innerHTML; -->
+						var child = this.innerHTML;
+						alert(child);
+					}
+					
+					$(".read").on("click", function() {
+					
 
 									
 				</script>
@@ -313,14 +318,7 @@
 				
 				
 				   $(function() {
-				   
-<!-- Lasse Dropdown geöffnet -->
-						$('dropdownDivFilter').on({
-							"shown.bs.dropdown": function() { this.closable = false; },
-							"click": function() { this.closable = false; },
-							"hide.bs.dropdown":  function() { return this.closable; }
-						});
-				   
+					   
 <!-- Enterfunktion Textfeld Fragen -->
 						$("#quNew").keyup(function(event){
 							if(event.keyCode == 13){
@@ -348,7 +346,9 @@
 								}
 							});
 						 });						
+								
 						
+
 <!-- Verändere Hintergrund von Fragestellen Feld -->
 						// var idOld = "agenda1";
 						
