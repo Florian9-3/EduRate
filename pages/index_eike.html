@@ -146,9 +146,9 @@
 									
 									<!-- Frage 1.1 -->
 									<div class="panel panel-default hider" id="qu1">
-										<div id="quHeader1" data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1" onclick="read()" value="test">
-					   hallo
-											<div  class="panel-title ellipsis fragePositionierung quBold" value="test1">
+										<div id="quHeader1" data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1 read">
+
+											<div  class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
 											</div>
 
@@ -300,14 +300,10 @@
 						}
 						
 					}
-<!-- Setze gelesen-Status -->
-					function read(){
-						<!-- var child = this.firstElementChild().innerHTML; -->
-						var child = this.innerHTML;
-						alert(child);
-					}
-					
-					$(".read").on("click", function() {
+<!-- Setze gelesen-Status -->					
+					$(".quBold").on("click", function() {					
+						var child = $(this).removeClass("quBold");		
+					});
 					
 
 									

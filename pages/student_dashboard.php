@@ -716,11 +716,11 @@
 								  <li><input href="#dropItLikeItsHot" type="checkbox" id="ub" value="unbeantwortetFilter" style="margin-left:5px"><label for="ub" style="margin-left:2px">unbeantwortet</label><br></li>
 								  <li class="divider"></li>
 								  <li class="dropdown-header">AGENDA</li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="agenda1Filter" style="margin-left:5px"><label for="agendaF1" style="margin-left:2px">1. Einführung</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px"><label for="agendaF2" style="margin-left:2px">2. Weiterführung</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px"><label for="agendaF3" style="margin-left:2px">3. Analyse</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px"><label for="agendaF4" style="margin-left:2px">4. Aufgaben</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px"><label for="agendaF5" style="margin-left:2px">5. Fazit</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="agenda1Filter" style="margin-left:5px"><label for="agenda1Filter" style="margin-left:2px">1. Einführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px"><label for="agenda2Filter" style="margin-left:2px">2. Weiterführung</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px"><label for="agenda3Filter" style="margin-left:2px">3. Analyse</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px"><label for="agenda4Filter" style="margin-left:2px">4. Aufgaben</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px"><label for="agenda5Filter" style="margin-left:2px">5. Fazit</label><br></li>
 
 								  
 								  
@@ -968,18 +968,11 @@
 							});
 						 });						
 								
-						
-
-<!-- Verändere Hintergrund von Fragestellen Feld -->
-						// var idOld = "agenda1";
-						
-							// $("#agendaLabel").on("click", function(){					
-								// var agendaLabel = document.getElementById("agendaLabel");
-								// var id = agendaLabel.value;
-								// $("#quNew").removeClass(idOld);
-								// $("#quNew").addClass(id);
-								// idOld = id;
-							// });
+<!-- Setze gelesen-Status -->					
+					$(".quBold").on("click", function() {					
+						$(this).removeClass("quBold");		
+					});
+										
 						
 <!-- Frage hinzufügen -->
 						var x = 5;
@@ -1027,7 +1020,7 @@
 									$(div21).attr( 'href', hcollapseX);
 									$(div21).attr( 'aria-expanded', 'false');	
 									$(div21).attr( 'aria-controls', collapseX);
-									$(div21).addClass("panel-heading quOverflow").addClass(id);								
+									$(div21).addClass("panel-heading quOverflow quBold").addClass(id);								
 									
 										
 										$(div31).addClass("panel-title ellipsis fragePositionierung")
@@ -1113,6 +1106,10 @@
 								
 							<!-- Lösche Eingabe aus Textfeld -->
 								document.getElementById("quNew").value = "";
+								
+								$(".quBold").on("click", function() {					
+									$(this).removeClass("quBold");		
+								});
 							}
 							});
 						
