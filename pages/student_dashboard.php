@@ -129,12 +129,8 @@
                                       <button type="button" id="agenda3" style="width: 100% ; text-align: left" class="agenda3 btn btn-default btn-lg" onclick="agendaChange(3);" >3. Analyse</button>
                                       <br><br>
                                       <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt">
-                                      <button type="button" id="agenda4" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled"
-                                      >4. Aufgaben</button></div>
-                                      <br>
-                                      <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt">
-                                      <button type="button" id="agenda5" style="width: 100% ; text-align: left" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(5);" disabled="disabled"
-                                      >5. Fazit</button></div>
+                                      <button type="button" id="agenda5" style="width: 100% ; text-align: left" class="agendaDisabled btn btn-lg btn-primary" onclick="agendaChange(5);" disabled="disabled"
+                                      >4. Fazit</button></div>
 
 
                                     </div>

@@ -69,7 +69,14 @@
 
 .agenda4,
 .agenda4:focus{
-	background-color: #757575 !important;
+	background-color: #FFEB3B !important;
+	color:#FFF;
+}
+
+.agendaDisabled,
+.agendaDisabled:focus{
+	background-color: #BDBDBD !important;
+	border-color: #BDBDBD !important;
 	color:#FFF;
 }
 
@@ -84,6 +91,11 @@
 }
 .agenda3:hover{
 	background-color: #0D47A1 !important;
+	color:#FFF;
+}
+
+.agenda4:hover{
+	background-color: #FBC02D !important;
 	color:#FFF;
 }
 
@@ -142,6 +154,11 @@
 	background-color:#2196F3 !important;
 }
 
+.bewertung4{
+	border-color:#FFEB3B !important;
+	background-color:#FFEB3B !important;
+}
+
 .bewertungcontainer1{
 	border-color:#F44336 !important;
 }
@@ -152,6 +169,10 @@
 
 .bewertungcontainer3{
 	border-color:#2196F3 !important;
+}
+
+.bewertungcontainer4{
+	border-color:#FFEB3B !important;
 }
 
 
@@ -347,6 +368,10 @@
 
 .comment3{
 	border-bottom-color:#2196F3 !important;
+}
+
+.comment4{
+	border-bottom-color:#FFEB3B !important;
 }
 
 

@@ -161,11 +161,19 @@
                                       </button>
                                       <br><br>
                                       <div data-toggle="tooltip" data-placement="right" title="Noch nicht behandelt" id="nichtBehandelt4">
-                                          <div style="width: 100%; text-align: left; margin-bottom:1em; " id="agenda4" class="agenda4 btn btn-lg btn-primary" onclick="agendaChange(4);" disabled="disabled"
-                                          >4. Aufgaben
+                                          <div style="width: 100%; text-align: left; margin-bottom:1em; cursor: default !important;" id="agenda4" class="agendaDisabled btn btn-lg btn-primary" onclick="agendaChange(4);"
+                                          >4. Fazit
                                           <span style="float: right;">
                                           <button type="button" class="btn btn-info btn-circle" style="cursor: pointer !important" onClick="activate(4)" id="activate_button4"><i class="fa fa-check"></i>
-                                            </button></span>
+                                            </button>
+											<fieldset class="ratingDoz" id="rating4" style="display: none">
+                                            <input type="radio" id="ag5" name="ratingDoz4" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz4" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz4" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz4" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz4" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+										</fieldset>
+											</span>
                                           </div></div>
                                       <br>
                                       
@@ -187,8 +195,8 @@
                             <div style="width:100%; height:100%" id="chart_div"></div>
                             <div style="margin-left:3%" id="gesamtzahl">Gesamtanzahl: 253 Bewertungen</div>
                             <hr>
-                            <div style="margin-left:3%"><b>Kommentare:</b></div><br>
-                            <ul class="chat" style="margin-left:3%; margin-right:1%; padding-right:2%; height:200px !important; overflow:auto;">
+                            <div id="Kommentare" style="margin-left:3%"><b>Kommentare:</b></div><br>
+                            <ul id="comments" class="chat" style="margin-left:3%; margin-right:1%; padding-right:2%; height:200px !important; overflow:auto;">
                                 <li class="left clearfix comment1" id="list1">
                                     
                                     <div class="chat-body clearfix">
@@ -363,10 +371,11 @@
 					
 					function activate(position){
 						
-						document.getElementById("agenda4").className = "agenda3 btn btn-lg btn-primary";
+						document.getElementById("agenda4").className = "agenda4 btn btn-lg btn-primary";
 						document.getElementById("agenda4").disabled = false;
-						//document.getElementById("nichtBehandelt4").
+						$("#nichtBehandelt4").tooltip('destroy');
 						document.getElementById("activate_button4").style.display = "none";
+						document.getElementById("rating4").style.display = "inline";
 					}
 					
 					function agendaChange(position){
@@ -374,6 +383,8 @@
 						switch(position){
 						 case 1:
 						 	agenda = 1;
+							document.getElementById("Kommentare").innerHTML="<b>Kommentare:</b>";
+							document.getElementById("comments").style.display = "block";
 							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Einführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
 							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
@@ -433,6 +444,8 @@
 							break;
 						 case 2:
 						 	agenda = 2;
+							document.getElementById("Kommentare").innerHTML="<b>Kommentare:</b>";
+							document.getElementById("comments").style.display = "block";
 							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Weiterführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
 							document.getElementById("bewertung_container").className = "bewertungcontainer2 panel panel-yellow";
@@ -492,6 +505,8 @@
 							break;
 						 case 3:
 						 	agenda = 3;
+							document.getElementById("Kommentare").innerHTML="<b>Kommentare:</b>";
+							document.getElementById("comments").style.display = "block";
 							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Analyse";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
 							document.getElementById("bewertung_container").className = "bewertungcontainer3 panel panel-yellow";
@@ -551,7 +566,67 @@
 							
 							break;
 						 case 4:
-							document.getElementById("bewertung_header").innerHTML="Bewertung: Fazit";
+							if(document.getElementById("activate_button4").style.display == "none"){
+								agenda = 4;
+								document.getElementById("bewertung_header").innerHTML="Detailbewertung: Fazit";
+								document.getElementById("bewertung_header").className = "panel-heading bewertung4";
+								document.getElementById("bewertung_container").className = "bewertungcontainer4 panel panel-yellow";
+								document.getElementById("list1").className = "left clearfix comment4";
+								document.getElementById("list2").className = "left clearfix comment4";
+								document.getElementById("list3").className = "left clearfix comment4";
+								document.getElementById("list4").className = "left clearfix comment4";
+								document.getElementById("comments").style.display = "none";
+								document.getElementById("Kommentare").innerHTML="<b>Noch keine Kommentare</b>";
+								
+								// Load the Visualization API and the piechart package.
+								  google.load('visualization', '1.0', {'packages':['corechart']});
+							
+								  // Set a callback to run when the Google Visualization API is loaded.
+								  google.setOnLoadCallback(drawChart);
+							
+								  // Callback that creates and populates a data table,
+								  // instantiates the pie chart, passes in the data and
+								  // draws it.
+								  function drawChart4() {
+							
+									// Create the data table.
+									var data = new google.visualization.DataTable();
+									data.addColumn('string', 'Topping');
+									data.addColumn('number', 'Anzahl der Bewertungen');
+									data.addColumn({type:'string', role:'style'});
+									data.addRows([
+									  ['1 Stern', 0, 'color: #FFEB3B'],
+									  ['2 Sterne', 0, 'color: #FFEB3B'],
+									  ['3 Sterne', 0, 'color: #FFEB3B'],
+									  ['4 Sterne', 0, 'color: #FFEB3B'],
+									  ['5 Sterne', 0, 'color: #FFEB3B']
+									]);
+							
+									// Set chart options
+									//var options = {'title':'Bewertung der Studenten'};
+									var options = {
+										title: 'Bewertung der Studenten',
+										animation:{
+											duration: 1500,
+											startup: true,
+											easing: 'out',
+										  },
+										legend:{
+											position: 'none',
+										},
+									};
+							
+									// Instantiate and draw our chart, passing in some options.
+									var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+									chart.draw(data, options);
+								  }
+								
+								  drawChart4();
+								  window.onresize = function(event) {
+							
+								  };
+								document.getElementById("gesamtzahl").innerHTML="Gesamtanzahl: 0 Bewertungen";
+							}
 							break;
 						 }
 						 
