@@ -996,7 +996,13 @@
 							});
 								
 							$(".panel-group").hide();
-							$(".hider").hide();
+							
+							if(checkedStatusList.length > 0){
+								$(".hider").hide();
+							}else{
+								$(".hider").show();
+							}
+							
 								
 							for(var i = 0; i < checkedAgendaList.length; i++){
 								var cl = "#" + checkedAgendaList[i].value;
