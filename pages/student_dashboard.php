@@ -1003,31 +1003,51 @@
 								$(".hider").show();
 							}
 							
-								
-							for(var i = 0; i < checkedAgendaList.length; i++){
-								var cl = "#" + checkedAgendaList[i].value;
-								$(cl).show();
-							}
-							
-							for(var i = 0; i < checkedStatusList.length; i++){
-								var cl = "." + checkedStatusList[i].value;
-								
-								if(cl == ".quBold"){
-									$(".quBold").each(function(){
-										$(this).parent().parent().show();
-									});
-									// $(cl).parent().parent().show();
+							if(checkedStatusList.length < 2){
+															
+								for(var i = 0; i < checkedAgendaList.length; i++){
+									var cl = "#" + checkedAgendaList[i].value;
+									$(cl).show();
 								}
 								
-								if(cl == ".fa-ellipsis-h"){
-									$(".fa-ellipsis-h").each(function(){
-										$(this).parent().parent().parent().show();
-									});
-								}
+								for(var i = 0; i < checkedStatusList.length; i++){
+									var cl = "." + checkedStatusList[i].value;
 									
-							}
-							
-							
+									if(cl == ".quBold"){
+										$(".quBold").each(function(){
+											$(this).parent().parent().show();
+										});
+									}
+									
+									if(cl == ".fa-ellipsis-h"){
+										$(".fa-ellipsis-h").each(function(){
+											$(this).parent().parent().parent().show();
+										});
+									}		
+								}
+								
+							}else{
+									for(var i = 0; i < checkedAgendaList.length; i++){
+									var cl = "#" + checkedAgendaList[i].value;
+									$(cl).show();
+									}
+									
+									var faEllipsisEle = [];
+									var i = 0;
+									$(".fa-ellipsis-h").each(function(){
+										faEllipsisEle[i] = $(this).parent().parent().parent().attr("id");
+										i++;
+									});
+									
+									$(".quBold").each(function(){
+										var found = faEllipsisEle.indexOf($(this).parent().parent().attr("id"));
+										// var found = $.inArray($(this).parent().parent(), faEllipsisEle);
+										if(found > -1){
+											$(this).parent().parent().show();
+										}
+									});
+
+							}	
 						});
 						
 						
@@ -1081,10 +1101,10 @@
 									$(div21).attr( 'href', hcollapseX);
 									$(div21).attr( 'aria-expanded', 'false');	
 									$(div21).attr( 'aria-controls', collapseX);
-									$(div21).addClass("panel-heading quOverflow quBold").addClass(id);								
+									$(div21).addClass("panel-heading quOverflow").addClass(id);								
 									
 										
-										$(div31).addClass("panel-title ellipsis fragePositionierung")
+										$(div31).addClass("panel-title ellipsis fragePositionierung quBold")
 											.appendTo($(hdiv21X));
 										$(div31).html(quNew);
 										var div31X = 'div31' + x;
