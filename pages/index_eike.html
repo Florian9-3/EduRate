@@ -125,7 +125,7 @@
 								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="agenda2Filter" style="margin-left:5px"><label for="agenda2Filter" style="margin-left:2px">2. Weiterführung</label><br></li>
 								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="agenda3Filter" style="margin-left:5px"><label for="agenda3Filter" style="margin-left:2px">3. Analyse</label><br></li>
 								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="agenda4Filter" style="margin-left:5px"><label for="agenda4Filter" style="margin-left:2px">4. Aufgaben</label><br></li>
-								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" v -->alue="agenda5Filter" style="margin-left:5px"><label for="agenda5Filter" style="margin-left:2px">5. Fazit</label><br></li>
+								  <li><input href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="agenda5Filter" style="margin-left:5px"><label for="agenda5Filter" style="margin-left:2px">5. Fazit</label><br></li>-->
 	  
 								</ul>
 
@@ -145,6 +145,47 @@
 								$('#filterLabel').removeClass('open');
 							}
 						});
+						
+						
+						
+						jQuery.fn.highlight = function(pat) {
+							 function innerHighlight(node, pat) {
+							  var skip = 0;
+							  if (node.nodeType == 3) {
+							   var pos = node.data.toUpperCase().indexOf(pat);
+							   pos -= (node.data.substr(0, pos).toUpperCase().length - node.data.substr(0, pos).length);
+							   if (pos >= 0) {
+								var spannode = document.createElement('span');
+								spannode.className = 'highlight';
+								var middlebit = node.splitText(pos);
+								var endbit = middlebit.splitText(pat.length);
+								var middleclone = middlebit.cloneNode(true);
+								spannode.appendChild(middleclone);
+								middlebit.parentNode.replaceChild(spannode, middlebit);
+								skip = 1;
+							   }
+							  }
+							  else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+							   for (var i = 0; i < node.childNodes.length; ++i) {
+								i += innerHighlight(node.childNodes[i], pat);
+							   }
+							  }
+							  return skip;
+							 }
+							 return this.length && pat && pat.length ? this.each(function() {
+							  innerHighlight(this, pat.toUpperCase());
+							 }) : this;
+							};
+
+							jQuery.fn.removeHighlight = function() {
+							 return this.find("span.highlight").each(function() {
+							  this.parentNode.firstChild.nodeName;
+							  with (this.parentNode) {
+							   replaceChild(this.firstChild, this);
+							   normalize();
+							  }
+							 }).end();
+							};
 						
 						
 					</script>
@@ -364,6 +405,8 @@
 								var text = $(this).text().toLowerCase();
 								if(text.indexOf(val) != -1)
 								{
+									$('.fragePositionierung').removeHighlight();
+									$(".fragePositionierung").highlight(val);
 									$(this).show();
 								}
 							});
@@ -372,6 +415,8 @@
 								var text = $(this).text().toLowerCase();
 								if(text.indexOf(val) != -1)
 								{
+									$("div[name='texterArea']").removeHighlight();
+									$("div[name='texterArea']").highlight(val);
 									$(this).show();
 								}
 							});

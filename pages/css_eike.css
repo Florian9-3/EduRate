@@ -35,6 +35,10 @@
 .hider{
 }
 
+.highlight { 
+	background-color: grey;
+}
+
 
 /* Eigenschaften für Filterbutton */
 .filter,
