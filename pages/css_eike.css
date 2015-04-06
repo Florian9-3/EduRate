@@ -31,6 +31,10 @@
 	font-weight:bold;
 }
 
+.dozSentAnswer{
+	background-color: rgb(216, 216, 216);
+}
+
 /* Für Suche */
 .hider{
 }

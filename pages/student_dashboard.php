@@ -709,8 +709,8 @@
 								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
 								
 								  <li class="dropdown-header">STATUS</li>
-								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ug" value="quBold" style="margin-left:5px; cursor:pointer"><label for="ug" style="margin-left:2px; cursor:pointer">ungelesen</label><br></li>
-								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ub" value="fa-ellipsis-h" style="margin-left:5px; cursor:pointer"><label for="ub" style="margin-left:2px; cursor:pointer">unbeantwortet</label><br></li>
+								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ug" value="quBold" style="margin-left:5px; cursor:pointer"><label for="ug" style="margin-left:2px; cursor:pointer">Ungelesen</label><br></li>
+								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ub" value="fa-check" style="margin-left:5px; cursor:pointer"><label for="ub" style="margin-left:2px; cursor:pointer">Beantwortet</label><br></li>
 								  <li class="divider"></li>
 								  <li class="dropdown-header">AGENDA</li>
 								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="pgagenda1" style="margin-left:5px; cursor:pointer" checked><label for="agenda1Filter" style="margin-left:2px; cursor:pointer">1. Einführung</label><br></li>
@@ -1062,8 +1062,8 @@
 										});
 									}
 									
-									if(cl == ".fa-ellipsis-h"){
-										$(".fa-ellipsis-h").each(function(){
+									if(cl == ".fa-check"){
+										$(".fa-check").each(function(){
 											$(this).parent().parent().parent().show();
 										});
 									}		
@@ -1077,7 +1077,7 @@
 									
 									var faEllipsisEle = [];
 									var i = 0;
-									$(".fa-ellipsis-h").each(function(){
+									$(".fa-check").each(function(){
 										faEllipsisEle[i] = $(this).parent().parent().parent().attr("id");
 										i++;
 									});

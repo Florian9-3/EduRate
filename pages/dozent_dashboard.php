@@ -32,6 +32,9 @@
 	<!-- CSS Eike -->
 	<link href="css_eike.css" rel="stylesheet" type="text/css">
 	
+		 <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="dropzoneStudent.js"></script>
 	<script src="dropzoneDozent.js"></script>
@@ -691,287 +694,425 @@
 --------------------------------------------------------------- Fragenbox Anfang -----------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------->
 				
-				<div class="col-lg-6">
+			<div class="col-lg-6">
                     <div class="panel panel-default" style="overflow: hidden">
-                        <div class="panel-heading">
-                            <h4 style="display:inline-block">FRAGEN</h4>
+                        <div class="panel-heading" style="display:inline-block; width:100%">
+
+						<div style="float:left; width:90%">
+						
+							<div style="display:inline-block; width:150px">
+								Fragen
+							</div>
 							
-				<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->
-<ul class="nav navbar-top-links navbar-right in" style="display:inline-block; position:center">
-                <li class="dropdown active">
-                    <a class="dropdown-toggle active" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages in">
-                        <li>
-                            <a href="#" class="active">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#" class="active">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#" class="active">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center active" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-            </ul>
-				
-				
-				
-				
-				
-<!-- 							<li class="dropdown open" style="display:inline-block; left:500px">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
-									<i class="fa fa-filter fa-fw"></i>  <i class="fa fa-caret-down"></i>
-								</a>
-								<ul class="dropdown-menu dropdown-messages">
-									<li>
-										<a href="#">
-											<div>
-												<strong>John Smith</strong>
-												<span class="pull-right text-muted">
-													<em>Yesterday</em>
-												</span>
-											</div>
-											<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-										</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a class="text-center" href="#">
-											<strong>Read All Messages</strong>
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</li>
+							<div class="fa fa-search" >
+							</div>
+							
+							<div style="display:inline-block; width: 350px;">
+								<input class="form-control" type="text" id="search" placeholder="Suche nach Stichwort...">
+							</div>
+						
+						</div>	
+
+<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->						
+						<div class="nav navbar-top-links navbar-right in" style="width:10% display:inline-block">
+							<label id="filterLabel" class="dropdown active">
+								<div id="dropdownDivFilter" href="#dropItLikeItsHot" style="cursor:pointer" class="dropdown-toggle filter nav navbar-top-links in" onClick="toggleFilter()" role="button" aria-expanded="false">
+									<label class="fa fa-filter" style="cursor:pointer"></label> Filter <span class="caret"></span>
+								</div>
+								
+								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
+								
+								  <li class="dropdown-header">STATUS</li>
+								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ug" value="quBold" style="margin-left:5px; cursor:pointer"><label for="ug" style="margin-left:2px; cursor:pointer">Ungelesen</label><br></li>
+								  <li><input class="stFilter fi" href="#dropItLikeItsHot" type="checkbox" id="ub" value="fa-ellipsis-h" style="margin-left:5px; cursor:pointer"><label for="ub" style="margin-left:2px; cursor:pointer">Unbeantwortet</label><br></li>
+								  <li class="divider"></li>
+								  <li class="dropdown-header">AGENDA</li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="pgagenda1" style="margin-left:5px; cursor:pointer" checked><label for="agenda1Filter" style="margin-left:2px; cursor:pointer">1. Einführung</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="pgagenda2" style="margin-left:5px; cursor:pointer" checked><label for="agenda2Filter" style="margin-left:2px; cursor:pointer">2. Weiterführung</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="pgagenda3" style="margin-left:5px; cursor:pointer" checked><label for="agenda3Filter" style="margin-left:2px; cursor:pointer">3. Analyse</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="pgagenda4" style="margin-left:5px; cursor:pointer" checked><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Aufgaben</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="pgagenda5" style="margin-left:5px; cursor:pointer" checked><label for="agenda5Filter" style="margin-left:2px; cursor:pointer">5. Fazit</label><br></li>
+
 								</ul>
-								<!-- /.dropdown-messages -->
-							<!-- </li>  -->
-				<!-- ************************************************Filterfunktion Ende*************************************************************************** -->
-                        </div>
-
-                        <div class="panel-body">
-                            <div class="col-lg-12">
-									
-							<!-- Panel Groups-->		
-		
-										<!-- *******************************************Panel Group 1 *****************************************************-->
-										<div class="panel-group " id="accordion1">
-											
-											<!-- Frage 1.1 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenOne">
-													<div class="panel-title ellipsis fragePositionierung">
-													<!-- display:inline; position:relative;  -->
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
-														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >Frage: Einleitung sooooooooo unglaublich lang und deswegen frage ich mich, ob sie sinnvoll ist?</a>
-													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="squaredCheckbox beantwortetButtonPositionierung disabled">
-														<input type="checkbox" onclick="return false" value="None" id="squaredOne" name="check" />
-														<label for="squaredOne"></label>
-													</div>
-													
-													<!-- Beantwortet Label -->
-													<div class="panel-title beantwortetLabelPositionierung">
-															Beantwortet
-													</div>
-												</div>
-												
-												<div id="collapseOne" class="panel-collapse collapse in">
-													<div class="panel-body">
-														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 11:10</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Einleitung sooooooooo unglaublcih lang und deswegen frage ich mich, ob sie sinnvoll ist? </p>
-														</div>
-														<textarea name="Antwort auf Frage" cols="50" rows="5" placeholder="Es wurde noch keine Antwort gegeben..." readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-														</textarea>
-													</div>
-												</div>
-											</div>
-											
-											
-											<!-- Frage 1.2 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenOne">
-													<div class="panel-title ellipsis fragePositionierung">
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
-														<a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" >Frage: Weiterführung sinnvoll?</a>
-													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="checkerBoxer beantwortetButtonPositionierung">
-														<input type="checkbox" value="None" id="squaredTwo" name="check" />
-														<label class="haken" for="squaredTwo"><!-- <img src="/lampe_an.png" width="60" height="60" > --></label>
-													</div>
-
-													
-
-													
-												</div>
-												<div id="collapseTwo" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 11:20</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Weiterführung sinnvoll? </p>
-														</div>
-														<textarea name="user_eingabe" cols="50" rows="4" style="width:100%" placeholder="Es wurde noch keine Antwort gegeben..." readonly></textarea>
-													</div>
-												</div>
-											</div>
-											
-										</div>	
-
-									
-										<!-- *********************************************Panel Group 2 *********************************************************-->									
-										<div class="panel-group" id="accordion2">
-											
-											<!-- Frage 2.1 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenTwo">
-													<div class="panel-title ellipsis fragePositionierung">
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
-														<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" >Frage: Weiterführung sinnvoll?</a>
-													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="squaredCheckbox beantwortetButtonPositionierung">
-														<input type="checkbox" value="None" id="squaredThree" name="check" />
-														<label for="squaredThree"></label>
-													</div>
-													
-													<!-- Beantwortet Label -->
-													<div class="panel-title beantwortetLabelPositionierung">
-															Beantwortet
-													</div>
-													
-													
-												</div>
-												<div id="collapseThree" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">11. März 2015 um 12:20</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Weiterführung sinnvoll? </p>
-														</div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-													</div>
-												</div>
-											</div>
-											
-											
-											
-											<!-- Frage 2.2 -->
-											<div class="panel panel-default">
-												<div class="panel-heading hintergrundfarbeFragenTwo">
-													<div class="panel-title ellipsis fragePositionierung">
-													<script type="text/javascript">
-													
-													<!-- TODO: Textfeld auslesen und Checkbox setzen -->
-													
-													</script>
-														<a data-toggle="collapse" data-parent="#accordion2" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" >Frage: Weiterführung sinnvoll?</a>
-													</div>
-													
-													<!-- Squared FOUR -->
-													<div class="squaredCheckbox beantwortetButtonPositionierung">
-														<input type="checkbox" value="None" id="squaredFour" name="check" />
-														<label for="squaredFour"></label>
-													</div>
-													
-													<!-- Beantwortet Label -->
-													<div class="panel-title beantwortetLabelPositionierung">
-															Beantwortet
-													</div>
-													
-													
-												</div>
-												<div id="collapseFour" class="panel-collapse collapse">
-													<div class="panel-body">
-														<div>
-															<p style="font-size: 0.85em; opacity: .5; filter:Alpha(Opacity=50);">12. März 2015 um 11:20</p>
-															<p style="font-size: 1.3em; font-weight:bold"> Weiterführung sinnvoll? </p>
-														</div>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-													</div>
-												</div>
-											</div>
-											
-											
-										</div>							
-								
-								
-								
-							
-								
-									</div>
-							
+							</label>
 						</div>
-							
+					
+					<script>
+						function toggleFilter(){
+							$('#filterLabel').toggleClass('open');
+						}
+						
+						$('body').on('click', function (e) {
+							if (!$('#filterLabel').is(e.target) 
+								&& $('#filterLabel').has(e.target).length === 0 
+								&& $('.open').has(e.target).length === 0
+							) {
+								$('#filterLabel').removeClass('open');
+							}
+						});
+						
+						
+					</script>
+					
+					</div>	
+<!-- ************************************************Filterfunktion Ende*************************************************************************** -->
+                      	<!-- Frage stellen -->
 
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
+
+				<div class="panel-body">
+					<div class="col-lg-12">
+							
+					<!-- Panel Groups-->		
+
+						<!-- *******************************************Panel Group 1 *****************************************************-->
+						<div class="panel-group " id="pgagenda1">
+									
+									<!-- Frage 1.1 -->
+									<div class="panel panel-default hider" id="qu1">
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1">
+					   
+											<div id="quHeader1" class="panel-title ellipsis fragePositionierung quBold">
+												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
+											</div>
+
+											<div data-toggle="tooltip" data-placement="left" data-original-title="" class="checkerBoxer beantwortetButtonPositionierung">
+												<label class="haken" name="labeler"></label>
+											</div>
+
+											
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div>
+													<p class="frageDatum">30/3/2015 um 19:50</p>
+													<p class="frageVollständig"> Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten? </p>
+												</div>
+												<textarea rows="5" id="antwort1" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes">Weil der Dozent passender zu der spezifischen Frage und vor allem passender zu seinem relevanten Stoff eine passende Antwort geben kann. Suchen bei Google können immer durch die nicht vorhandene Möglichkeit des expliziten Fragestellens sehr mühselig werden, bis man die für die Frage relevanten Informationen gefunden hat. </textarea>														
+												<button type="button" class="btn btn-success disabled" id="answSend">Absenden</button>
+												<button type="button" class="btn btn-warning" id="answChange">Bearbeiten</button>
+											</div>
+										</div>
+									</div>
+									
+
+									<!-- Frage 1.2 -->
+									<div class="panel panel-default hider" id="qu2">
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
+
+											<div id="quHeader2" class="panel-title ellipsis fragePositionierung quBold">
+												Warum sollten Dozenten Feedback wollen?
+											</div>
+
+											<div  class="checkerBoxer beantwortetButtonPositionierung" data-toggle="tooltip" data-placement="left" data-original-title="">
+												<label class="haken" name="labeler"></label>
+											</div>
+
+											
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div>
+													<p class="frageDatum">30/3/2015 um 19:39</p>
+													<p class="frageVollständig"> Warum sollten Dozenten Feedback wollen? </p>
+												</div>
+												<textarea rows="5" id="antwort2" name="texterArea" style="width:100%"></textarea>	
+												
+											</div>
+										</div>
+									</div>
+									
+								</div>	
+
+							
+								<!-- *********************************************Panel Group 2 *********************************************************-->									
+								<div class="panel-group " id="pgagenda2">
+									
+									<!-- Frage 2.1 -->
+									<div class="panel panel-default hider" id="qu3">
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2">
+
+											<div id="quHeader3" class="panel-title ellipsis fragePositionierung quBold">
+												Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten?
+											</div>
+
+											<div data-toggle="tooltip" data-placement="left" data-original-title="" class="checkerBoxer beantwortetButtonPositionierung">
+												<label class="haken" name="labeler"></label>
+											</div>
+										</div>
+										
+										<div id="collapse3" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div>
+													<p class="frageDatum">30/3/2015 um 20:15</p>
+													<p class="frageVollständig"> Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten? </p>
+												</div>
+												<textarea rows="5" id="antwort3" name="texterArea" style="width:100%">Weil er so während der Vorlesung mehr Zeit hat seinen Stoff verständlich und interaktiv zu vermitteln. Außerdem kann er so die Informationen die er den Studenten bereitstellt mit weiteren Informationen oder Dateien versehen. Z.B. der kompletten Lösung einer Rechenaufgabe. Hierbei kann er sich viel mehr Zeit nehmen, als er während der Vorlesung hätte. 
+												</textarea>														
+											</div>
+										</div>
+									</div>
+									
+									
+									<!-- Frage 2.2 -->
+									<div class="panel panel-default hider" id="qu4">
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2"> 
+
+											<div id="quHeader4" class="panel-title ellipsis fragePositionierung quBold">
+												Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein?
+											</div>
+
+											<div data-toggle="tooltip" data-placement="left" data-original-title="" class="checkerBoxer beantwortetButtonPositionierung" style="border-left:groove">
+												<label class="haken" name="labeler"></label>
+											</div>
+
+											
+										</div>
+										<div id="collapse4" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div>
+													<p class="frageDatum">30/3/2015 um 19:55</p>
+													<p class="frageVollständig"> Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein? </p>
+												</div>
+												<textarea rows="5" id="antwort4" name="texterArea" style="width:100%"></textarea>	
+											</div>
+										</div>
+									</div>
+									
+								</div>							
+					
+					
+					<div class="panel-group " id="pgagenda3">
 					</div>
-                </div>
+					
+					<div class="panel-group " id="pgagenda4">
+					</div>
+					
+				</div>
+			</div>
+            </div>
                 <!-- /.col-lg-4 -->
-               
+          </div>     
 				
 <!----------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------- Fragenbox ENDE ---------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------>
-		
-
-		
-		
-        </div>
+---------------------------------------------------------------------------------------------------------------------------------------------------
         <!-- /#page-wrapper -->
 
+	<script type="text/javascript">
+					<!-- Textarea auslesen und Status setzen -->
+					
+					window.onload = start;
+					
+					function start(){
+						setzeBeantwortetStatus();
+					}
+					
+					
+<!-- Beantwortet Status setzen  -->
+					function setzeBeantwortetStatus(){
+						var listeTextarea = document.getElementsByName("texterArea");
+						var listeLabel = document.getElementsByName("labeler");
+						var anzahlLT = listeTextarea.length;
+						var antwort;
+						
+						for(var i = 0; i < anzahlLT; i++ ){
+						
+							antwort = listeTextarea[i].textContent;
+							
+							if(antwort == ""){
+								listeLabel[i].className = "haken fa fa-ellipsis-h";
+								$(listeLabel[i]).parent().attr("data-original-title" , "Unbeantwortet");
+							}
+							else{
+								listeLabel[i].className = "haken fa fa-check";
+								$(listeLabel[i]).parent().attr("data-original-title", "Beantwortet");
+							}
+
+						}
+						
+					}
+					
+<!-- Setze gelesen-Status -->					
+					$(".quBold").on("click", function() {					
+						$(this).removeClass("quBold");		
+					});
+
+									
+				</script>
+               
+				
+				<script>
+				
+				
+				   $(function() {
+					   
+<!-- Antwort auf Frage bearbeiten bzw. absenden -->
+					$("#answSend").on("click", function(){
+						if(!($("#answSend").hasClass("disabled"))){
+							var textarea = $("#answSend").parent().children("name=texterArea");
+							textarea.addClass("dozSentAnswer");
+							textarea.attr("readonly", "yes");
+							$("#answSend").addClass("disabled");
+						}
+					});
+					   
+<!-- Enterfunktion Textfeld Fragen -->
+						$("#quNew").keyup(function(event){
+							if(event.keyCode == 13){
+								$("#btnAddQuestion").click();
+							}
+						});
+						
+<!-- Suche -->
+						jQuery.fn.highlight = function(pat) {
+							 function innerHighlight(node, pat) {
+							  var skip = 0;
+							  if (node.nodeType == 3) {
+							   var pos = node.data.toUpperCase().indexOf(pat);
+							   pos -= (node.data.substr(0, pos).toUpperCase().length - node.data.substr(0, pos).length);
+							   if (pos >= 0) {
+								var spannode = document.createElement('span');
+								spannode.className = 'highlight';
+								var middlebit = node.splitText(pos);
+								var endbit = middlebit.splitText(pat.length);
+								var middleclone = middlebit.cloneNode(true);
+								spannode.appendChild(middleclone);
+								middlebit.parentNode.replaceChild(spannode, middlebit);
+								skip = 1;
+							   }
+							  }
+							  else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+							   for (var i = 0; i < node.childNodes.length; ++i) {
+								i += innerHighlight(node.childNodes[i], pat);
+							   }
+							  }
+							  return skip;
+							 }
+							 return this.length && pat && pat.length ? this.each(function() {
+							  innerHighlight(this, pat.toUpperCase());
+							 }) : this;
+						};
+
+						jQuery.fn.removeHighlight = function() {
+						 return this.find("span.highlight").each(function() {
+						  this.parentNode.firstChild.nodeName;
+						  with (this.parentNode) {
+						   replaceChild(this.firstChild, this);
+						   normalize();
+						  }
+						 }).end();
+						};
+
+						$("#search").keyup(function(){
+							var val = $(this).val().toLowerCase();
+							$(".hider").hide();
+							$(".hider").each(function(){
+								var text = $(this).text().toLowerCase();
+								if(text.indexOf(val) != -1)
+								{
+									$('.fragePositionierung').removeHighlight();
+									$(".fragePositionierung").highlight(val);
+									$(this).show();
+								}
+							});
+							
+							$("div[name='texterArea']").each(function(){
+								var text = $(this).text().toLowerCase();
+								if(text.indexOf(val) != -1)
+								{
+									$("div[name='texterArea']").removeHighlight();
+									$("div[name='texterArea']").highlight(val);
+									$(this).show();
+								}
+							});
+						 });						
+
+<!-- Filter -->
+						$(".fi").on("click", function(){
+							
+							var checkedAgendaList = [];
+							var checkedStatusList = [];
+							var count = 0;
+							
+							<!-- Filteroptionen auslesen -->
+							$(".agFilter").each(function(){
+								if(this.checked === true){
+									checkedAgendaList[count] =  this;
+									count++;
+								}
+							});
+							
+							count = 0;
+							
+							$(".stFilter").each(function(){
+								if(this.checked === true){
+									checkedStatusList[count] =  this;
+									count++;
+								}
+							});
+								
+							$(".panel-group").hide();
+							
+							if(checkedStatusList.length > 0){
+								$(".hider").hide();
+							}else{
+								$(".hider").show();
+							}
+							
+							if(checkedStatusList.length < 2){
+															
+								for(var i = 0; i < checkedAgendaList.length; i++){
+									var cl = "#" + checkedAgendaList[i].value;
+									$(cl).show();
+								}
+								
+								for(var i = 0; i < checkedStatusList.length; i++){
+									var cl = "." + checkedStatusList[i].value;
+									
+									if(cl == ".quBold"){
+										$(".quBold").each(function(){
+											$(this).parent().parent().show();
+										});
+									}
+									
+									if(cl == ".fa-ellipsis-h"){
+										$(".fa-ellipsis-h").each(function(){
+											$(this).parent().parent().parent().show();
+										});
+									}		
+								}
+								
+							}else{
+									for(var i = 0; i < checkedAgendaList.length; i++){
+									var cl = "#" + checkedAgendaList[i].value;
+									$(cl).show();
+									}
+									
+									var faEllipsisEle = [];
+									var i = 0;
+									$(".fa-ellipsis-h").each(function(){
+										faEllipsisEle[i] = $(this).parent().parent().parent().attr("id");
+										i++;
+									});
+									
+									$(".quBold").each(function(){
+										var found = faEllipsisEle.indexOf($(this).parent().parent().attr("id"));
+										// var found = $.inArray($(this).parent().parent(), faEllipsisEle);
+										if(found > -1){
+											$(this).parent().parent().show();
+										}
+									});
+
+							}	
+						});
+						
+						
+								
+
+					});
+						
+				</script>
+		
     </div>
     <!-- /#wrapper -->
 
