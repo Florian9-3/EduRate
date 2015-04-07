@@ -59,25 +59,25 @@
 
 .agenda1,
 .agenda1:focus{
-	background-color: #F44336 !important;
+	background-color: #009688 !important;
 	color:#FFF !important;
 }
 
 .agenda2,
 .agenda2:focus{
-	background-color: #673AB7 !important;
+	background-color: #4CAF50 !important;
 	color:#FFF !important;;
 }
 
 .agenda3,
 .agenda3:focus{
-	background-color: #2196F3 !important;
+	background-color: #8BC34A !important;
 	color:#FFF !important;
 }
 
 .agenda4,
 .agenda4:focus{
-	background-color: #FFEB3B !important;
+	background-color: #009688 !important;
 	color:#FFF;
 }
 
@@ -90,15 +90,15 @@
 
 
 .agenda1:hover{
-	background-color: #B71C1C !important;
+	background-color: #00695C !important;
 	color:#FFF;
 }
 .agenda2:hover{
-	background-color: #311B92 !important;
+	background-color: #2E7D32 !important;
 	color:#FFF;
 }
 .agenda3:hover{
-	background-color: #0D47A1 !important;
+	background-color: #558B2F !important;
 	color:#FFF;
 }
 
@@ -110,26 +110,26 @@
 
 .agenda1Fragen{
 	border: groove !important;
-	border-color: #B71C1C !important;
+	border-color: #009688 !important;
 	
 }
 .agenda2Fragen{
 	border: groove !important;
-	border-color: #311B92 !important;
+	border-color: #4CAF50 !important;
 }
 .agenda3Fragen{
 	border: groove !important;
-	border-color: #0D47A1 !important;
+	border-color: #8BC34A !important;
 }
 
 .agenda1Label{
-	color: #F44336;
+	color: #009688;
 }
 .agenda2Label{
-	color: #673AB7;
+	color: #4CAF50;
 }
 .agenda3Label{
-	color: #2196F3;
+	color: #8BC34A;
 }
 
 .quLabel{
@@ -148,18 +148,18 @@
 
 
 .bewertung1{
-	border-color:#F44336 !important;
-	background-color:#F44336 !important;
+	border-color:#009688 !important;
+	background-color:#009688 !important;
 }
 
 .bewertung2{
-	border-color:#673AB7 !important;
-	background-color:#673AB7 !important;
+	border-color:#4CAF50 !important;
+	background-color:#4CAF50 !important;
 }
 
 .bewertung3{
-	border-color:#2196F3 !important;
-	background-color:#2196F3 !important;
+	border-color:#8BC34A !important;
+	background-color:#8BC34A !important;
 }
 
 .bewertung4{
@@ -168,19 +168,19 @@
 }
 
 .bewertungcontainer1{
-	border-color:#F44336 !important;
+	border-color:#B0BEC5 !important;
 }
 
 .bewertungcontainer2{
-	border-color:#673AB7 !important;
+	border-color:#B0BEC5 !important;
 }
 
 .bewertungcontainer3{
-	border-color:#2196F3 !important;
+	border-color:#B0BEC5 !important;
 }
 
 .bewertungcontainer4{
-	border-color:#FFEB3B !important;
+	border-color:#B0BEC5 !important;
 }
 
 

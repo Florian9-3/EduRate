@@ -117,7 +117,7 @@
             
             <div class="col-lg-6">
                                 <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
-                                    <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important;">
+                                    <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:17px; font-size=15px">
                                         Agenda
                                     </div>
                                     <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
@@ -144,7 +144,7 @@
             
 				<div class="col-lg-6">
                     <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
-                        <div class="bewertung1 panel-heading" id="bewertung_header">
+                        <div class="bewertung1 panel-heading" id="bewertung_header" style="padding:17px; font-size=15px">
                             Bewertung: 1. Einführung
                         </div>
                       <div class="panel-body">
@@ -304,7 +304,7 @@
 								document.getElementById("sendButton").disabled = false;
 							}
 							else if(one_count<=30){
-								document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+one_count+")";
+								document.getElementById("kommentar").value = "("+one_count+") Bis zum nächsten Kommentar bitte warten.";
 								document.getElementById("kommentar").disabled = true;
 								document.getElementById("sendButton").disabled = true;
 							}
@@ -395,7 +395,7 @@
 								document.getElementById("sendButton").disabled = false;
 							}
 							else if(two_count<=30){
-								document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+two_count+")";
+								document.getElementById("kommentar").value = "("+two_count+") Bis zum nächsten Kommentar bitte warten.";
 								document.getElementById("kommentar").disabled = true;
 								document.getElementById("sendButton").disabled = true;
 							}
@@ -485,7 +485,7 @@
 								document.getElementById("sendButton").disabled = false;
 							}
 							else if(three_count<=30){
-								document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+three_count+")";
+								document.getElementById("kommentar").value = "("+three_count+") Bis zum nächsten Kommentar bitte warten.";
 								document.getElementById("kommentar").disabled = true;
 								document.getElementById("sendButton").disabled = true;
 							}
@@ -544,7 +544,7 @@
 								case 1:
 									one_count = 30;
 									one_Counter = setInterval(oneCounter, 1000);
-									document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+one_count+")";
+									document.getElementById("kommentar").value = "("+one_count+") Bis zum nächsten Kommentar bitte warten.";
 									document.getElementById("kommentar").disabled = true;
 									document.getElementById("sendButton").disabled = true;
 									one_comment = null;
@@ -552,7 +552,7 @@
 								case 2:
 									two_count = 30;
 									two_Counter = setInterval(twoCounter, 1000);
-									document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+two_count+")";
+									document.getElementById("kommentar").value = "("+two_count+") Bis zum nächsten Kommentar bitte warten.";
 									document.getElementById("kommentar").disabled = true;
 									document.getElementById("sendButton").disabled = true;
 									two_comment = null;
@@ -560,7 +560,7 @@
 								case 3:
 									three_count = 30;
 									three_Counter = setInterval(threeCounter, 1000);
-									document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+three_count+")";
+									document.getElementById("kommentar").value = "("+three_count+") Bis zum nächsten Kommentar bitte warten.";
 									document.getElementById("kommentar").disabled = true;
 									document.getElementById("sendButton").disabled = true;
 									three_comment = null;
@@ -584,7 +584,7 @@
 							return;	
 						}
 						if(agenda == 1)
-							document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+one_count+")";
+							document.getElementById("kommentar").value = "("+one_count+") Bis zum nächsten Kommentar bitte warten.";
 					}
 					
 					function twoCounter(){
@@ -600,7 +600,7 @@
 							return;	
 						}
 						if(agenda == 2)
-							document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+two_count+")";
+							document.getElementById("kommentar").value = "("+two_count+") Bis zum nächsten Kommentar bitte warten.";
 					}
 					
 					function threeCounter(){
@@ -616,7 +616,7 @@
 							return;	
 						}
 						if(agenda == 3)
-							document.getElementById("kommentar").value = "Bis zum nächsten Kommentar bitte warten ("+three_count+")";
+							document.getElementById("kommentar").value = "("+three_count+") Bis zum nächsten Kommentar bitte warten.";
 					}
 					
 					
@@ -654,7 +654,7 @@
 				
 
                     <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
-                        <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important;">
+                        <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:17px; font-size=15px">
                             Vorlesungsinhalte
                         </div>
                         <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
