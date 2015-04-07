@@ -123,8 +123,8 @@
       paramName: "file",
       createImageThumbnails: false,
       maxThumbnailFilesize: 10,
-      thumbnailWidth: 120,
-      thumbnailHeight: 120,
+      thumbnailWidth: 0,
+      thumbnailHeight: 0,
       filesizeBase: 1000,
       maxFiles: null,
       filesizeBase: 1000,
@@ -321,6 +321,7 @@
       thumbnail: function(file, dataUrl) {
         var thumbnailElement, _i, _len, _ref;
         if (file.previewElement) {
+		/*
           file.previewElement.classList.remove("dz-file-preview");
           _ref = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -333,6 +334,7 @@
               return file.previewElement.classList.add("dz-image-preview");
             };
           })(this)), 1);
+		  */
         }
       },
       error: function(file, message) {
