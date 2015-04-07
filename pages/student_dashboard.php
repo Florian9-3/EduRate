@@ -117,7 +117,7 @@
             
             <div class="col-lg-6">
                                 <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
-                                    <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:17px; font-size=15px">
+                                    <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:16px; font-size:16px">
                                         Agenda
                                     </div>
                                     <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
@@ -144,7 +144,7 @@
             
 				<div class="col-lg-6">
                     <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
-                        <div class="bewertung1 panel-heading" id="bewertung_header" style="padding:17px; font-size=15px">
+                        <div class="bewertung1 panel-heading" id="bewertung_header" style="padding:16px; font-size:16px;">
                             Bewertung: 1. Einführung
                         </div>
                       <div class="panel-body">
@@ -654,7 +654,7 @@
 				
 
                     <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
-                        <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:17px; font-size=15px">
+                        <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:16px; font-size:16px">
                             Vorlesungsinhalte
                         </div>
                         <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
@@ -686,7 +686,7 @@
 
 						<div style="float:left; width:90%">
 						
-							<div style="display:inline-block; width:150px">
+							<div style="display:inline-block; width:150px; font-size:16px">
 								Fragen
 							</div>
 							
@@ -700,10 +700,10 @@
 						</div>	
 
 <!-- **********************************************************Filterfunktion Anfang*************************************************************** -->						
-						<div class="nav navbar-top-links navbar-right in" style="width:10% display:inline-block">
+						<div style="float:right; width:10%; height:34px">
 							<label id="filterLabel" class="dropdown active">
 								<div id="dropdownDivFilter" href="#dropItLikeItsHot" style="cursor:pointer" class="dropdown-toggle filter nav navbar-top-links in" onClick="toggleFilter()" role="button" aria-expanded="false">
-									<label class="fa fa-filter" style="cursor:pointer"></label> Filter <span class="caret"></span>
+									<label class="fa fa-filter" style="cursor:pointer; font-size:16px"></label> Filter <span class="caret"></span>
 								</div>
 								
 								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
@@ -722,7 +722,7 @@
 								</ul>
 							</label>
 						</div>
-					
+						</div>
 					<script>
 						function toggleFilter(){
 							$('#filterLabel').toggleClass('open');
