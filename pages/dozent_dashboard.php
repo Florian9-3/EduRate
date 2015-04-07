@@ -34,10 +34,17 @@
 	
 		 <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-	
+    
+    <!-- Für Highlighten in Textarea GEHT NICHT
+    <script src="jquery-ui-1.11.4/jquery-ui/jquery-ui.min.js"></script>
+    <script src="jquery-highlighttextarea/jquery.highlighttextarea.min.js"></script>
+    
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui/theme/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-highlighttextarea/jquery.highlighttextarea.min.css"> -->
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="dropzoneStudent.js"></script>
-	<script src="dropzoneDozent.js"></script>
+    <script src="dropzoneStudent.js"></script>
+	<script src="dropzoneDozent.js"></script> 
 	<link rel="stylesheet" href="dropzoneDozent.css">
 	<link rel="stylesheet" href="dropzoneStudent.css">
 
@@ -788,8 +795,8 @@
 													<p class="frageVollständig"> Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten? </p>
 												</div>
 												<textarea rows="5" id="antwort1" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes">Weil der Dozent passender zu der spezifischen Frage und vor allem passender zu seinem relevanten Stoff eine passende Antwort geben kann. Suchen bei Google können immer durch die nicht vorhandene Möglichkeit des expliziten Fragestellens sehr mühselig werden, bis man die für die Frage relevanten Informationen gefunden hat. </textarea>														
-												<button type="button" class="btn btn-success disabled" id="answSend">Absenden</button>
-												<button type="button" class="btn btn-warning" id="answChange">Bearbeiten</button>
+												<button type="button" class="fa fa-share btn btn-success disabled answSend"> Absenden</button>
+												<button type="button" class="fa fa-pencil btn btn-warning answChange"> Bearbeiten</button>
 											</div>
 										</div>
 									</div>
@@ -815,8 +822,9 @@
 													<p class="frageDatum">30/3/2015 um 19:39</p>
 													<p class="frageVollständig"> Warum sollten Dozenten Feedback wollen? </p>
 												</div>
-												<textarea rows="5" id="antwort2" name="texterArea" style="width:100%"></textarea>	
-												
+												<textarea rows="5" id="antwort2" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes"></textarea>	
+												<button type="button" class="btn btn-success disabled answSend">Absenden</button>
+												<button type="button" class="btn btn-warning answChange">Bearbeiten</button>
 											</div>
 										</div>
 									</div>
@@ -846,8 +854,10 @@
 													<p class="frageDatum">30/3/2015 um 20:15</p>
 													<p class="frageVollständig"> Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten? </p>
 												</div>
-												<textarea rows="5" id="antwort3" name="texterArea" style="width:100%">Weil er so während der Vorlesung mehr Zeit hat seinen Stoff verständlich und interaktiv zu vermitteln. Außerdem kann er so die Informationen die er den Studenten bereitstellt mit weiteren Informationen oder Dateien versehen. Z.B. der kompletten Lösung einer Rechenaufgabe. Hierbei kann er sich viel mehr Zeit nehmen, als er während der Vorlesung hätte. 
-												</textarea>														
+												<textarea rows="5" id="antwort3" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes">Weil er so während der Vorlesung mehr Zeit hat seinen Stoff verständlich und interaktiv zu vermitteln. Außerdem kann er so die Informationen die er den Studenten bereitstellt mit weiteren Informationen oder Dateien versehen. Z.B. der kompletten Lösung einer Rechenaufgabe. Hierbei kann er sich viel mehr Zeit nehmen, als er während der Vorlesung hätte. 
+												</textarea>	
+                                                <button type="button" class="btn btn-success disabled answSend">Absenden</button>
+												<button type="button" class="btn btn-warning answChange">Bearbeiten</button>
 											</div>
 										</div>
 									</div>
@@ -873,8 +883,10 @@
 													<p class="frageDatum">30/3/2015 um 19:55</p>
 													<p class="frageVollständig"> Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein? </p>
 												</div>
-												<textarea rows="5" id="antwort4" name="texterArea" style="width:100%"></textarea>	
-											</div>
+												<textarea rows="5" id="antwort4" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes"></textarea>	
+                                                <button type="button" class="btn btn-success disabled answSend">Absenden</button>
+												<button type="button" class="btn btn-warning answChange">Bearbeiten</button>
+                                            </div>
 										</div>
 									</div>
 									
@@ -897,7 +909,24 @@
 ----------------------------------------------------------------- Fragenbox ENDE ---------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------------
         <!-- /#page-wrapper -->
+                       
+    <style type="text/css">
 
+      .CodeMirror-line-numbers {
+        width: 2.2em;
+        color: #aaa;
+        background-color: #eee;
+        text-align: right;
+        padding-right: .3em;
+        font-size: 10pt;
+        font-family: monospace;
+        padding-top: .4em;
+      }
+
+    </style>
+            
+            
+            
 	<script type="text/javascript">
 					<!-- Textarea auslesen und Status setzen -->
 					
@@ -945,16 +974,28 @@
 				
 				
 				   $(function() {
-					   
-<!-- Antwort auf Frage bearbeiten bzw. absenden -->
-					$("#answSend").on("click", function(){
-						if(!($("#answSend").hasClass("disabled"))){
-							var textarea = $("#answSend").parent().children("name=texterArea");
-							textarea.addClass("dozSentAnswer");
-							textarea.attr("readonly", "yes");
-							$("#answSend").addClass("disabled");
-						}
-					});
+				
+<!-- Antwort auf Frage bearbeiten bzw absenden -->
+    
+                $(".answSend").on("click", function(){
+                if(!($(this).hasClass("disabled"))){
+                    var textarea = $(this).parent().children("[name*=texterArea]");
+                    textarea.addClass("dozSentAnswer");
+                    textarea.attr("readonly", "yes");
+                    $(this).addClass("disabled");
+                    $(this).parent().children(".answChange").removeClass("disabled");
+                }
+                });
+
+                $(".answChange").on("click", function(){
+                if(!($(this).hasClass("disabled"))){
+                    var textarea = $(this).parent().children("[name*=texterArea]");
+                    textarea.removeClass("dozSentAnswer");
+                    textarea.removeAttr("readonly");
+                    $(this).addClass("disabled");
+                    $(this).parent().children(".answSend").removeClass("disabled");
+                }
+                });
 					   
 <!-- Enterfunktion Textfeld Fragen -->
 						$("#quNew").keyup(function(event){
@@ -1016,16 +1057,24 @@
 								}
 							});
 							
-							$("div[name='texterArea']").each(function(){
+							$("textarea[name='texterArea']").each(function(){
 								var text = $(this).text().toLowerCase();
 								if(text.indexOf(val) != -1)
 								{
-									$("div[name='texterArea']").removeHighlight();
-									$("div[name='texterArea']").highlight(val);
+									$("textarea[name='texterArea']").removeHighlight();
+									$("textarea[name='texterArea']").highlight(val); 
+                                    //$("textarea[name='texterArea']").highlightTextarea({
+                                    //  words: ['dozent'],
+                                    //  caseSensitive: true
+                                    //});
+
 									$(this).show();
 								}
 							});
-						 });						
+
+						 });	
+
+
 
 <!-- Filter -->
 						$(".fi").on("click", function(){
