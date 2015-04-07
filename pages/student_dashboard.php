@@ -56,9 +56,9 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; background-color: #B0BEC5 !important;">
             <div class="navbar-header">
-                <a class="navbar-brand" href="student_dashboard.php">Willkommen Henny</a>
+                <a class="navbar-brand" href="student_dashboard.php" style="color: #000 !important">Willkommen Henny</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -116,8 +116,8 @@
 			<div class="row">
             
             <div class="col-lg-6">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading panelCustom">
+                                <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
+                                    <div class="panel-heading panelCustom" style="background-color: #B0BEC5 !important;">
                                         Agenda
                                     </div>
                                     <div class="panel-body" style="text-align: left; margin-bottom: -1 em; margin-top: -1 em">
@@ -653,8 +653,8 @@
 				</div>
 				
 
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
+                    <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
+                        <div class="panel-heading panelCustom" style="background-color: #B0BEC5 !important;">
                             Vorlesungsinhalte
                         </div>
                         <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
@@ -681,8 +681,8 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------->
 				
 				<div class="col-lg-6">
-                    <div class="panel panel-default" style="overflow: hidden">
-                        <div class="panel-heading" style="display:inline-block; width:100%">
+                    <div class="panel panel-default" style="overflow: hidden; border-color: #B0BEC5 !important;">
+                        <div class="panel-heading" style="display:inline-block; width:100%; background-color: #B0BEC5 !important;">
 
 						<div style="float:left; width:90%">
 						
