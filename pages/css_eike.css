@@ -267,8 +267,8 @@
 }
 
 .rating > input:checked ~ label {
-    color: #f70;
-    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+    color: gold;
+    text-shadow:1px 1px #c60, 2px 2px #F27611, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 .rating:not(:checked) > label:hover,
@@ -282,7 +282,7 @@
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
+    color: #EAC117;
     text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
 }
 

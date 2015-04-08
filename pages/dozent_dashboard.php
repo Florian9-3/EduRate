@@ -63,9 +63,9 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; background-color: #ECEFF1 !important;">
             <div class="navbar-header">
-                <a class="navbar-brand" href="student_dashboard.php">Willkommen Herr Gichter</a>
+                <a class="navbar-brand" href="student_dashboard.php" style="color:#000000">Willkommen Herr Gichter</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -135,11 +135,11 @@
                                       <span style="text-align:left;">1. Einführung</span>
                                       <span style="text-align:right;">
                                       	<fieldset class="ratingDoz">
-                                            <input type="radio" id="ag5" name="ratingDoz" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                            <input type="radio" id="ag4" name="ratingDoz" value="4" checked="true" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                            <input type="radio" id="ag3" name="ratingDoz" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                            <input type="radio" id="ag2" name="ratingDoz" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                            <input type="radio" id="ag1" name="ratingDoz" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                            <input type="radio" id="ag5" name="ratingDoz" value="5" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz" value="4" checked="true" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz" value="3" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz" value="2" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz" value="1" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
 										</fieldset>
                                         </span>
                                       </button>
@@ -148,11 +148,11 @@
                                       <span style="text-align:left;">2. Weiterführung</span>
                                       <span style="text-align:right;">
                                       	<fieldset class="ratingDoz">
-                                            <input type="radio" id="ag5" name="ratingDoz2" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                            <input type="radio" id="ag4" name="ratingDoz2" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                            <input type="radio" id="ag3" name="ratingDoz2" value="3" checked="true" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                            <input type="radio" id="ag2" name="ratingDoz2" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                            <input type="radio" id="ag1" name="ratingDoz2" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                            <input type="radio" id="ag5" name="ratingDoz2" value="5" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz2" value="4" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz2" value="3" checked="true" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz2" value="2" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz2" value="1" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
 										</fieldset>
                                         </span>
                                       </button>
@@ -161,11 +161,11 @@
                                       <span style="text-align:left;">3. Analyse</span>
                                       <span style="text-align:right;">
                                       	<fieldset class="ratingDoz">
-                                            <input type="radio" id="ag5" name="ratingDoz3" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                            <input type="radio" id="ag4" name="ratingDoz3" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                            <input type="radio" id="ag3" name="ratingDoz3" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                            <input type="radio" id="ag2" name="ratingDoz3" value="2" checked="true" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                            <input type="radio" id="ag1" name="ratingDoz3" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                            <input type="radio" id="ag5" name="ratingDoz3" value="5" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz3" value="4" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz3" value="3" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz3" value="2" checked="true" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz3" value="1" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
 										</fieldset>
                                         </span>
                                       </button>
@@ -177,11 +177,11 @@
                                           <button type="button" class="btn btn-info btn-circle" style="cursor: pointer !important" onClick="activate(4)" id="activate_button4"><i class="fa fa-check"></i>
                                             </button>
 											<fieldset class="ratingDoz" id="rating4" style="display: none">
-                                            <input type="radio" id="ag5" name="ratingDoz4" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                            <input type="radio" id="ag4" name="ratingDoz4" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                            <input type="radio" id="ag3" name="ratingDoz4" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                            <input type="radio" id="ag2" name="ratingDoz4" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                            <input type="radio" id="ag1" name="ratingDoz4" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                            <input type="radio" id="ag5" name="ratingDoz4" value="5" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                            <input type="radio" id="ag4" name="ratingDoz4" value="4" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                            <input type="radio" id="ag3" name="ratingDoz4" value="3" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                            <input type="radio" id="ag2" name="ratingDoz4" value="2" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                            <input type="radio" id="ag1" name="ratingDoz4" value="1" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
 										</fieldset>
 											</span>
                                           </div></div>
@@ -213,11 +213,11 @@
                                         <div class="header" style="line-height:1">
                                             
                                                 <fieldset class="ratingComment">
-                                                    <input type="radio" id="ag5" name="ratingComment1" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                                    <input type="radio" id="ag4" name="ratingComment1" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                                    <input type="radio" id="ag3" name="ratingComment1" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                                    <input type="radio" id="ag2" name="ratingComment1" value="2" checked="true" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                                    <input type="radio" id="ag1" name="ratingComment1" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                    <input type="radio" id="ag5" name="ratingComment1" value="5" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment1" value="4" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment1" value="3" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment1" value="2" checked="true" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment1" value="1" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
                                                 </fieldset>
                                             
                                             <small class="pull-right text-muted" style="margin-top:2%">
@@ -235,11 +235,11 @@
                                         <div class="header" style="line-height:1">
                                             
                                                 <fieldset class="ratingComment">
-                                                    <input type="radio" id="ag5" name="ratingComment2" value="5" checked="true" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                                    <input type="radio" id="ag4" name="ratingComment2" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                                    <input type="radio" id="ag3" name="ratingComment2" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                                    <input type="radio" id="ag2" name="ratingComment2" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                                    <input type="radio" id="ag1" name="ratingComment2" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                    <input type="radio" id="ag5" name="ratingComment2" value="5" checked="true" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment2" value="4" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment2" value="3" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment2" value="2" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment2" value="1" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
                                                 </fieldset>
                                             
                                             <small class="pull-right text-muted" style="margin-top:2%">
@@ -257,11 +257,11 @@
                                         <div class="header" style="line-height:1">
                                             
                                                 <fieldset class="ratingComment">
-                                                    <input type="radio" id="ag5" name="ratingComment3" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                                    <input type="radio" id="ag4" name="ratingComment3" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                                    <input type="radio" id="ag3" name="ratingComment3" value="3" checked="true" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                                    <input type="radio" id="ag2" name="ratingComment3" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                                    <input type="radio" id="ag1" name="ratingComment3" value="1" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                    <input type="radio" id="ag5" name="ratingComment3" value="5" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment3" value="4" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment3" value="3" checked="true" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment3" value="2" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment3" value="1" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
                                                 </fieldset>
                                             
                                             <small class="pull-right text-muted" style="margin-top:2%">
@@ -279,11 +279,11 @@
                                         <div class="header" style="line-height:1">
                                             
                                                 <fieldset class="ratingComment">
-                                                    <input type="radio" id="ag5" name="ratingComment4" value="5" disabled="true"/><label for="ag5" title="Rocks!">5 stars</label>
-                                                    <input type="radio" id="ag4" name="ratingComment4" value="4" disabled="true"/><label for="ag4" title="Pretty good">4 stars</label>
-                                                    <input type="radio" id="ag3" name="ratingComment4" value="3" disabled="true"/><label for="ag3" title="Meh">3 stars</label>
-                                                    <input type="radio" id="ag2" name="ratingComment4" value="2" disabled="true"/><label for="ag2" title="Kinda bad">2 stars</label>
-                                                    <input type="radio" id="ag1" name="ratingComment4" value="1" checked="true" disabled="true"/><label for="ag1" title="Sucks big time">1 star</label>
+                                                    <input type="radio" id="ag5" name="ratingComment4" value="5" disabled="true"/><label for="ag5" title="Perfekt">5 stars</label>
+                                                    <input type="radio" id="ag4" name="ratingComment4" value="4" disabled="true"/><label for="ag4" title="Gut">4 stars</label>
+                                                    <input type="radio" id="ag3" name="ratingComment4" value="3" disabled="true"/><label for="ag3" title="Okay">3 stars</label>
+                                                    <input type="radio" id="ag2" name="ratingComment4" value="2" disabled="true"/><label for="ag2" title="Verbesserungsfähig">2 stars</label>
+                                                    <input type="radio" id="ag1" name="ratingComment4" value="1" checked="true" disabled="true"/><label for="ag1" title="Ungenügend">1 star</label>
                                                 </fieldset>
                                             
                                             <small class="pull-right text-muted" style="margin-top:2%">
@@ -795,7 +795,7 @@
 													<p class="frageDatum">30/3/2015 um 19:50</p>
 													<p class="frageVollständig"> Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten? </p>
 												</div>
-												<textarea rows="5" id="antwort1" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes">Weil der Dozent passender zu der spezifischen Frage und vor allem passender zu seinem relevanten Stoff eine passende Antwort geben kann. Suchen bei Google können immer durch die nicht vorhandene Möglichkeit des expliziten Fragestellens sehr mühselig werden, bis man die für die Frage relevanten Informationen gefunden hat. </textarea>														
+												<textarea rows="5" id="antwort1" name="texterArea" style="width:100%" class="dozSentAnswer" readonly>Weil der Dozent passender zu der spezifischen Frage und vor allem passender zu seinem relevanten Stoff eine passende Antwort geben kann. Suchen bei Google können immer durch die nicht vorhandene Möglichkeit des expliziten Fragestellens sehr mühselig werden, bis man die für die Frage relevanten Informationen gefunden hat. </textarea>														
 												<button type="button" class="btn btn-success disabled answSend"><label class="fa fa-share"></label>  Absenden</button>
 												<button type="button" class="btn btn-warning answChange"><label class="fa fa-pencil"></label> Bearbeiten</button>
 											</div>
@@ -823,7 +823,7 @@
 													<p class="frageDatum">30/3/2015 um 19:39</p>
 													<p class="frageVollständig"> Warum sollten Dozenten Feedback wollen? </p>
 												</div>
-												<textarea rows="5" id="antwort2" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes"></textarea>	
+												<textarea rows="5" id="antwort2" name="texterArea" style="width:100%" class="dozSentAnswer" readonly></textarea>	
 												<button type="button" class="btn btn-success disabled answSend"><label class="fa fa-share"></label> Absenden</button>
 												<button type="button" class="btn btn-warning answChange"><label class="fa fa-pencil"></label> Bearbeiten</button>
 											</div>
@@ -855,7 +855,7 @@
 													<p class="frageDatum">30/3/2015 um 20:15</p>
 													<p class="frageVollständig"> Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten? </p>
 												</div>
-												<textarea rows="5" id="antwort3" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes">Weil er so während der Vorlesung mehr Zeit hat seinen Stoff verständlich und interaktiv zu vermitteln. Außerdem kann er so die Informationen die er den Studenten bereitstellt mit weiteren Informationen oder Dateien versehen. Z.B. der kompletten Lösung einer Rechenaufgabe. Hierbei kann er sich viel mehr Zeit nehmen, als er während der Vorlesung hätte. 
+												<textarea rows="5" id="antwort3" name="texterArea" style="width:100%" class="dozSentAnswer" readonly>Weil er so während der Vorlesung mehr Zeit hat seinen Stoff verständlich und interaktiv zu vermitteln. Außerdem kann er so die Informationen die er den Studenten bereitstellt mit weiteren Informationen oder Dateien versehen. Z.B. der kompletten Lösung einer Rechenaufgabe. Hierbei kann er sich viel mehr Zeit nehmen, als er während der Vorlesung hätte. 
 												</textarea>	
                                                 <button type="button" class="btn btn-success disabled answSend"><label class="fa fa-share"></label> Absenden</button>
 												<button type="button" class="btn btn-warning answChange"><label class="fa fa-pencil"></label> Bearbeiten</button>
@@ -884,7 +884,7 @@
 													<p class="frageDatum">30/3/2015 um 19:55</p>
 													<p class="frageVollständig"> Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein? </p>
 												</div>
-												<textarea rows="5" id="antwort4" name="texterArea" style="width:100%" class="dozSentAnswer" readonly="yes"></textarea>	
+												<textarea rows="5" id="antwort4" name="texterArea" style="width:100%" class="dozSentAnswer" readonly></textarea>	
                                                 <button type="button" class="btn btn-success disabled answSend"><label class="fa fa-share"></label> Absenden</button>
 												<button type="button" class="btn btn-warning answChange"><label class="fa fa-pencil"></label> Bearbeiten</button>
                                             </div>
