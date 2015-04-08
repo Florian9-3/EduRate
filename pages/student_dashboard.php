@@ -772,7 +772,7 @@
 									
 									<!-- Frage 1.1 -->
 									<div class="panel panel-default hider" id="qu1">
-										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1">
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1 quBoldP">
 					   
 											<div id="quHeader1" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
@@ -798,7 +798,7 @@
 
 									<!-- Frage 1.2 -->
 									<div class="panel panel-default hider" id="qu2">
-										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1 quBoldP"> 
 
 											<div id="quHeader2" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Dozenten Feedback wollen?
@@ -830,7 +830,7 @@
 									
 									<!-- Frage 2.1 -->
 									<div class="panel panel-default hider" id="qu3">
-										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2">
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2 quBoldP">
 
 											<div id="quHeader3" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten?
@@ -858,7 +858,7 @@
 									
 									<!-- Frage 2.2 -->
 									<div class="panel panel-default hider" id="qu4">
-										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2"> 
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2 quBoldP"> 
 
 											<div id="quHeader4" class="panel-title ellipsis fragePositionierung quBold">
 												Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein?
@@ -932,6 +932,10 @@
 <!-- Setze gelesen-Status -->					
 					$(".quBold").on("click", function() {					
 						$(this).removeClass("quBold");		
+					});
+					
+					$(".quBoldP").on("click", function() {					
+						$(this).children(".quBold").removeClass("quBold");		
 					});
 
 									
@@ -1155,7 +1159,7 @@
 									$(div21).attr( 'href', hcollapseX);
 									$(div21).attr( 'aria-expanded', 'false');	
 									$(div21).attr( 'aria-controls', collapseX);
-									$(div21).addClass("panel-heading quOverflow").addClass(id);								
+									$(div21).addClass("panel-heading quOverflow quBoldP").addClass(id);								
 									
 										
 										$(div31).addClass("panel-title ellipsis fragePositionierung quBold")

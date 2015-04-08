@@ -125,7 +125,7 @@
 			</script>
             
             <div class="col-lg-6">
-                                <div class="panel panel-info">
+                                <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
                                     <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:16px; font-size:16px">
                                         Agenda
                                     </div>
@@ -700,7 +700,7 @@
 				</div>
 				
 
-                    <div class="panel panel-info">
+                    <div class="panel panel-info" style="border-color: #B0BEC5 !important;">
                         <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:16px; font-size:16px">
                             Vorlesungsinhalte
                         </div>
@@ -728,8 +728,8 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------->
 				
 			<div class="col-lg-6">
-                    <div class="panel panel-default" style="overflow: hidden">
-                        <div class="panel-heading" style="display:inline-block; width:100%">
+                    <div class="panel panel-default" style="overflow: hidden; border-color: #B0BEC5 !important;">
+                        <div class="panel-heading" style="display:inline-block; width:100%; background-color: #ECEFF1 !important; border-color: #B0BEC5 !important;">
 
 						<div style="float:left; width:90%">
 						
@@ -793,7 +793,7 @@
                       	<!-- Frage stellen -->
 
 
-				<div class="panel-body">
+				<div class="panel-body" style="min-height:250px;">
 					<div class="col-lg-12">
 							
 					<!-- Panel Groups-->		
@@ -803,7 +803,7 @@
 									
 									<!-- Frage 1.1 -->
 									<div class="panel panel-default hider" id="qu1">
-										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1">
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="panel-heading quOverflow agenda1 quBoldP">
 					   
 											<div id="quHeader1" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Studenten ihrem Dozenten eine Frage stellen, wenn sie doch stattdessen Google benutzen könnten?
@@ -831,7 +831,7 @@
 
 									<!-- Frage 1.2 -->
 									<div class="panel panel-default hider" id="qu2">
-										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1"> 
+										<div data-toggle="collapse" data-parent="#pgagenda1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="panel-heading quOverflow agenda1 quBoldP"> 
 
 											<div id="quHeader2" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollten Dozenten Feedback wollen?
@@ -864,7 +864,7 @@
 									
 									<!-- Frage 2.1 -->
 									<div class="panel panel-default hider" id="qu3">
-										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2">
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="panel-heading quOverflow agenda2 quBoldP">
 
 											<div id="quHeader3" class="panel-title ellipsis fragePositionierung quBold">
 												Warum sollte sich der Dozent im Nachgang Zeit nehmen um die Fragen der Studenten zu beantworten?
@@ -892,7 +892,7 @@
 									
 									<!-- Frage 2.2 -->
 									<div class="panel panel-default hider" id="qu4">
-										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2"> 
+										<div data-toggle="collapse" data-parent="#pgagenda2" href="#collapse4" aria-expanded="true" aria-controls="collapse4" class="panel-heading quOverflow agenda2 quBoldP"> 
 
 											<div id="quHeader4" class="panel-title ellipsis fragePositionierung quBold">
 												Dies ist eine sehr, sehr lange Dummy Frage, um zu zeigen welch tolles Feature die Fragenanzeige hinsichtlich zu langen Fragen hat. Welches Feature könnte es nur sein?
@@ -1014,6 +1014,10 @@
 <!-- Setze gelesen-Status -->					
 					$(".quBold").on("click", function() {					
 						$(this).removeClass("quBold");		
+					});
+					
+					$(".quBoldP").on("click", function() {					
+						$(this).children(".quBold").removeClass("quBold");		
 					});
 
 				
