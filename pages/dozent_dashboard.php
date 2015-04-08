@@ -65,7 +65,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0; background-color: #ECEFF1 !important;">
             <div class="navbar-header">
-                <a class="navbar-brand" href="student_dashboard.php" style="color:#000000">Willkommen Herr Gichter</a>
+                <a class="navbar-brand" href="dozent_dashboard.php" style="color:#000000">Willkommen Herr Gichter</a>
             </div>
             <!-- /.navbar-header -->
 
