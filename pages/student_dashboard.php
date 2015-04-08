@@ -701,6 +701,7 @@
 
 <!-- **********************************************************Filterfunktion Anfang*************************************************************** -->						
 						<div style="float:right; width:10%; height:34px">
+						<div class="nav navbar-top-links navbar-right in" style="padding-top: 6px;">
 							<label id="filterLabel" class="dropdown active">
 								<div id="dropdownDivFilter" href="#dropItLikeItsHot" style="cursor:pointer" class="dropdown-toggle filter nav navbar-top-links in" onClick="toggleFilter()" role="button" aria-expanded="false">
 									<label class="fa fa-filter" style="cursor:pointer; font-size:16px"></label> Filter <span class="caret"></span>
@@ -716,8 +717,7 @@
 								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="pgagenda1" style="margin-left:5px; cursor:pointer" checked><label for="agenda1Filter" style="margin-left:2px; cursor:pointer">1. Einführung</label><br></li>
 								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="pgagenda2" style="margin-left:5px; cursor:pointer" checked><label for="agenda2Filter" style="margin-left:2px; cursor:pointer">2. Weiterführung</label><br></li>
 								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="pgagenda3" style="margin-left:5px; cursor:pointer" checked><label for="agenda3Filter" style="margin-left:2px; cursor:pointer">3. Analyse</label><br></li>
-								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="pgagenda4" style="margin-left:5px; cursor:pointer" checked><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Aufgaben</label><br></li>
-								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="pgagenda5" style="margin-left:5px; cursor:pointer" checked><label for="agenda5Filter" style="margin-left:2px; cursor:pointer">5. Fazit</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="pgagenda4" style="margin-left:5px; cursor:pointer" checked><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Fazit</label><br></li>
 
 								</ul>
 							</label>
@@ -1012,6 +1012,17 @@
 									$(this).show();
 								}
 							});
+							
+							$(".frageVollständig").each(function(){
+								var text = $(this).text().toLowerCase();
+								if(text.indexOf(val) != -1)
+								{
+									$(".frageVollständig").removeHighlight();
+									$(".frageVollständig").highlight(val);
+									$(this).show();
+								}
+							});
+							
 						 });						
 
 <!-- Filter -->

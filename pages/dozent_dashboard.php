@@ -962,16 +962,34 @@
 						
 					}
 					
+					function setzeBeantwortetStatusTextarea(){
+						var listeTextarea = document.getElementsByName("texterArea");
+						var listeLabel = document.getElementsByName("labeler");
+						var anzahlLT = listeTextarea.length;
+						var antwort;
+						
+						for(var i = 0; i < anzahlLT; i++ ){
+						
+							antwort = listeTextarea[i].value;
+							
+							if(antwort == ""){
+								listeLabel[i].className = "haken fa fa-ellipsis-h";
+								$(listeLabel[i]).parent().attr("data-original-title" , "Unbeantwortet");
+							}
+							else{
+								listeLabel[i].className = "haken fa fa-check";
+								$(listeLabel[i]).parent().attr("data-original-title", "Beantwortet");
+							}
+
+						}
+						
+					}
+					
 <!-- Setze gelesen-Status -->					
 					$(".quBold").on("click", function() {					
 						$(this).removeClass("quBold");		
 					});
 
-									
-				</script>
-               
-				
-				<script>
 				
 				
 				   $(function() {
@@ -985,6 +1003,7 @@
                     textarea.attr("readonly", "yes");
                     $(this).addClass("disabled");
                     $(this).parent().children(".answChange").removeClass("disabled");
+					setzeBeantwortetStatusTextarea();
                 }
                 });
 
@@ -995,6 +1014,7 @@
                     textarea.removeAttr("readonly");
                     $(this).addClass("disabled");
                     $(this).parent().children(".answSend").removeClass("disabled");
+					setzeBeantwortetStatusTextarea();
                 }
                 });
 					   
