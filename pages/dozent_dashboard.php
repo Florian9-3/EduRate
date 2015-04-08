@@ -323,11 +323,11 @@
                     data.addColumn('number', 'Anzahl der Bewertungen');
 					data.addColumn({type:'string', role:'style'});
                     data.addRows([
-                      ['1 Stern', 37, 'color: #F44336'],
-                      ['2 Sterne', 23, 'color: #F44336'],
-                      ['3 Sterne', 55, 'color: #F44336'],
-                      ['4 Sterne', 76, 'color: #F44336'],
-                      ['5 Sterne', 62, 'color: #F44336']
+                      ['1 Stern', 37, 'color: #009688'],
+                      ['2 Sterne', 23, 'color: #009688'],
+                      ['3 Sterne', 55, 'color: #009688'],
+                      ['4 Sterne', 76, 'color: #009688'],
+                      ['5 Sterne', 62, 'color: #009688']
                     ]);
             
                     // Set chart options
@@ -395,7 +395,7 @@
 						 	agenda = 1;
 							document.getElementById("Kommentare").innerHTML="<b>Kommentare:</b>";
 							document.getElementById("comments").style.display = "block";
-							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Einführung";
+							document.getElementById("bewertung_header").innerHTML="Detailbewertung: 1. Einführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung1";
 							document.getElementById("bewertung_container").className = "bewertungcontainer1 panel panel-yellow";
 							document.getElementById("list1").className = "left clearfix comment1";
@@ -420,11 +420,11 @@
 								data.addColumn('number', 'Anzahl der Bewertungen');
 								data.addColumn({type:'string', role:'style'});
 								data.addRows([
-								  ['1 Stern', 37, 'color: #F44336'],
-								  ['2 Sterne', 23, 'color: #F44336'],
-								  ['3 Sterne', 55, 'color: #F44336'],
-								  ['4 Sterne', 76, 'color: #F44336'],
-								  ['5 Sterne', 62, 'color: #F44336']
+								  ['1 Stern', 37, 'color: #009688'],
+								  ['2 Sterne', 23, 'color: #009688'],
+								  ['3 Sterne', 55, 'color: #009688'],
+								  ['4 Sterne', 76, 'color: #009688'],
+								  ['5 Sterne', 62, 'color: #009688']
 								]);
 						
 								// Set chart options
@@ -456,7 +456,7 @@
 						 	agenda = 2;
 							document.getElementById("Kommentare").innerHTML="<b>Kommentare:</b>";
 							document.getElementById("comments").style.display = "block";
-							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Weiterführung";
+							document.getElementById("bewertung_header").innerHTML="Detailbewertung: 2. Weiterführung";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung2";
 							document.getElementById("bewertung_container").className = "bewertungcontainer2 panel panel-yellow";
 							document.getElementById("list1").className = "left clearfix comment2";
@@ -481,11 +481,11 @@
 								data.addColumn('number', 'Anzahl der Bewertungen');
 								data.addColumn({type:'string', role:'style'});
 								data.addRows([
-								  ['1 Stern', 10, 'color: #673AB7'],
-								  ['2 Sterne', 17, 'color: #673AB7'],
-								  ['3 Sterne', 88, 'color: #673AB7'],
-								  ['4 Sterne', 34, 'color: #673AB7'],
-								  ['5 Sterne', 49, 'color: #673AB7']
+								  ['1 Stern', 10, 'color: #4CAF50'],
+								  ['2 Sterne', 17, 'color: #4CAF50'],
+								  ['3 Sterne', 88, 'color: #4CAF50'],
+								  ['4 Sterne', 34, 'color: #4CAF50'],
+								  ['5 Sterne', 49, 'color: #4CAF50']
 								]);
 						
 								// Set chart options
@@ -517,7 +517,7 @@
 						 	agenda = 3;
 							document.getElementById("Kommentare").innerHTML="<b>Kommentare:</b>";
 							document.getElementById("comments").style.display = "block";
-							document.getElementById("bewertung_header").innerHTML="Detailbewertung: Analyse";
+							document.getElementById("bewertung_header").innerHTML="Detailbewertung: 3. Analyse";
 							document.getElementById("bewertung_header").className = "panel-heading bewertung3";
 							document.getElementById("bewertung_container").className = "bewertungcontainer3 panel panel-yellow";
 							document.getElementById("list1").className = "left clearfix comment3";
@@ -542,11 +542,11 @@
 								data.addColumn('number', 'Anzahl der Bewertungen');
 								data.addColumn({type:'string', role:'style'});
 								data.addRows([
-								  ['1 Stern', 45, 'color: #2196F3'],
-								  ['2 Sterne', 49, 'color: #2196F3'],
-								  ['3 Sterne', 55, 'color: #2196F3'],
-								  ['4 Sterne', 43, 'color: #2196F3'],
-								  ['5 Sterne', 13, 'color: #2196F3']
+								  ['1 Stern', 45, 'color: #8BC34A'],
+								  ['2 Sterne', 49, 'color: #8BC34A'],
+								  ['3 Sterne', 55, 'color: #8BC34A'],
+								  ['4 Sterne', 43, 'color: #8BC34A'],
+								  ['5 Sterne', 13, 'color: #8BC34A']
 								]);
 						
 								// Set chart options
@@ -578,7 +578,7 @@
 						 case 4:
 							if(document.getElementById("activate_button4").style.display == "none"){
 								agenda = 4;
-								document.getElementById("bewertung_header").innerHTML="Detailbewertung: Fazit";
+								document.getElementById("bewertung_header").innerHTML="Detailbewertung: 4. Fazit";
 								document.getElementById("bewertung_header").className = "panel-heading bewertung4";
 								document.getElementById("bewertung_container").className = "bewertungcontainer4 panel panel-yellow";
 								document.getElementById("list1").className = "left clearfix comment4";
@@ -605,11 +605,11 @@
 									data.addColumn('number', 'Anzahl der Bewertungen');
 									data.addColumn({type:'string', role:'style'});
 									data.addRows([
-									  ['1 Stern', 0, 'color: #FFEB3B'],
-									  ['2 Sterne', 0, 'color: #FFEB3B'],
-									  ['3 Sterne', 0, 'color: #FFEB3B'],
-									  ['4 Sterne', 0, 'color: #FFEB3B'],
-									  ['5 Sterne', 0, 'color: #FFEB3B']
+									  ['1 Stern', 0, 'color: #B6902E'],
+									  ['2 Sterne', 0, 'color: #B6902E'],
+									  ['3 Sterne', 0, 'color: #B6902E'],
+									  ['4 Sterne', 0, 'color: #B6902E'],
+									  ['5 Sterne', 0, 'color: #B6902E']
 									]);
 							
 									// Set chart options
