@@ -77,7 +77,7 @@
 
 .agenda4,
 .agenda4:focus{
-	background-color: #009688 !important;
+	background-color: #B6902E !important;
 	color:#FFF;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .agenda4:hover{
-	background-color: #FBC02D !important;
+	background-color: #7F6728 !important;
 	color:#FFF;
 }
 
@@ -163,8 +163,8 @@
 }
 
 .bewertung4{
-	border-color:#FFEB3B !important;
-	background-color:#FFEB3B !important;
+	border-color:#B6902E !important;
+	background-color:#B6902E !important;
 }
 
 .bewertungcontainer1{

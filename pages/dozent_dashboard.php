@@ -126,7 +126,7 @@
             
             <div class="col-lg-6">
                                 <div class="panel panel-info">
-                                    <div class="panel-heading">
+                                    <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:16px; font-size:16px">
                                         Agenda
                                     </div>
                                     <div class="panel-body" style="margin-bottom: -1 em; margin-top: -1 em">
@@ -198,8 +198,8 @@
             
 				<div class="col-lg-6">
                     <div class="bewertungcontainer1 panel panel-yellow" id="bewertung_container" style="overflow: hidden">
-                        <div class="bewertung1 panel-heading" id="bewertung_header">
-                            Detailbewertung: Einführung
+                        <div class="bewertung1 panel-heading" id="bewertung_header" style="padding:16px; font-size:16px;">
+                            Detailbewertung: 1. Einführung
                         </div>
                       <div class="panel-body">
                             <div style="width:100%; height:100%" id="chart_div"></div>
@@ -675,7 +675,7 @@
 				
 
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="panel-heading panelCustom" style="background-color: #ECEFF1 !important; border-color: #B0BEC5 !important; padding:16px; font-size:16px">
                             Vorlesungsinhalte
                         </div>
                         <div class="panel-body" style="margin-bottom: 0.5em; margin-top: 0.5em;">
@@ -707,7 +707,7 @@
 
 						<div style="float:left; width:90%">
 						
-							<div style="display:inline-block; width:150px">
+							<div style="display:inline-block; width:150px; font-size:16px">
 								Fragen
 							</div>
 							
@@ -720,11 +720,12 @@
 						
 						</div>	
 
-<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->						
-						<div class="nav navbar-top-links navbar-right in" style="width:10% display:inline-block">
+<!-- **********************************************************Filterfunktion Anfang*************************************************************** -->												
+						<div style="float:right; width:10%; height:34px">
+						<div class="nav navbar-top-links navbar-right in" style="padding-top: 6px;">
 							<label id="filterLabel" class="dropdown active">
 								<div id="dropdownDivFilter" href="#dropItLikeItsHot" style="cursor:pointer" class="dropdown-toggle filter nav navbar-top-links in" onClick="toggleFilter()" role="button" aria-expanded="false">
-									<label class="fa fa-filter" style="cursor:pointer"></label> Filter <span class="caret"></span>
+									<label class="fa fa-filter" style="cursor:pointer; font-size:16px"></label> Filter <span class="caret"></span>
 								</div>
 								
 								<ul id="dropdownListFilter" class="dropdown-menu"role="menu">
@@ -737,11 +738,11 @@
 								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda1Filter" value="pgagenda1" style="margin-left:5px; cursor:pointer" checked><label for="agenda1Filter" style="margin-left:2px; cursor:pointer">1. Einführung</label><br></li>
 								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda2Filter" value="pgagenda2" style="margin-left:5px; cursor:pointer" checked><label for="agenda2Filter" style="margin-left:2px; cursor:pointer">2. Weiterführung</label><br></li>
 								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda3Filter" value="pgagenda3" style="margin-left:5px; cursor:pointer" checked><label for="agenda3Filter" style="margin-left:2px; cursor:pointer">3. Analyse</label><br></li>
-								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="pgagenda4" style="margin-left:5px; cursor:pointer" checked><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Aufgaben</label><br></li>
-								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda5Filter" value="pgagenda5" style="margin-left:5px; cursor:pointer" checked><label for="agenda5Filter" style="margin-left:2px; cursor:pointer">5. Fazit</label><br></li>
+								  <li><input class="agFilter fi" href="#dropItLikeItsHot" type="checkbox" id="agenda4Filter" value="pgagenda4" style="margin-left:5px; cursor:pointer" checked><label for="agenda4Filter" style="margin-left:2px; cursor:pointer">4. Fazit</label><br></li>
 
 								</ul>
 							</label>
+						</div>
 						</div>
 					
 					<script>
@@ -1057,17 +1058,27 @@
 								}
 							});
 							
-							$("textarea[name='texterArea']").each(function(){
+							// $("textarea[name='texterArea']").each(function(){
+								// var text = $(this).text().toLowerCase();
+								// if(text.indexOf(val) != -1)
+								// {
+									// $("textarea[name='texterArea']").removeHighlight();
+									// $("textarea[name='texterArea']").highlight(val); 
+                                    // //$("textarea[name='texterArea']").highlightTextarea({
+                                    // //  words: ['dozent'],
+                                    // //  caseSensitive: true
+                                    // //});
+
+									// $(this).show();
+								// }
+							// });
+							
+							$(".frageVollständig").each(function(){
 								var text = $(this).text().toLowerCase();
 								if(text.indexOf(val) != -1)
 								{
-									$("textarea[name='texterArea']").removeHighlight();
-									$("textarea[name='texterArea']").highlight(val); 
-                                    //$("textarea[name='texterArea']").highlightTextarea({
-                                    //  words: ['dozent'],
-                                    //  caseSensitive: true
-                                    //});
-
+									$(".frageVollständig").removeHighlight();
+									$(".frageVollständig").highlight(val);
 									$(this).show();
 								}
 							});
