@@ -204,7 +204,16 @@
                       <div class="panel-body">
                             <div style="width:100%; height:100%" id="chart_div"></div>
                             <div style="margin-left:3%" id="gesamtzahl">Gesamtanzahl: 253 Bewertungen</div>
-                            <hr>
+                            <hr style="margin:0.5em">
+                            <div class="row">
+                                <div class="col-lg-3 radios1" id="verstandenDiv" style="margin-top:0.3em; margin-left:0.3em">
+                                <input type="radio" name="like" value="1" id="v1" disabled="true" checked="true" style="cursor: default !important"/> 
+                                  <label class="radio" for="v1" title="" style="cursor: default !important"></label></div>
+                                  <div class="col-lg-8" style="margin-top: 10%" id="verstandenText">
+                                  78% haben das Thema verstanden
+                                 </div>
+                             </div>
+                            <hr style="margin:0.5em">
                             <div id="Kommentare" style="margin-left:3%"><b>Kommentare:</b></div><br>
                             <ul id="comments" class="chat" style="margin-left:3%; margin-right:1%; padding-right:2%; height:200px !important; overflow:auto;">
                                 <li class="left clearfix comment1" id="list1">
@@ -403,6 +412,10 @@
 							document.getElementById("list3").className = "left clearfix comment1";
 							document.getElementById("list4").className = "left clearfix comment1";
 							
+							document.getElementById("v1").checked = true;
+							document.getElementById("verstandenText").innerHTML="78% haben das Thema verstanden";
+							document.getElementById("verstandenDiv").className = "col-lg-3 radios1";
+							
 							// Load the Visualization API and the piechart package.
 							  google.load('visualization', '1.0', {'packages':['corechart']});
 						
@@ -464,6 +477,10 @@
 							document.getElementById("list3").className = "left clearfix comment2";
 							document.getElementById("list4").className = "left clearfix comment2";
 							
+							document.getElementById("v1").checked = true;
+							document.getElementById("verstandenText").innerHTML="55% haben das Thema verstanden";
+							document.getElementById("verstandenDiv").className = "col-lg-3 radios1";
+							
 							// Load the Visualization API and the piechart package.
 							  google.load('visualization', '1.0', {'packages':['corechart']});
 						
@@ -524,6 +541,11 @@
 							document.getElementById("list2").className = "left clearfix comment3";
 							document.getElementById("list3").className = "left clearfix comment3";
 							document.getElementById("list4").className = "left clearfix comment3";
+							
+							document.getElementById("verstandenDiv").className = "col-lg-3 radios2";
+							document.getElementById("v1").checked = true;
+							document.getElementById("verstandenText").innerHTML="34% haben das Thema verstanden";
+							
 							
 							// Load the Visualization API and the piechart package.
 							  google.load('visualization', '1.0', {'packages':['corechart']});
@@ -587,6 +609,10 @@
 								document.getElementById("list4").className = "left clearfix comment4";
 								document.getElementById("comments").style.display = "none";
 								document.getElementById("Kommentare").innerHTML="<b>Noch keine Kommentare</b>";
+								
+								document.getElementById("v1").checked = false;
+								document.getElementById("verstandenText").innerHTML="Noch keine Abstimmung";
+								document.getElementById("verstandenDiv").className = "col-lg-3 radios1";
 								
 								// Load the Visualization API and the piechart package.
 								  google.load('visualization', '1.0', {'packages':['corechart']});
